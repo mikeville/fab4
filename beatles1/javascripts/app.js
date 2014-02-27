@@ -27,12 +27,18 @@ var App = Backbone.Router.extend({
     app.metaData = dataMaster.songStructure
     if (timelineHeading) timelineHeading.remove()
     var timelineHeading = new TimelineHeading()
+
+    if (legend) legend.remove()
+    var legend = new Legend()
   },
 
   authorship: function(){
     app.metaData = dataMaster.authorship
     if (timelineHeading) timelineHeading.remove()
     var timelineHeading = new TimelineHeading()
+
+    if (legend) legend.remove()
+    var legend = new Legend()
   },
 
   schedule: function(){
@@ -49,6 +55,25 @@ var TimelineHeading = Backbone.View.extend({
   },
   template: function(attributes){
     var source = $('#meta-template').html();
+    var template = Handlebars.compile(source);
+    return template(attributes)
+  },
+  render: function(){
+    this.$el.html(this.template(app.metaData))
+    return this
+  }
+})
+
+
+var Legend = Backbone.View.extend({
+  initialize: function(){
+    this.render()
+  },
+  el: function(){
+    return $('#legend-container')
+  },
+  template: function(attributes){
+    var source = $('#legend-template').html();
     var template = Handlebars.compile(source);
     return template(attributes)
   },
@@ -116,40 +141,11 @@ var TimelineHeading = Backbone.View.extend({
 $(function(){
 
 
-
-
-  // var metaData1 = {
-  //   timelineTitle: 'Song Structure',
-  //   oneLiner: 'How did song structure change over time lorem ipsum? Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.',
-  //   legendLine: 'Strips of color within each song row represent song segment types:'
-  // }
-
-
     // instantiates app Router
-  window.metaData = dataMaster;
-
   window.app = new App();
 
   // required code to use Router
   Backbone.history.start();
-
-  // var source = $('#meta-template').html();
-  // var template = Handlebars.compile(source);
-  // var templateData = template(metaData1);
-  // $('#meta-container').append(templateData)
-
-  var source = $('#legend-template').html();
-  var template = Handlebars.compile(source);
-  var templateData = template(metaData);
-  $('#legend-container').append(templateData)
-
-
-
-
-
-  // var legend = Backbone.Model.extend({
-
-  // })
 
 
 })
