@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>beatles1</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/style2.css" />
+	<script src='javascripts/jquery.js'></script>
+	<script src='javascripts/d3.js'></script>
+	<script src='javascripts/jquery.js'></script>
+	<script src='javascripts/underscore.js'></script>
+	<script src='javascripts/backbone.js'></script>
+	<script src='javascripts/handlebars.js'></script>
+	<script src='timeline_data/song_structure.js'></script>
+	<script src='javascripts/app.js'></script>
+</head>
+<body>
+		<div id="main-container">
+			<header>
+				<div id="site-title">
+					<h1>Charting The Beatles</h1>
+				</div>
+				<div id="meta-container">
+				</div>
+				<div id="timeline-nav-container">
+					<nav id="timeline-switcher">
+						<a href="#">1</a>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+					</nav>
+				</div>	
+			</header>
+			<div id="timeline">
+				<p>d3 timeline goes here</p>
+			</div>
+			<div id="sidebar">
+				<div id="legend-container">
+				</div>
+			</div>
+		</div>
+
+
+	<script id='legend-template' type='text/x-handlebars-template'>
+			<h4>How to read this timeline</h4>
+			<p>{{legendLine}}</p>
+ 	</script>
+
+ 	<script id='meta-template' type='text/x-handlebars-template'>
+		<h2>{{timelineTitle}}</h2>
+		<p>{{oneLiner}}</p>
+ 	</script>
+
+
+
+
+</body>
+</html>
