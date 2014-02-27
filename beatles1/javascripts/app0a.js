@@ -22,43 +22,42 @@ var App = Backbone.Router.extend({
   },
 
   songStructure: function(){
+    // if (ui) ui.remove()
+    // var ui = new UI()
     app.metaData = dataMaster.songStructure
-    app.uiMaker()
+    if (timelineHeading) timelineHeading.remove()
+    var timelineHeading = new TimelineHeading()
+
+    if (legend) legend.remove()
+    var legend = new Legend()
   },
 
   authorship: function(){
     app.metaData = dataMaster.authorship
-    app.uiMaker()
+    if (timelineHeading) timelineHeading.remove()
+    var timelineHeading = new TimelineHeading()
+
+    if (legend) legend.remove()
+    var legend = new Legend()
   },
 
   schedule: function(){
   },
 
-  uiMaker: function(){
-    if (ui) ui.remove()
-    var ui = new UI()
-  }
-
 })
 
 
-var UI = Backbone.View.extend({
+// var UI = Backbone.View.extend({
+//   initialize: function(){
+//     this.render();
+//   },
+//   render
+// })
+
+var TimelineHeading = Backbone.View.extend({
   initialize: function(){
-    this.render({
-      timelineHeading: new UI.TimelineHeading,
-      legend: new UI.Legend
-    });
+    this.render()
   },
-  render: function(sub_views){
-    _.each(sub_views, function(view){
-      view.$el.empty()
-      view.render()
-    })
-    return this;
-  }
-})
-
-UI.TimelineHeading = Backbone.View.extend({
   el: function(){
     return $('#meta-container')
   },
@@ -74,7 +73,10 @@ UI.TimelineHeading = Backbone.View.extend({
 })
 
 
-UI.Legend = Backbone.View.extend({
+var Legend = Backbone.View.extend({
+  initialize: function(){
+    this.render()
+  },
   el: function(){
     return $('#legend-container')
   },
@@ -90,12 +92,70 @@ UI.Legend = Backbone.View.extend({
 })
 
 
+
+
+
+// var UI = Backbone.View.extend({
+
+//   initialize: function(attributes){
+
+//     this.render({
+//       heading: new UI.Heading()
+//       // sidebar: new UI.Sidebar()
+//     });
+//   },
+
+//   el: function(){
+//     return $('#main-container')
+//   },
+
+//   render: function(sub_views){
+//     var self = this;
+//     this.$el.empty()
+
+//     _.each(this.sub_views, function(view){
+//       view.remove()
+//     })
+
+//     this.sub_views = sub_views
+
+//     _.each(this.sub_views, function(view){
+//       var view_el = view.render().$el
+//       self.$el.append(view_el)
+//     })
+//     return this;
+//   }
+// })
+
+
+// UI.Heading = Backbone.View.extend({
+//   initialize: function(){
+//   },
+//   render: function(){
+//     this.$el.html(this.template({
+//       timelineTitle: app.timelineTitle
+//     }))
+//     return this;
+//   },
+//   template: function(attributes){
+//     var source = $('#meta-template').html();
+//     var template = Handlebars.compile(source);
+//     return template(attributes)
+//   }
+// })
+
+
+
 $(function(){
+
+
     // instantiates app Router
   window.app = new App();
 
   // required code to use Router
   Backbone.history.start();
+
+
 })
 
 
