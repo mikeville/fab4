@@ -8,6 +8,26 @@ var dataMaster = {
     timelineTitle: 'Authorship',
     oneLiner: 'How did did the balance of authorship shift as Lennon, McCartney, and the dark horse Harrison evolved as songwriters?',
     legendLine: 'Each color in the collabo-meter stands for a band member:' 
+  },
+  schedule: {
+    timelineTitle: 'Working Schedule',
+    oneLiner: 'How did their day-to-day grind change over time?',
+    legendLine: 'Each color represents a working activity:' 
+  },
+  inTheStudio: {
+    timelineTitle: 'In The Studio',
+    oneLiner: 'How many days of recording went into each song?',
+    legendLine: 'Each line is a length of something lorem ipsum:' 
+  },
+  lyricalSyntax: {
+    timelineTitle: 'Lyrical Syntax',
+    oneLiner: 'How did their lyrics evolve?',
+    legendLine: 'Song title color lorem ipsum:' 
+  },
+  selfReference: {
+    timelineTitle: 'Self Reference',
+    oneLiner: 'When did The Beatle’s lyrics points back to previous songs?',
+    legendLine: 'Arrows point from the the song with the refering lyric back to the lorem ipsum.' 
   }
 }
 
@@ -17,7 +37,10 @@ var App = Backbone.Router.extend({
   routes: {
     'song-structure': 'songStructure',
     'authorship-and-collaboration': 'authorship',
-    'schedule': 'schedule'
+    'working-schedule': 'schedule',
+    'in-the-studio': 'inTheStudio',
+    'lyrical-syntax': 'lyricalSyntax',
+    'self-reference': 'selfReference'
     //go to error page if these aren't found? or redirect to home page?
   },
 
@@ -32,6 +55,23 @@ var App = Backbone.Router.extend({
   },
 
   schedule: function(){
+    app.metaData = dataMaster.schedule
+    app.uiMaker()
+  },
+
+  inTheStudio: function(){
+    app.metaData = dataMaster.inTheStudio
+    app.uiMaker()
+  },
+
+  lyricalSyntax: function(){
+    app.metaData = dataMaster.lyricalSyntax
+    app.uiMaker()
+  },
+
+  selfReference: function(){
+    app.metaData = dataMaster.selfReference
+    app.uiMaker()
   },
 
   uiMaker: function(){
