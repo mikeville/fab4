@@ -1,3 +1,9 @@
+var Data = {
+  timelineTitle: "Song Structure",
+  oneLiner: "How did song structure change over time lorem ipsum? Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.",
+  legendLine: "Strips of color within each song row represent song segment types:"
+}
+
 var App = Backbone.Router.extend({
 
   routes: {
@@ -8,8 +14,10 @@ var App = Backbone.Router.extend({
 
   songStructure: function(){
     app.timelineTitle = "Song Structure"
-    if (ui) ui.remove()
-    var ui = new UI()
+    // if (ui) ui.remove()
+    // var ui = new UI()
+    if (timelineHeading) timelineHeading.remove()
+    var timelineHeading = new TimelineHeading()
   },
 
   authorship: function(){
@@ -19,6 +27,27 @@ var App = Backbone.Router.extend({
   },
 
 })
+
+var TimelineHeading = Backbone.View.extend({
+  initialize: function(){
+    this.render()
+  },
+  el: function(){
+    return $('#meta-container')
+  },
+  template: function(attributes){
+    var source = $('#meta-template').html();
+    var template = Handlebars.compile(source);
+    return template(attributes)
+  },
+  render: function(){
+    this.$el.html(this.template(metaData1))
+    return this
+  }
+})
+
+
+
 
 
 var UI = Backbone.View.extend({
@@ -74,18 +103,22 @@ UI.Heading = Backbone.View.extend({
 
 $(function(){
 
-  // instantiates app Router
+
+
+
+  // var metaData1 = {
+  //   timelineTitle: "Song Structure",
+  //   oneLiner: "How did song structure change over time lorem ipsum? Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.",
+  //   legendLine: "Strips of color within each song row represent song segment types:"
+  // }
+
+
+    // instantiates app Router
   window.app = new App();
+  window.metaData1 = Data;
 
   // required code to use Router
   Backbone.history.start();
-
-
-  var metaData1 = {
-    timelineTitle: "Song Structure",
-    oneLiner: "How did song structure change over time lorem ipsum? Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.",
-    legendLine: "Strips of color within each song row represent song segment types:"
-  }
 
   // var source = $('#meta-template').html();
   // var template = Handlebars.compile(source);
