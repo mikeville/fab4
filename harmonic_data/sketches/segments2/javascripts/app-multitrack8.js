@@ -4,7 +4,7 @@
 $(function(){
 
 
-var dataset = dataRevolverSegments[8]
+var dataset = dataSegments[8]
 
 var margin = {top: 20, right: 40, bottom: 20, left: 20},
     width = $(window).width() - margin.left - margin.right,
