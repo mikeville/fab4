@@ -1,0 +1,8 @@
+[{"start":0.000,"end":0.395,"segment":"silence"},
+{"start":0.395,"end":5.549,"segment":"intro"},
+{"start":5.549,"end":39.351,"segment":"verse_(initial)"},
+{"start":39.351,"end":69.885,"segment":"verse_(variant)"},
+{"start":69.885,"end":100.490,"segment":"verse_(half_vocal_half_solo)"},
+{"start":100.490,"end":131.037,"segment":"verse_(variant)"},
+{"start":131.037,"end":151.984,"segment":"outro_verse_(fade-out)"},
+{"start":151.984,"end":157.200,"segment":"silence"}]

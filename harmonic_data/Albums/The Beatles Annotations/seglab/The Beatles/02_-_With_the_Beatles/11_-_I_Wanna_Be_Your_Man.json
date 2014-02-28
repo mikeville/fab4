@@ -1,0 +1,10 @@
+[{"start":0.000,"end":0.421,"segment":"silence"},
+{"start":0.421,"end":20.622,"segment":"verse"},
+{"start":20.622,"end":31.547,"segment":"refrain"},
+{"start":31.547,"end":51.075,"segment":"verse"},
+{"start":51.075,"end":62.023,"segment":"refrain"},
+{"start":62.023,"end":76.233,"segment":"break"},
+{"start":76.233,"end":95.506,"segment":"verse"},
+{"start":95.506,"end":106.454,"segment":"refrain"},
+{"start":106.454,"end":115.013,"segment":"outro"},
+{"start":115.013,"end":118.973,"segment":"silence"}]

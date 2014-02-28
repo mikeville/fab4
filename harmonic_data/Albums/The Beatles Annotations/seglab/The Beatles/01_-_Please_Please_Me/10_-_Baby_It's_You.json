@@ -1,0 +1,6 @@
+[{"start":0.000,"end":0.414,"segment":"silence"},
+{"start":0.414,"end":49.429,"segment":"verse"},
+{"start":49.429,"end":94.389,"segment":"verse"},
+{"start":94.389,"end":139.238,"segment":"verse_(half_solo)"},
+{"start":139.238,"end":151.907,"segment":"outro_(fade-out)"},
+{"start":151.907,"end":158.067,"segment":"silence"}]

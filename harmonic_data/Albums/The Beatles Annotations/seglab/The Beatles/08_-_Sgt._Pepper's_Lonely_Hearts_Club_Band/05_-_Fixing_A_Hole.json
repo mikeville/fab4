@@ -1,0 +1,11 @@
+[{"start":0.000,"end":0.353,"segment":"silence"},
+{"start":0.353,"end":6.705,"segment":"intro"},
+{"start":6.705,"end":24.840,"segment":"verse"},
+{"start":24.840,"end":42.325,"segment":"verse"},
+{"start":42.325,"end":59.496,"segment":"bridge"},
+{"start":59.496,"end":76.609,"segment":"verse"},
+{"start":76.609,"end":93.258,"segment":"verse_guitar"},
+{"start":93.258,"end":109.802,"segment":"bridge"},
+{"start":109.802,"end":126.578,"segment":"verse"},
+{"start":126.578,"end":154.077,"segment":"outro"},
+{"start":154.077,"end":156.627,"segment":"silence"}]

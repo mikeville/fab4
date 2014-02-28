@@ -1,0 +1,13 @@
+[{"start":0.000,"end":0.365,"segment":"silence"},
+{"start":0.365,"end":28.528,"segment":"intro"},
+{"start":28.528,"end":43.985,"segment":"verse"},
+{"start":43.985,"end":59.444,"segment":"refrain"},
+{"start":59.444,"end":75.018,"segment":"break_(guitar_solo)"},
+{"start":75.018,"end":92.603,"segment":"refrain'"},
+{"start":92.603,"end":108.338,"segment":"break_(piano_solo)"},
+{"start":108.338,"end":124.027,"segment":"verse"},
+{"start":124.027,"end":139.537,"segment":"refrain"},
+{"start":139.537,"end":155.054,"segment":"break_(guitar_solo)"},
+{"start":155.054,"end":170.473,"segment":"refrain'"},
+{"start":170.473,"end":185.355,"segment":"outro"},
+{"start":185.355,"end":187.093,"segment":"silence"}]

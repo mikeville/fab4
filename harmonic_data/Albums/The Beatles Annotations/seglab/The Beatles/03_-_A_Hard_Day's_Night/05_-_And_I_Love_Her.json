@@ -1,0 +1,10 @@
+[{"start":0.000,"end":0.384,"segment":"silence"},
+{"start":0.384,"end":9.244,"segment":"intro"},
+{"start":9.244,"end":29.896,"segment":"verse"},
+{"start":29.896,"end":50.849,"segment":"verse"},
+{"start":50.849,"end":67.690,"segment":"bridge"},
+{"start":67.690,"end":88.800,"segment":"verse"},
+{"start":88.800,"end":110.065,"segment":"verse_(instrumental)"},
+{"start":110.065,"end":131.306,"segment":"verse"},
+{"start":131.306,"end":147.168,"segment":"outro"},
+{"start":147.168,"end":151.053,"segment":"silence"}]
