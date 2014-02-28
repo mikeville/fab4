@@ -1,6 +1,6 @@
 var dataSegments =[
-{album_title: "Please Please Me", tracks: [
-    {order: 1, track_title: "I Saw Her Standing There", segments:[
+{albumKey: "pleasePleaseMe", albumTitle: "Please Please Me", tracks: [
+    {order: 1, trackTitle: "I Saw Her Standing There", segments:[
       {"start":0.000,"end":2.612,"segment":"silence"},
       {"start":2.612,"end":8.424,"segment":"intro"},
       {"start":8.424,"end":20.410,"segment":"versea"},
@@ -16,7 +16,7 @@ var dataSegments =[
       {"start":146.042,"end":172.062,"segment":"verseb"},
       {"start":172.062,"end":175.800,"segment":"silence"}]
     },
-    {order: 2, track_title: "Misery", segments:
+    {order: 2, trackTitle: "Misery", segments:
       [{"start":0.000,"end":0.414,"segment":"silence"},
       {"start":0.414,"end":10.635,"segment":"intro"},
       {"start":10.635,"end":24.938,"segment":"verse"},
@@ -28,7 +28,7 @@ var dataSegments =[
       {"start":95.155,"end":106.547,"segment":"outro"},
       {"start":106.547,"end":110.160,"segment":"silence"}]
     },
-    {order: 3, track_title: "Anna (Go to Him)", segments:
+    {order: 3, trackTitle: "Anna (Go to Him)", segments:
       [{"start":0.000,"end":0.708,"segment":"silence"},
       {"start":0.708,"end":9.670,"segment":"intro"},
       {"start":9.670,"end":29.411,"segment":"verse"},
@@ -41,7 +41,7 @@ var dataSegments =[
       {"start":159.510,"end":173.560,"segment":"chorus"},
       {"start":173.560,"end":177.573,"segment":"silence"}]
     },
-    {order: 4, track_title: "Chains", segments:
+    {order: 4, trackTitle: "Chains", segments:
       [{"start":0.000,"end":0.433,"segment":"silence"},
       {"start":0.433,"end":7.675,"segment":"intro"},
       {"start":7.675,"end":29.722,"segment":"verse"},
@@ -53,7 +53,7 @@ var dataSegments =[
       {"start":126.008,"end":141.647,"segment":"outro"},
       {"start":141.647,"end":146.493,"segment":"silence"}]
     },
-    {order: 5, track_title: "Boys", segments:
+    {order: 5, trackTitle: "Boys", segments:
       [{"start":0.000,"end":0.383,"segment":"silence"},
       {"start":0.383,"end":7.332,"segment":"intro"},
       {"start":7.332,"end":27.109,"segment":"verse"},
@@ -65,7 +65,7 @@ var dataSegments =[
       {"start":128.114,"end":142.763,"segment":"outro_(fade-out)"},
       {"start":142.763,"end":147.507,"segment":"silence"}]
     },
-    {order: 6, track_title: "Ask Me Why", segments:
+    {order: 6, trackTitle: "Ask Me Why", segments:
       [{"start":0.000,"end":0.459,"segment":"silence"},
       {"start":0.459,"end":3.878,"segment":"intro"},
       {"start":3.878,"end":26.895,"segment":"verse_(initial)"},
@@ -78,7 +78,7 @@ var dataSegments =[
       {"start":123.234,"end":143.117,"segment":"verse_(variant_2_with_ending)"},
       {"start":143.117,"end":147.760,"segment":"silence"}]
     },
-    {order: 7, track_title: "Please Please Me", segments:
+    {order: 7, trackTitle: "Please Please Me", segments:
       [{"start":0.000,"end":0.429,"segment":"silence"},
       {"start":0.429,"end":7.709,"segment":"intro"},
       {"start":7.709,"end":35.120,"segment":"verse"},
@@ -88,7 +88,7 @@ var dataSegments =[
       {"start":108.016,"end":118.939,"segment":"outro"},
       {"start":118.939,"end":123.373,"segment":"silence"}]
     },
-    {order: 8, track_title: "Love Me Do", segments:
+    {order: 8, trackTitle: "Love Me Do", segments:
       [{"start":0.000,"end":0.412,"segment":"silence"},
       {"start":0.412,"end":13.424,"segment":"intro"},
       {"start":13.424,"end":34.694,"segment":"verse"},
@@ -99,7 +99,7 @@ var dataSegments =[
       {"start":109.708,"end":137.945,"segment":"verse_with_ending"},
       {"start":137.945,"end":142.760,"segment":"silence"}]
     },
-    {order: 9, track_title: "P.S. I Love You", segments:
+    {order: 9, trackTitle: "P.S. I Love You", segments:
       [{"start":0.000,"end":0.459,"segment":"silence"},
       {"start":0.459,"end":14.663,"segment":"intro"},
       {"start":14.663,"end":32.531,"segment":"verse"},
@@ -111,7 +111,7 @@ var dataSegments =[
       {"start":114.823,"end":122.070,"segment":"outro"},
       {"start":122.070,"end":125.733,"segment":"silence"}]
     },
-    {order: 10, track_title: "Baby It's You", segments:
+    {order: 10, trackTitle: "Baby It's You", segments:
       [{"start":0.000,"end":0.414,"segment":"silence"},
       {"start":0.414,"end":49.429,"segment":"verse"},
       {"start":49.429,"end":94.389,"segment":"verse"},
@@ -119,7 +119,7 @@ var dataSegments =[
       {"start":139.238,"end":151.907,"segment":"outro_(fade-out)"},
       {"start":151.907,"end":158.067,"segment":"silence"}]
     },
-    {order: 11, track_title: "Do You Want To Know A Secret", segments:
+    {order: 11, trackTitle: "Do You Want To Know A Secret", segments:
       [{"start":0.000,"end":0.416,"segment":"silence"},
       {"start":0.416,"end":8.576,"segment":"intro"},
       {"start":8.576,"end":38.499,"segment":"verse"},
@@ -129,7 +129,7 @@ var dataSegments =[
       {"start":127.233,"end":152.147,"segment":"bridge_with_ending"},
       {"start":152.147,"end":153.267,"segment":"silence"}]
     },
-    {order: 12, track_title: "A Taste of Honey", segments:
+    {order: 12, trackTitle: "A Taste of Honey", segments:
       [{"start":0.000,"end":0.416,"segment":"silence"},
       {"start":0.416,"end":8.576,"segment":"intro"},
       {"start":8.576,"end":38.499,"segment":"verse"},
@@ -139,7 +139,7 @@ var dataSegments =[
       {"start":127.233,"end":152.147,"segment":"bridge_with_ending"},
       {"start":152.147,"end":153.267,"segment":"silence"}]
     },
-    {order: 13, track_title: "There's a Place", segments:
+    {order: 13, trackTitle: "There's a Place", segments:
       [{"start":0.000,"end":0.435,"segment":"silence"},
       {"start":0.435,"end":9.131,"segment":"intro"},
       {"start":9.131,"end":34.331,"segment":"verse"},
@@ -149,7 +149,7 @@ var dataSegments =[
       {"start":95.997,"end":107.648,"segment":"outro"},
       {"start":107.648,"end":112.867,"segment":"silence"}]
     },
-    {order: 14, track_title: "Twist and Shout", segments:
+    {order: 14, trackTitle: "Twist and Shout", segments:
       [{"start":0.000,"end":0.416,"segment":"silence"},
       {"start":0.416,"end":8.576,"segment":"intro"},
       {"start":8.576,"end":38.499,"segment":"verse"},
@@ -160,23 +160,23 @@ var dataSegments =[
       {"start":152.147,"end":153.267,"segment":"silence"}]
     }
   ]},
-  {album_title: "With The Beatles", tracks: [
+  {albumKey: "withTheBeatles", albumTitle: "With The Beatles", tracks: [
 
   ]},
-  {album_title: "A Hard Day's Night", tracks: [
+  {albumKey: "aHardDaysNight", albumTitle: "A Hard Day's Night", tracks: [
 
   ]},
-  {album_title: "Beatles For Sale", tracks: [
+  {albumKey: "beatlesForSale", albumTitle: "Beatles For Sale", tracks: [
 
   ]},
-  {album_title: "Help!", tracks: [
+  {albumKey: "help", albumTitle: "Help!", tracks: [
 
   ]},
-  {album_title: "Rubber Soul", tracks: [
+  {albumKey: "rubberSoul", albumTitle: "Rubber Soul", tracks: [
 
   ]},
-  {album_title: "Revolver", tracks: [
-    {order: 1, track_title: "Taxman", segments:[
+  {albumKey: "revolver", albumTitle: "Revolver", tracks: [
+    {order: 1, trackTitle: "Taxman", segments:[
       {"start":0.000,"end":1.069,"segment":"silence"},
       {"start":1.069,"end":9.131,"segment":"intro"},
       {"start":9.131,"end":23.011,"segment":"verse"},
@@ -194,7 +194,7 @@ var dataSegments =[
       {"start":155.233,"end":159.000,"segment":"silence"}
       ]
     },
-    {order: 2, track_title: "Eleanor Rigby", segments:[
+    {order: 2, trackTitle: "Eleanor Rigby", segments:[
       {"start":0.000,"end":0.404,"segment":"silence"},
       {"start":0.404,"end":14.269,"segment":"intro"},
       {"start":14.269,"end":31.790,"segment":"verse"},
@@ -207,7 +207,7 @@ var dataSegments =[
       {"start":123.866,"end":127.667,"segment":"silence"}
       ]
     },
-    {order: 3, track_title: "I'm Only Sleeping", segments:[
+    {order: 3, trackTitle: "I'm Only Sleeping", segments:[
       {"start":0.000,"end":0.423,"segment":"silence"},
       {"start":0.423,"end":21.409,"segment":"verse"},
       {"start":21.409,"end":35.184,"segment":"refrain"},
@@ -222,7 +222,7 @@ var dataSegments =[
       {"start":175.705,"end":181.667,"segment":"silence"}
       ]
     },
-    {order: 4, track_title: "Love You To", segments:[
+    {order: 4, trackTitle: "Love You To", segments:[
       {"start":0.000,"end":0.445,"segment":"silence"},
       {"start":0.445,"end":39.673,"segment":"intro"},
       {"start":39.673,"end":56.297,"segment":"verse"},
@@ -236,7 +236,7 @@ var dataSegments =[
       {"start":176.416,"end":181.200,"segment":"silence"}
       ]
     },
-    {order: 5, track_title: "Here, There and Everywhere", segments:[
+    {order: 5, trackTitle: "Here, There and Everywhere", segments:[
       {"start":0.000,"end":0.416,"segment":"silence"},
       {"start":0.416,"end":10.054,"segment":"intro"},
       {"start":10.054,"end":33.335,"segment":"verse"},
@@ -249,7 +249,7 @@ var dataSegments =[
       {"start":141.322,"end":145.867,"segment":"silence"}
       ]
     },
-    {order: 6, track_title: "Yellow Submarine", segments:[
+    {order: 6, trackTitle: "Yellow Submarine", segments:[
       {"start":0.000,"end":0.980,"segment":"silence"},
       {"start":0.980,"end":18.709,"segment":"verse"},
       {"start":18.709,"end":35.988,"segment":"verse"},
@@ -262,7 +262,7 @@ var dataSegments =[
       {"start":155.139,"end":160.400,"segment":"silence"}
       ]
     },
-    {order: 7, track_title: "She Said She Said", segments:[
+    {order: 7, trackTitle: "She Said She Said", segments:[
       {"start":0.000,"end":0.433,"segment":"silence"},
       {"start":0.433,"end":6.976,"segment":"intro"},
       {"start":6.976,"end":29.004,"segment":"verse"},
@@ -275,7 +275,7 @@ var dataSegments =[
       {"start":152.592,"end":157.133,"segment":"silence"}
       ]
     },
-    {order: 8, track_title: "Good Day Sunshine", segments:[
+    {order: 8, trackTitle: "Good Day Sunshine", segments:[
       {"start":0.000,"end":0.424,"segment":"silence"},
       {"start":0.424,"end":8.492,"segment":"intro"},
       {"start":8.492,"end":20.596,"segment":"refrain"},
@@ -290,7 +290,7 @@ var dataSegments =[
       {"start":125.940,"end":129.760,"segment":"silence"}
       ]
     },
-    {order: 9, track_title: "And Your Bird Can Sing", segments:[
+    {order: 9, trackTitle: "And Your Bird Can Sing", segments:[
       {"start":0.000,"end":0.453,"segment":"silence"},
       {"start":0.453,"end":7.709,"segment":"intro"},
       {"start":7.709,"end":22.245,"segment":"verse"},
@@ -304,7 +304,7 @@ var dataSegments =[
       {"start":117.965,"end":121.733,"segment":"silence"}
       ]
     },
-    {order: 10, track_title: "For No One", segments:[
+    {order: 10, trackTitle: "For No One", segments:[
       {"start":0.000,"end":0.418,"segment":"silence"},
       {"start":0.418,"end":12.527,"segment":"verse"},
       {"start":12.527,"end":24.300,"segment":"verse"},
@@ -318,7 +318,7 @@ var dataSegments =[
       {"start":117.098,"end":121.707,"segment":"silence"}
     ]
     },
-    {order: 11, track_title: "Doctor Robert", segments:[
+    {order: 11, trackTitle: "Doctor Robert", segments:[
       {"start":0.000,"end":0.377,"segment":"silence"},
       {"start":0.377,"end":6.176,"segment":"intro"},
       {"start":6.176,"end":32.369,"segment":"verse"},
@@ -330,7 +330,7 @@ var dataSegments =[
       {"start":131.832,"end":135.200,"segment":"silence"}
       ]
     },
-    {order: 12, track_title: "I Want to Tell You", segments:[
+    {order: 12, trackTitle: "I Want to Tell You", segments:[
       {"start":0.000,"end":0.450,"segment":"silence"},
       {"start":0.450,"end":7.505,"segment":"intro"},
       {"start":7.505,"end":35.585,"segment":"verse"},
@@ -343,7 +343,7 @@ var dataSegments =[
       {"start":144.808,"end":150.627,"segment":"silence"}
       ]
     },
-    {order: 13, track_title: "Got to Get You into My Life", segments:[
+    {order: 13, trackTitle: "Got to Get You into My Life", segments:[
       {"start":0.000,"end":0.450,"segment":"silence"},
       {"start":0.450,"end":7.505,"segment":"intro"},
       {"start":7.505,"end":35.585,"segment":"verse"},
@@ -356,7 +356,7 @@ var dataSegments =[
       {"start":144.808,"end":150.627,"segment":"silence"}
       ]
     },
-    {order: 14, track_title: "Tomorrow Never Knows", segments:[
+    {order: 14, trackTitle: "Tomorrow Never Knows", segments:[
       {"start":0.000,"end":1.013,"segment":"silence"},
       {"start":1.013,"end":11.731,"segment":"intro"},
       {"start":11.731,"end":26.610,"segment":"verse"},
@@ -372,46 +372,46 @@ var dataSegments =[
       ]
     },
   ]},
-  {album_title: "Sgt. Pepper’s Lonely Hearts Club Band", tracks: [
-    {order: 1, track_title: "XXX", segments:
+  {albumKey: "sgtPeppersLonelyHeartsClubBand", albumTitle: "Sgt. Pepper's Lonely Hearts Club Band", tracks: [
+    {order: 1, trackTitle: "XXX", segments:
       []
     },
-    {order: 2, track_title: "XXX", segments:
+    {order: 2, trackTitle: "XXX", segments:
       []
     },
-    {order: 3, track_title: "XXX", segments:
+    {order: 3, trackTitle: "XXX", segments:
       []
     },
-    {order: 4, track_title: "XXX", segments:
+    {order: 4, trackTitle: "XXX", segments:
       []
     },
-    {order: 5, track_title: "XXX", segments:
+    {order: 5, trackTitle: "XXX", segments:
       []
     },
-    {order: 6, track_title: "XXX", segments:
+    {order: 6, trackTitle: "XXX", segments:
       []
     },
-    {order: 7, track_title: "XXX", segments:
+    {order: 7, trackTitle: "XXX", segments:
       []
     },
-    {order: 8, track_title: "XXX", segments:
+    {order: 8, trackTitle: "XXX", segments:
       []
     },
-    {order: 9, track_title: "XXX", segments:
+    {order: 9, trackTitle: "XXX", segments:
       []
     },
-    {order: 10, track_title: "XXX", segments:
+    {order: 10, trackTitle: "XXX", segments:
       []
     },
-    {order: 11, track_title: "XXX", segments:
+    {order: 11, trackTitle: "XXX", segments:
       []
     },
-    {order: 12, track_title: "XXX", segments:
+    {order: 12, trackTitle: "XXX", segments:
       []
     }
   ]},
-  {album_title: "Magical Mystery Tour", tracks: [
-    {order: 1, track_title: "Magical Mystery Tour", segments:
+  {albumKey: "magicalMysteryTour", albumTitle: "Magical Mystery Tour", tracks: [
+    {order: 1, trackTitle: "Magical Mystery Tour", segments:
       [{"start":0.000,"end":1.029,"segment":"silence"},
       {"start":1.029,"end":9.739,"segment":"intro"},
       {"start":9.739,"end":32.776,"segment":"verse"},
@@ -425,7 +425,7 @@ var dataSegments =[
       {"start":140.245,"end":166.204,"segment":"outro"},
       {"start":166.204,"end":171.827,"segment":"silence"}]
     },
-    {order: 2, track_title: "The Fool on the Hill", segments:
+    {order: 2, trackTitle: "The Fool on the Hill", segments:
       [{"start":0.000,"end":0.420,"segment":"silence"},
       {"start":0.420,"end":4.008,"segment":"intro"},
       {"start":4.008,"end":27.698,"segment":"verse"},
@@ -439,7 +439,7 @@ var dataSegments =[
       {"start":159.918,"end":176.109,"segment":"outro"},
       {"start":176.109,"end":180.173,"segment":"silence"}]
     },
-    {order: 3, track_title: "Flying", segments:
+    {order: 3, trackTitle: "Flying", segments:
       [{"start":0.000,"end":0.383,"segment":"silence"},
       {"start":0.383,"end":31.533,"segment":"intro"},
       {"start":31.533,"end":62.392,"segment":"verse"},
@@ -447,7 +447,7 @@ var dataSegments =[
       {"start":93.337,"end":131.749,"segment":"outro"},
       {"start":131.749,"end":136.960,"segment":"silence"}]
     },
-    {order: 4, track_title: "Blue Jay Way", segments:
+    {order: 4, trackTitle: "Blue Jay Way", segments:
       [{"start":0.000,"end":0.743,"segment":"silence"},
       {"start":0.743,"end":24.181,"segment":"intro"},
       {"start":24.181,"end":48.927,"segment":"verse"},
@@ -461,7 +461,7 @@ var dataSegments =[
       {"start":186.580,"end":233.327,"segment":"outro_refrain"},
       {"start":233.327,"end":236.707,"segment":"silence"}]
     },
-    {order: 5, track_title: "Your Mother Should Know", segments:
+    {order: 5, trackTitle: "Your Mother Should Know", segments:
       [{"start":0.000,"end":0.416,"segment":"silence"},
       {"start":0.416,"end":4.748,"segment":"intro"},
       {"start":4.748,"end":24.816,"segment":"verse"},
@@ -473,7 +473,7 @@ var dataSegments =[
       {"start":127.025,"end":145.575,"segment":"outro"},
       {"start":145.575,"end":149.600,"segment":"silence"}]
     },
-    {order: 6, track_title: "I Am the Walrus", segments:
+    {order: 6, trackTitle: "I Am the Walrus", segments:
       [{"start":0.000,"end":0.394,"segment":"silence"},
       {"start":0.394,"end":21.780,"segment":"intro"},
       {"start":21.780,"end":38.917,"segment":"first_verse"},
@@ -490,7 +490,7 @@ var dataSegments =[
       {"start":197.625,"end":273.283,"segment":"outro"},
       {"start":273.283,"end":277.067,"segment":"silence"}]
     },
-    {order: 7, track_title: "Hello Goodbye", segments:
+    {order: 7, trackTitle: "Hello Goodbye", segments:
       [{"start":0.000,"end":0.502,"segment":"silence"},
       {"start":0.502,"end":17.796,"segment":"verse"},
       {"start":17.796,"end":38.791,"segment":"refrain"},
@@ -504,7 +504,7 @@ var dataSegments =[
       {"start":165.642,"end":206.381,"segment":"second_outro"},
       {"start":206.381,"end":211.467,"segment":"silence"}]
     },
-    {order: 8, track_title: "Strawberry Fields Forever", segments:
+    {order: 8, trackTitle: "Strawberry Fields Forever", segments:
       [{"start":0.000,"end":0.358,"segment":"silence"},
       {"start":0.358,"end":15.070,"segment":"intro"},
       {"start":15.070,"end":34.412,"segment":"refrain"},
@@ -517,7 +517,7 @@ var dataSegments =[
       {"start":172.278,"end":249.540,"segment":"outro_(double_fade-out)"},
       {"start":249.540,"end":250.493,"segment":"silence"}]
     },
-    {order: 9, track_title: "Penny Lane", segments:
+    {order: 9, trackTitle: "Penny Lane", segments:
       [{"start":0.000,"end":0.978,"segment":"silence"},
       {"start":0.978,"end":18.239,"segment":"verse"},
       {"start":18.239,"end":35.337,"segment":"verse"},
@@ -531,7 +531,7 @@ var dataSegments =[
       {"start":153.579,"end":180.009,"segment":"outro_refrain"},
       {"start":180.009,"end":183.373,"segment":"silence"}]
     },
-    {order: 10, track_title: "Baby You're a Rich Man", segments:
+    {order: 10, trackTitle: "Baby You're a Rich Man", segments:
       [{"start":0.000,"end":0.370,"segment":"silence"},
       {"start":0.370,"end":20.695,"segment":"intro"},
       {"start":20.695,"end":48.090,"segment":"verse"},
@@ -542,7 +542,7 @@ var dataSegments =[
       {"start":161.634,"end":177.998,"segment":"outro_(fade-out)"},
       {"start":177.998,"end":183.760,"segment":"silence"}]
     },
-    {order: 11, track_title: "All You Need Is Love", segments:
+    {order: 11, trackTitle: "All You Need Is Love", segments:
       [{"start":0.000,"end":0.400,"segment":"silence"},
       {"start":0.400,"end":26.773,"segment":"intro"},
       {"start":26.773,"end":44.262,"segment":"verse"},
@@ -557,13 +557,13 @@ var dataSegments =[
       {"start":224.000,"end":228.440,"segment":"silence"}]
     }
   ]},
-  {album_title: "The Beatles (White Album)", tracks: [
+  {albumKey: "theBeatlesWhiteAlbum", albumTitle: "The Beatles (White Album)", tracks: [
 
   ]},
-  {album_title: "Let It Be", tracks: [
+  {albumKey: "letItBe", albumTitle: "Let It Be", tracks: [
 
   ]},
-  {album_title: "Abbey Road", tracks: [
+  {albumKey: "abbeyRoad", albumTitle: "Abbey Road", tracks: [
 
   ]}
 

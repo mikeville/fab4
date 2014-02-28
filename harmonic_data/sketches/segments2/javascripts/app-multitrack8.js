@@ -3,8 +3,13 @@
 
 $(function(){
 
+_.each(dataSegments, function(album){
+  console.log(album.albumTitle)
+  $('body').append("<div class='"+album.albumKey+"'></div>")
+  $("."+album.albumKey).append("<h3 class='album-title-label'>"+album.albumTitle+"</h3>")
 
-var dataset = dataSegments[8]
+
+var dataset = dataSegments[0]
 
 var margin = {top: 20, right: 40, bottom: 20, left: 20},
     width = $(window).width() - margin.left - margin.right,
@@ -15,7 +20,10 @@ var widthFactor = 4
 var paddingVert = 10
 var textPadding = 15
 
-var g = d3.select("body").selectAll("svg")
+
+
+
+var g = d3.select("."+album.albumKey).selectAll("svg")
     .data(dataset.tracks)
   .enter().append("svg")
     .attr("width", width)
@@ -28,7 +36,7 @@ g.append("text")
   .attr("class", "track-title-label")
   .attr("x", 0)
   .attr("y", textPadding-2)
-  .text(function(d) {return d.track_title})
+  .text(function(d) {return d.trackTitle})
 
 
 g.selectAll("rect")
@@ -55,5 +63,8 @@ g.selectAll("text")
     .attr("y", (textPadding*1.75))
     .attr("width", function(d) { return (d.end-d.start)*widthFactor })
     .text( function(d) { return d.segment})
+
+
+})
 
 })

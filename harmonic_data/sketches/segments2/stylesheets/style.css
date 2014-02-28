@@ -52,3 +52,8 @@ body {
 .segment-label {
   font-size: .6em;
 }
+
+.album-title-label {
+  font-size: 1.5em;
+  padding-top: 1em;
+}
