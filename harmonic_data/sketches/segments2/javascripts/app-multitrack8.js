@@ -9,7 +9,7 @@ _.each(dataSegments, function(album){
   $("."+album.albumKey).append("<h3 class='album-title-label'>"+album.albumTitle+"</h3>")
 
 
-var dataset = dataSegments[0]
+var dataset = album
 
 var margin = {top: 20, right: 40, bottom: 20, left: 20},
     width = $(window).width() - margin.left - margin.right,
