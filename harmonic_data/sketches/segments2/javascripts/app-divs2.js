@@ -13,7 +13,7 @@ TimelineStructure1 = function(){
       album(albumData)
 
       _.each(albumData.tracks, function(trackData){
-        track(trackData)
+        track(trackData, albumData)
         d3Maker(trackData)
       })
 
@@ -26,10 +26,11 @@ TimelineStructure1 = function(){
     $('#timeline-container').append(template(albumData))
   }
 
-  var track = function(trackData){
+  var track = function(trackData, albumData){
+    var albumKey = albumData.albumKey
     var source = $('#track-container-template').html();
     var template = Handlebars.compile(source)
-    $('#timeline-container').append(template(trackData))
+    $("#album-"+albumKey).append(template(trackData))
   }
 
   var d3Maker = function(trackData){
