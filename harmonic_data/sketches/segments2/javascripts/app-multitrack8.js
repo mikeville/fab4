@@ -4,7 +4,6 @@
 $(function(){
 
 _.each(dataSegments, function(album){
-  console.log(album.albumTitle)
   $('body').append("<div class='"+album.albumKey+"'></div>")
   $("."+album.albumKey).append("<h3 class='album-title-label'>"+album.albumTitle+"</h3>")
 

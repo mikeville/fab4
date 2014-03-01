@@ -57,3 +57,33 @@ body {
   font-size: 1.5em;
   padding-top: 1em;
 }
+
+
+.timeline-container{
+  background-color: grey;
+}
+
+.album-container{
+  background-color: dark-grey;
+}
+
+.song-container{
+  background-color: silver;
+}
+
+.song-label{
+  background-color: silver;
+}
+
+.song-svg-container{
+  background-color: red;
+  height: 30px;
+}
+
+
+
+.album-container2{
+  background-color: blue;
+  height: 50px;
+  min-height: 20px;
+}
