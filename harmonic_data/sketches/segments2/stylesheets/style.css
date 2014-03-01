@@ -83,17 +83,32 @@ body {
 
 
 .album-container2{
-  background-color: blue;
+  /*background-color: blue;*/
   height: 50px;
   min-height: 20px;
 }
 
 
-.track-title-container {
+.timeline-container, .album-container, .album-title-label{
+  float:left;
+}
 
+
+.album-title-label {
+  width: 800px;
+}
+
+.track-title-container {
+  /*background-color: yellow;*/
+  width: 300px;
+  overflow: hidden;
+  float: left;
 }
 
 
 .svg-track-container {
-  
+  /*background-color: green;*/
+  width: 600px;
+  float: left;
+
 }
