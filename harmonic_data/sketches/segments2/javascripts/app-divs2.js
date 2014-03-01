@@ -33,11 +33,15 @@ TimelineStructure1 = function(){
 
 
 Album = function(albumData){
-  console.log("appending: "+albumData.albumTitle)
+  var source = $('#album-container-template').html();
+  var template = Handlebars.compile(source)
+  $('#timeline-container').append(template(albumData))
 }
 
 Track = function(trackData){
-  console.log("-----appending: "+trackData.trackTitle)
+  var source = $('#track-container-template').html();
+  var template = Handlebars.compile(source)
+  $('#timeline-container').append(template(trackData))
 }
 
 

@@ -5,6 +5,7 @@
 	<script src='javascripts/jquery.js'></script>
   <script src='javascripts/d3.js'></script>
   <script src='http://underscorejs.org/underscore.js'></script>
+  <script src='javascripts/handlebars.js'></script>
 	<script src='http://backbonejs.org/backbone.js'></script>
   <script src='javascripts/data_album_revolver.js'></script>
   <script src='javascripts/app-divs2.js'></script>
@@ -12,25 +13,25 @@
 
 </head>
 <body>
-
+<div id="timeline-container"></div>
 
 <script id="album-container-template" type='text/x-handlebars-template'>
   <div class"album-container">
-    <div class="album-title">Album Label</div>
-    <div class="song-container">
-      <div class="song-label">Song Label</div>
-      <div class="song-svg-container"></div>
-    </div>
-    <div class="song-container">
-      <div class="song-label">Song Label</div>
-      <div class="song-svg-container"></div>
-    </div>
-    <div class="song-container">
-      <div class="song-label">Song Label</div>
-      <div class="song-svg-container"></div>
+    <div class="album-title-container">
+      <h3 class="album-title-label">{{albumTitle}}</h4>  
     </div>
   </div>
-  </script>
+</script>
+
+<script id="track-container-template" type='text/x-handlebars-template'>
+  <div class"track-container">
+    <div class="track-title-container">
+      <h6 class="track-title-label">{{order}}. {{trackTitle}}</h4>  
+    </div>
+    <div class="svg-track-container">
+    </div>
+  </div>
+</script>
 
 </body>
 </html>
