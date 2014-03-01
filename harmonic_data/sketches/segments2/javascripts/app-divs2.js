@@ -10,40 +10,55 @@ TimelineStructure1 = function(){
 
   var initialize = function(){
     _.each(dataset, function(albumData){
-      album = new Album(albumData)
+      album(albumData)
 
       _.each(albumData.tracks, function(trackData){
-        track = new Track(trackData)
-        d3Maker(trackData.segments)
+        track(trackData)
+        d3Maker(trackData)
       })
 
     })
-    console.log("this is the album:"+album)
   }
 
-  var d3Maker = function(segmentData){
-    _.each(segmentData, function(segment){
-      console.log("----- ----- "+segment.segment)
-    })
+  var album = function(albumData){
+    var source = $('#album-container-template').html();
+    var template = Handlebars.compile(source)
+    $('#timeline-container').append(template(albumData))
+  }
+
+  var track = function(trackData){
+    var source = $('#track-container-template').html();
+    var template = Handlebars.compile(source)
+    $('#timeline-container').append(template(trackData))
+  }
+
+  var d3Maker = function(trackData){
+
+    segments = trackData.segments
+    trackKey = trackData.trackTitle.replace(/\s/g, '');
+
+    var width = 1000
+    var barHeight = 15
+    widthFactor = 3
+
+    var svg = d3.select(".track-"+trackData.trackIndex).append("svg")
+      .attr("width", width)
+      .attr("height", barHeight)
+
+    svg.selectAll("rect")
+        .data(segments)
+      .enter().append("rect")
+        .attr("x", function(d) { return d.start*widthFactor })
+        .attr("y", 0)
+        .attr("width", function(d) { return (d.end-d.start)*widthFactor })
+        .attr("height", barHeight)
+        .style("stroke", "white")
+        .attr("class", function(d) { return "segment_"+d.segment })
 
   }
 
   initialize()
 }
-
-
-Album = function(albumData){
-  var source = $('#album-container-template').html();
-  var template = Handlebars.compile(source)
-  $('#timeline-container').append(template(albumData))
-}
-
-Track = function(trackData){
-  var source = $('#track-container-template').html();
-  var template = Handlebars.compile(source)
-  $('#timeline-container').append(template(trackData))
-}
-
 
 
 
