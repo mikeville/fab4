@@ -9,30 +9,36 @@ TimelineStructure1 = function(){
   var dataset = dataSegments
 
   var initialize = function(){
-    albumMaker()
-    trackMaker()
-    d3Maker()
+    _.each(dataset, function(albumData){
+      album = new Album(albumData)
+
+      _.each(albumData.tracks, function(trackData){
+        track = new Track(trackData)
+        d3Maker(trackData.segments)
+      })
+
+    })
+    console.log("this is the album:"+album)
   }
 
-  var albumMaker = function(){
-    console.log("appending the album")
-  }
+  var d3Maker = function(segmentData){
+    _.each(segmentData, function(segment){
+      console.log("----- ----- "+segment.segment)
+    })
 
-  var trackMaker = function(){
-    console.log("appending the tracks to album")
-  }
-
-  var d3Maker = function(){
-    console.log("adding d3")
   }
 
   initialize()
 }
 
 
+Album = function(albumData){
+  console.log("appending: "+albumData.albumTitle)
+}
 
-
-
+Track = function(trackData){
+  console.log("-----appending: "+trackData.trackTitle)
+}
 
 
 
