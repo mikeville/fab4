@@ -85,19 +85,35 @@ legendNavHider = function(){
 
 
 ssmTest = function(){
-  ssm.addState({
+  ssm.addStates([
+  {
+    id: 'mobile-tablet',
+    maxWidth: 1024,
+    onEnter: function(){
+      contextModuleToMobile();
+    }
+  },
+  {
     id: 'desktop',
     minWidth: 1024,
     onEnter: function(){
       contextModuleToSidebar();
     }
-  }).ready()
+  }
+  ]).ready()
 }
 
 contextModuleToSidebar = function(){
-  console.log("big mode now")
+  $("#context-module").hide()
+  $('#timeline-container').addClass("timeline-container-desktop")
+  // $('#timeline-container').css("background-color", "black")
 }
 
+contextModuleToMobile = function(){
+  $("#context-module").show()
+  $('#timeline-container').removeClass("timeline-container-desktop")
+
+}
 
 $(function(){
 

@@ -139,7 +139,7 @@ html {
 /* Large screens (1024px) */
 @media (min-width: 64rem) { 
   .svg-track-container{
-    background-color: red;
+    // background-color: red;
   }
 
   .track-title-container{
@@ -155,6 +155,13 @@ html {
   background-color: silver;
 }
 
+#timeline-container {
+  
+}
 
-
+.timeline-container-desktop {
+  background-color: green;
+  color: red;
+  width: 20%
+}
 

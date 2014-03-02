@@ -217,12 +217,6 @@ html {
   }
 }
 /* Large screens (1024px) */
-@media (min-width: 64rem) {
-  /* line 141, sass/main.scss */
-  .svg-track-container {
-    background-color: red;
-  }
-}
 /* line 150, sass/main.scss */
 #site-header {
   padding-bottom: 1rem;
@@ -231,4 +225,11 @@ html {
 /* line 154, sass/main.scss */
 #context-module {
   background-color: silver;
+}
+
+/* line 162, sass/main.scss */
+.timeline-container-desktop {
+  background-color: green;
+  color: red;
+  width: 20%;
 }
