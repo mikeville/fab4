@@ -128,13 +128,12 @@ html {
 /* Medium screens (640px) */
 @media (min-width: 40rem) { 
   .svg-track-container{
-    background-color: yellow;
     width: 75%;
     float: left;
   }
 
   .track-title-container{
-    width:25%;
+    width:24%;
     float: left;
   }
 }

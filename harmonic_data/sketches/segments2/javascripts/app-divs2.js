@@ -1,8 +1,16 @@
+
+
+//port over to sass file
+//make black segments colored.
 //hide labels until hover
 //group hover
-//other features to lsit
+//remove silences from data (and start data versioning history)
+//change font size for smaller bars
+//change bar ratio or wahtever for smaller size
 
-//add 1px padding between bars instead of the white stroke it hink? or make stroke same color as bg
+//add legend box for mobile
+//toggle labels on/off on mobile
+
 
 TimelineStructure1 = function(){
 
@@ -43,7 +51,7 @@ TimelineStructure1 = function(){
     // var maxBarWidth = 502.200 //data's time length for Reovlution 9. todo: change to carnival's long length or make this programmatic using d3's .max method
     var maxBarWidth = 290 //adjusting for while my guitar gently weeps
 
-    var barHeight = width/10
+    var barHeight = width/10 //todo: fix bug for floating text weird height gaps
     var widthFactor = width/maxBarWidth //1.35 factor from 384 px wide on guitar weep
 
     var svg = d3.select(".track-"+trackData.trackIndex).append("svg")
