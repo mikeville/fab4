@@ -68,7 +68,7 @@ body {
 
 /*********** DIAGNOSTIC BG COLORS*/
 /*
-.album-container2{ background-color: blue; }
+.album-container{ background-color: blue; }
 .track-title-container{ background-color: yellow; }
 .svg-track-container{ background-color: green; }
 */
@@ -118,10 +118,35 @@ html {
 }
 
 .album-container{
-  background-color: red;
 }
 
 .svg-track-container{
-  background-color: orange;
-  height: 100%;
+  width: 100%;
 }
+
+
+/* Medium screens (640px) */
+@media (min-width: 40rem) { 
+  .svg-track-container{
+    background-color: yellow;
+    width: 75%;
+    float: left;
+  }
+
+  .track-title-container{
+    width:25%;
+    float: left;
+  }
+}
+
+
+/* Large screens (1024px) */
+@media (min-width: 64rem) { 
+  .svg-track-container{
+    background-color: red;
+  }
+
+  .track-title-container{
+  }
+}
+
