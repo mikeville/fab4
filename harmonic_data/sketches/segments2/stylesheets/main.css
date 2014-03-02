@@ -1,11 +1,21 @@
-/* line 3, sass/main.scss */
+/* line 5, sass/main.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 9, sass/main.scss */
+/* line 11, sass/main.scss */
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  -moz-binding: url('xml/ellipsis.xml#ellipsis');
+}
+
+/* line 16, sass/main.scss */
 .shadow {
   -webkit-box-shadow: black 5px 5px 5px;
   -moz-box-shadow: black 5px 5px 5px;
@@ -13,7 +23,7 @@
 }
 
 /* html5doctor.com Reset v1.6.1 - http://cssreset.com */
-/* line 14, sass/main.scss */
+/* line 21, sass/main.scss */
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -24,32 +34,32 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
   background: transparent;
 }
 
-/* line 14, sass/main.scss */
+/* line 21, sass/main.scss */
 body {
   line-height: 1;
 }
 
-/* line 14, sass/main.scss */
+/* line 21, sass/main.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 14, sass/main.scss */
+/* line 21, sass/main.scss */
 nav ul {
   list-style: none;
 }
 
-/* line 14, sass/main.scss */
+/* line 21, sass/main.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 14, sass/main.scss */
+/* line 21, sass/main.scss */
 blockquote:before, blockquote:after, q:before, q:after {
   content: none;
 }
 
-/* line 14, sass/main.scss */
+/* line 21, sass/main.scss */
 a {
   margin: 0;
   padding: 0;
@@ -58,14 +68,14 @@ a {
   background: transparent;
 }
 
-/* line 14, sass/main.scss */
+/* line 21, sass/main.scss */
 ins {
   background-color: #ff9;
   color: #000;
   text-decoration: none;
 }
 
-/* line 14, sass/main.scss */
+/* line 21, sass/main.scss */
 mark {
   background-color: #ff9;
   color: #000;
@@ -73,24 +83,24 @@ mark {
   font-weight: bold;
 }
 
-/* line 14, sass/main.scss */
+/* line 21, sass/main.scss */
 del {
   text-decoration: line-through;
 }
 
-/* line 14, sass/main.scss */
+/* line 21, sass/main.scss */
 abbr[title], dfn[title] {
   border-bottom: 1px dotted;
   cursor: help;
 }
 
-/* line 14, sass/main.scss */
+/* line 21, sass/main.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 14, sass/main.scss */
+/* line 21, sass/main.scss */
 hr {
   display: block;
   height: 1px;
@@ -100,141 +110,163 @@ hr {
   padding: 0;
 }
 
-/* line 14, sass/main.scss */
+/* line 21, sass/main.scss */
 input, select {
   vertical-align: middle;
 }
 
-/* line 18, sass/main.scss */
+/* line 25, sass/main.scss */
 * {
   font-family: helvetica;
 }
 
-/* line 36, sass/main.scss */
+/* line 43, sass/main.scss */
 .segment_silence {
   fill: white;
 }
 
-/* line 40, sass/main.scss */
+/* line 47, sass/main.scss */
 .segment_intro, .segment_outro {
   fill: grey;
 }
 
-/* line 44, sass/main.scss */
+/* line 51, sass/main.scss */
 .segment_verse, .segment_verse_-_break, .segment_outro_verse {
   fill: red;
 }
 
-/* line 48, sass/main.scss */
+/* line 55, sass/main.scss */
 .segment_chorus {
   fill: blue;
 }
 
-/* line 52, sass/main.scss */
+/* line 59, sass/main.scss */
 .segment_refrain {
   fill: cyan;
 }
 
-/* line 56, sass/main.scss */
+/* line 63, sass/main.scss */
 .segment_instrumental, .segment_verse_guitar_solo, .segment_sitar_solo, .segment_verse_instrumental, .segment_verse_instrumental_solo {
   fill: orange;
 }
 
-/* line 60, sass/main.scss */
+/* line 67, sass/main.scss */
 .segment_refrain_with_ending {
   fill: lightblue;
 }
 
-/* line 64, sass/main.scss */
+/* line 71, sass/main.scss */
 .segment_bridge, .segment_bridge_with_ending {
   fill: green;
 }
 
-/* line 72, sass/main.scss */
+/* line 79, sass/main.scss */
 .track-title-label, .segment-label {
   text-transform: uppercase;
 }
 
-/* line 76, sass/main.scss */
+/* line 83, sass/main.scss */
 .track-title-label {
-  font-size: .8em;
+  font-size: .6em;
   font-weight: normal;
 }
 
-/* line 81, sass/main.scss */
+/* line 88, sass/main.scss */
 .segment-label {
   font-size: .6em;
 }
 
-/* line 85, sass/main.scss */
+/* line 92, sass/main.scss */
 .album-title-label {
   font-size: 1.5em;
   padding-top: 1em;
+  display: inline;
 }
 
-/* line 95, sass/main.scss */
+/* line 98, sass/main.scss */
+.album-title-container {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 3rem;
+}
+
+/* line 109, sass/main.scss */
 html {
   width: 100%;
   font-size: 1em;
 }
 
-/* line 100, sass/main.scss */
+/* line 114, sass/main.scss */
 #width-tester {
   background-color: yellow;
   height: 40px;
   width: 100%;
 }
 
-/* line 106, sass/main.scss */
+/* line 120, sass/main.scss */
 #master-container {
   /*background-color: silver;*/
   max-width: 900px;
   margin: 0 auto;
 }
 
-/* line 115, sass/main.scss */
+/* line 129, sass/main.scss */
 .svg-track-container {
-  width: 100%;
+  width: 75%;
+  float: left;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
 }
 
-/* line 120, sass/main.scss */
-.legend-cotnainer {
-  background: grey;
+/* line 137, sass/main.scss */
+svg {
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+/* line 142, sass/main.scss */
+.track-title-container {
+  width: 20%;
+  float: left;
+}
+
+/* line 147, sass/main.scss */
+.track-title-container h6 {
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  -moz-binding: url('xml/ellipsis.xml#ellipsis');
 }
 
 /* Medium screens (640px) */
 @media (min-width: 40rem) {
-  /* line 127, sass/main.scss */
-  .svg-track-container {
-    width: 75%;
-    float: left;
-  }
-
-  /* line 132, sass/main.scss */
-  .track-title-container {
-    width: 24%;
-    float: left;
+  /* line 162, sass/main.scss */
+  .track-title-label {
+    font-size: .8em;
   }
 }
 /* Large screens (1024px) */
-/* line 150, sass/main.scss */
+/* line 179, sass/main.scss */
 #site-header {
   padding-bottom: 1rem;
 }
 
-/* line 154, sass/main.scss */
+/* line 183, sass/main.scss */
 #context-module {
   background-color: silver;
 }
 
-/* line 161, sass/main.scss */
+/* line 190, sass/main.scss */
 .context-module-desktop {
   width: 20%;
   float: right;
   height: 100%;
 }
 
-/* line 171, sass/main.scss */
+/* line 200, sass/main.scss */
 .timeline-container-desktop {
   width: 80%;
   float: left;

@@ -33,19 +33,21 @@ TimelineStructure1 = function(){
   var d3Maker = function(trackData){
 
 
-    var width = $("#timeline-container").width();
+  var ratioFactor = 20
+  var width = $("#timeline-container").width();
+  var height = width/ratioFactor
     // var maxBarWidth = 502.200 //data's time length for Reovlution 9. todo: change to carnival's long length or make this programmatic using d3's .max method
     var maxBarWidth = 290 //adjusting for while my guitar gently weeps
 
-    var barHeight = width/20 //todo: fix bug for floating text weird height gaps
+    // var barHeight = width/20 //todo: fix bug for floating text weird height gaps
     var widthFactor = width/maxBarWidth //1.35 factor from 384 px wide on guitar weep
 
     var svg = d3.select(".track-"+trackData.trackIndex).append("svg")
       // .attr("width", width)
       .attr("preserveAspectRatio", "xMidYMid")
-      .attr("viewBox", "0 0 "+width+" "+barHeight)
+      .attr("viewBox", "0 0 "+width+" "+height)
       .attr("width", width)
-      .attr("height", barHeight)
+      .attr("height", height)
 
     svg.selectAll("rect")
         .data(trackData.segments)
@@ -53,7 +55,7 @@ TimelineStructure1 = function(){
         .attr("x", function(d) { return d.start*widthFactor })
         .attr("y", 0)
         .attr("width", function(d) { return (d.end-d.start)*widthFactor})
-        .attr("height", barHeight)
+        .attr("height", height)
         .style("stroke", "white")
         .attr("class", function(d) { return "segment_"+d.segment })
 
@@ -106,8 +108,9 @@ $(function(){
   timeline = new TimelineStructure1()
   
   $(window).resize(function() {
+  var ratioFactor = 20
   var width = $("#timeline-container").width();
-  var height = width/10
+  var height = width/ratioFactor
   d3.selectAll("svg").attr("width", width);
   d3.selectAll("svg").attr("height", height);
   });

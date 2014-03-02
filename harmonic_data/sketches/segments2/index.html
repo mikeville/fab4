@@ -10,8 +10,9 @@
   <script src='javascripts/ssm.js'></script>
 	<script src='http://backbonejs.org/backbone.js'></script>
   <script src='javascripts/data_album_revolver.js'></script>
-  <script src='javascripts/app-divs2.js'></script>
+  <script src='javascripts/app-divs3.js'></script>
   <link rel="stylesheet" type="text/css" href="stylesheets/main.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/ellipsis.css" />
 
 </head>
 <body>
@@ -56,7 +57,8 @@
 <script id="album-container-template" type='text/x-handlebars-template'>
   <div id="album-{{albumKey}}" class="album-container">
     <div class="album-title-container">
-      <h3 class="album-title-label">{{albumTitle}}</h4>  
+      <h3 class="album-title-label">{{albumTitle}}</h4>
+      <span class="album-year-label">{{releaseDate.year}}</span>  
     </div>
   </div>
 </script>
@@ -64,7 +66,7 @@
 <script id="track-container-template" type='text/x-handlebars-template'>
   <div class="track-container">
     <div class="track-title-container">
-      <h6 class="track-title-label">{{order}}. {{trackTitle}}</h4>  
+      <h6 class="track-title-label">{{order}}. {{trackTitle}}</h6>  
     </div>
     <div class="svg-track-container track-{{trackIndex}}">
     </div>

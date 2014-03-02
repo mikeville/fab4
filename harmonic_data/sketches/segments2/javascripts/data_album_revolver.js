@@ -1,5 +1,11 @@
 var dataSegments =[
-{albumKey: "pleasePleaseMe", albumTitle: "Please Please Me", tracks: [
+{albumKey: "pleasePleaseMe", albumTitle: "Please Please Me",
+  releaseDate: {
+    year: 1963,
+    month: 3,
+    day: 22
+  },
+  tracks: [
     {trackIndex: 0, order: 1, trackTitle: "I Saw Her Standing There", segments:[
       {"start":0.000,"end":2.612,"segment":"silence"},
       {"start":2.612,"end":8.424,"segment":"intro"},
@@ -160,7 +166,13 @@ var dataSegments =[
       {"start":152.147,"end":153.267,"segment":"silence"}]
     }
   ]},
-  {albumKey: "withTheBeatles", albumTitle: "With The Beatles", tracks: [
+  {albumKey: "withTheBeatles", albumTitle: "With The Beatles",
+  releaseDate: {
+    year: 1963,
+    month: 11,
+    day: 22
+  },
+  tracks: [
     {trackIndex: 14, order: 1, trackTitle: "It Won't Be Long", segments:
       [{"start":0.000,"end":1.072,"segment":"silence"},
       {"start":1.072,"end":15.720,"segment":"chorus"},
@@ -341,7 +353,13 @@ var dataSegments =[
       {"start":166.054,"end":167.560,"segment":"silence"}]
     }
   ]},
-  {albumKey: "aHardDaysNight", albumTitle: "A Hard Day's Night", tracks: [
+  {albumKey: "aHardDaysNight", albumTitle: "A Hard Day's Night",
+  releaseDate: {
+    year: 1964,
+    month: 7,
+    day: 10
+  },
+  tracks: [
     {trackIndex: 28, order: 1, trackTitle: "A Hard Day's Night", segments:
       [{"start":0.000,"end":1.003,"segment":"silence"},
       {"start":1.003,"end":4.151,"segment":"intro"},
@@ -502,7 +520,13 @@ var dataSegments =[
       {"start":138.743,"end":140.547,"segment":"silence"}]
     }
   ]},
-  {albumKey: "beatlesForSale", albumTitle: "Beatles For Sale", tracks: [
+  {albumKey: "beatlesForSale", albumTitle: "Beatles For Sale",
+  releaseDate: {
+    year: 1964,
+    month: 12,
+    day: 4
+  },
+  tracks: [
     {trackIndex: 41, order: 1, trackTitle: "XXX", segments:
       []
     },
@@ -540,7 +564,13 @@ var dataSegments =[
       []
     }
   ]},
-  {albumKey: "help", albumTitle: "Help!", tracks: [
+  {albumKey: "help", albumTitle: "Help!",
+  releaseDate: {
+    year: 1965,
+    month: 8,
+    day: 6
+  },
+  tracks: [
     {trackIndex: 53, order: 1, trackTitle: "XXX", segments:
       []
     },
@@ -578,7 +608,13 @@ var dataSegments =[
       []
     }
   ]},
-  {albumKey: "rubberSoul", albumTitle: "Rubber Soul", tracks: [
+  {albumKey: "rubberSoul", albumTitle: "Rubber Soul",
+  releaseDate: {
+    year: 1965,
+    month: 12,
+    day: 3
+  },
+  tracks: [
     {trackIndex: 65, order: 1, trackTitle: "XXX", segments:
       []
     },
@@ -616,7 +652,13 @@ var dataSegments =[
       []
     }
   ]},
-  {albumKey: "revolver", albumTitle: "Revolver", tracks: [
+  {albumKey: "revolver", albumTitle: "Revolver",
+  releaseDate: {
+    year: 1966,
+    month: 8,
+    day: 5
+  },
+  tracks: [
     {trackIndex: 78, order: 1, trackTitle: "Taxman", segments:[
       {"start":0.000,"end":1.069,"segment":"silence"},
       {"start":1.069,"end":9.131,"segment":"intro"},
@@ -813,7 +855,13 @@ var dataSegments =[
       ]
     },
   ]},
-  {albumKey: "sgtPeppersLonelyHeartsClubBand", albumTitle: "Sgt. Pepper's Lonely Hearts Club Band", tracks: [
+  {albumKey: "sgtPeppersLonelyHeartsClubBand", albumTitle: "Sgt. Pepper's Lonely Hearts Club Band",
+  releaseDate: {
+    year: 1967,
+    month: 6,
+    day: 1
+  },
+  tracks: [
     {trackIndex: 92, order: 1, trackTitle: "XXX", segments:
       []
     },
@@ -851,7 +899,13 @@ var dataSegments =[
       []
     }
   ]},
-  {albumKey: "magicalMysteryTour", albumTitle: "Magical Mystery Tour", tracks: [
+  {albumKey: "magicalMysteryTour", albumTitle: "Magical Mystery Tour",
+  releaseDate: {
+    year: 1967,
+    month: 11,
+    day: 27
+  },
+  tracks: [
     {trackIndex: 104, order: 1, trackTitle: "Magical Mystery Tour", segments:
       [{"start":0.000,"end":1.029,"segment":"silence"},
       {"start":1.029,"end":9.739,"segment":"intro"},
@@ -998,7 +1052,13 @@ var dataSegments =[
       {"start":224.000,"end":228.440,"segment":"silence"}]
     }
   ]},
-  {albumKey: "theBeatlesWhiteAlbum", albumTitle: "The Beatles (White Album)", tracks: [
+  {albumKey: "theBeatlesWhiteAlbum", albumTitle: "The Beatles (White Album)",
+  releaseDate: {
+    year: 1968,
+    month: 11,
+    day: 22
+  },
+  tracks: [
     {trackIndex: 115, order: 1, trackTitle: "Back in the USSR", segments:
       [{"start":0.000,"end":3.044,"segment":"silence"},
       {"start":3.044,"end":16.708,"segment":"intro"},
@@ -1358,7 +1418,13 @@ var dataSegments =[
       {"start":190.250,"end":191.800,"segment":"silence"}]
     }
   ]},
-  {albumKey: "letItBe", albumTitle: "Let It Be", tracks: [
+  {albumKey: "letItBe", albumTitle: "Let It Be",
+  releaseDate: {
+    year: 1970,
+    month: 5,
+    day: 8
+  },
+  tracks: [
     {trackIndex: 127, order: 1, trackTitle: "XXX", segments:
       []
     },
@@ -1396,7 +1462,13 @@ var dataSegments =[
       []
     }
   ]},
-  {albumKey: "abbeyRoad", albumTitle: "Abbey Road", tracks: [
+  {albumKey: "abbeyRoad", albumTitle: "Abbey Road",
+  releaseDate: {
+    year: 1969,
+    month: 11,
+    day: 26
+  },
+  tracks: [
 
   ]}
 

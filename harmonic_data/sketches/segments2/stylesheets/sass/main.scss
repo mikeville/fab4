@@ -1,10 +1,17 @@
 @import 'compass/css3';
+$use-mozilla-ellipsis-binding: true;
+@import "compass/typography/text/ellipsis";
 
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+.ellipsis {
+  @include ellipsis;
+}
+
 
 .shadow {
   @include box-shadow(#000 5px 5px 5px);
@@ -74,7 +81,7 @@ $instrumental: orange;
 }
 
 .track-title-label {
-  font-size: .8em;
+  font-size: .6em;
   font-weight: normal;
 }
 
@@ -85,6 +92,13 @@ $instrumental: orange;
 .album-title-label {
   font-size: 1.5em;
   padding-top: 1em;
+  display:inline;
+}
+
+.album-title-container {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 3rem;
 }
 
 
@@ -113,25 +127,40 @@ html {
 }
 
 .svg-track-container{
-  width: 100%;
+  width: 75%;
+  float: left;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
 }
 
-
-.legend-cotnainer {
-  background: grey;
+svg{
+  display: block;
+  margin-bottom: .15rem
 }
+
+.track-title-container{
+  width:20%;
+  float: left;
+}
+
+.track-title-container h6{
+    @include ellipsis;
+  }
+
+
+// @media (max-width: 40rem) {
+//   .track-title-container h6{
+//     @include ellipsis;
+//   }
+// }
 
 
 /* Medium screens (640px) */
 @media (min-width: 40rem) { 
-  .svg-track-container{
-    width: 75%;
-    float: left;
-  }
 
-  .track-title-container{
-    width:24%;
-    float: left;
+  .track-title-label {
+    font-size: .8em;
   }
 }
 
