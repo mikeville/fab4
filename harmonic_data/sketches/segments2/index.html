@@ -9,12 +9,47 @@
 	<script src='http://backbonejs.org/backbone.js'></script>
   <script src='javascripts/data_album_revolver.js'></script>
   <script src='javascripts/app-divs2.js'></script>
-  <link rel="stylesheet" type="text/css" href="stylesheets/style2.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/main.css" />
 
 </head>
 <body>
   <div id="master-container">
-    <div id="timeline-container"></div>
+    <div id="site-header">
+      <h1>Charting the Beatles</h1>
+      <div id="nav-timelines">
+        <a href="#">previous</a>
+        <a href="#">next</a>
+      </div>
+    </div>
+    <div id="context-module">
+      <div id="context-nav">
+        <a href="#">Legend</a>
+        <a href="#">Notes</a>
+      </div>
+      <div id="legend-container">
+        <div class="legend-column">
+          <div class="legend-item">Intro/Outro</div>
+          <div class="legend-item">Chorus</div>
+          <div class="legend-item">Verse</div>
+          <div class="legend-item">Bridge</div>
+        </div>
+        <div class="legend-column">
+          <div class="legend-item">Unique Section</div>
+          <div class="legend-item">Variation</div>
+          <div class="legend-item">Solos and Instrumental</div>
+        </div>
+      </div>
+      <div id="notes-container">
+      </div>
+    </div>
+    <div id="timeline-header-container">
+      <h2 id="timeline-title">Song Structure</h2>
+      <p id="timeline-one-liner">
+        How did song structure change over time lorem ipsum? Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+      </p>
+    </div>
+    <div id="timeline-container">
+    </div>
 </div>
 <script id="album-container-template" type='text/x-handlebars-template'>
   <div id="album-{{albumKey}}" class="album-container">

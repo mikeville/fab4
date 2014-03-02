@@ -1,27 +1,41 @@
+@import 'compass/css3';
+
+.shadow {
+  @include box-shadow(#000 5px 5px 5px);
+}
+
 /* html5doctor.com Reset v1.6.1 - http://cssreset.com */
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{background-color:#ff9;color:#000;text-decoration:none}mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}input,select{vertical-align:middle}
+
+
 
 body {
   font-family: helvetica;
 }
 
 
-/***********SEGMENT COLORS*/
+// *************** Segment color variables
+
+$intro-outro: grey;
+$verse: red;
+$chorus: cyan;
+$bridge: green;
+
+$silence: white;
+
+$instrumental: orange;
+
 
 .segment_silence {
-  fill: white;
+  fill: $silence;
 }
 
 .segment_intro, .segment_outro {
-  fill: grey;
+  fill: $intro-outro;
 }
 
 .segment_verse, .segment_verse_-_break, .segment_outro_verse {
-  fill: red;
-}
-
-.segment_instrumental, .segment_verse_guitar_solo, .segment_sitar_solo, .segment_verse_instrumental, .segment_verse_instrumental_solo {
-  fill: orange;
+  fill: $verse;
 }
 
 .segment_chorus {
@@ -29,7 +43,11 @@ body {
 }
 
 .segment_refrain {
-  fill: cyan;
+  fill: $chorus;
+}
+
+.segment_instrumental, .segment_verse_guitar_solo, .segment_sitar_solo, .segment_verse_instrumental, .segment_verse_instrumental_solo {
+  fill: $instrumental;
 }
 
 .segment_refrain_with_ending {
@@ -37,13 +55,12 @@ body {
 }
 
 .segment_bridge, .segment_bridge_with_ending {
-  fill: green;
+  fill: $bridge;
 }
 
 
 
-/*********** LABEL TYPOGRAPHY */
-
+// *************** Label typography
 
 .track-title-label, .segment-label {
   text-transform: uppercase;
@@ -66,39 +83,7 @@ body {
 
 
 
-/*********** DIAGNOSTIC BG COLORS*/
-/*
-.album-container{ background-color: blue; }
-.track-title-container{ background-color: yellow; }
-.svg-track-container{ background-color: green; }
-*/
-
-
-/*********** FLOATING*/
-
-/*.timeline-container, .album-container, .album-title-label{
-  float:left;
-}
-
-.album-container2{
-  height: 50px;
-  min-height: 20px;
-}
-
-.album-title-label {
-  width: 800px;
-}
-
-.track-title-container {
-  width: 300px;
-  overflow: hidden;
-  float: left;
-}
-
-.svg-track-container {
-  width: 600px;
-  float: left;
-}*/
+// *************** Grid
 
 html {
   width: 100%;

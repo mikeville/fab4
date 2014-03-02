@@ -1,0 +1,218 @@
+/* line 3, sass/main.scss */
+.shadow {
+  -webkit-box-shadow: black 5px 5px 5px;
+  -moz-box-shadow: black 5px 5px 5px;
+  box-shadow: black 5px 5px 5px;
+}
+
+/* html5doctor.com Reset v1.6.1 - http://cssreset.com */
+/* line 8, sass/main.scss */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 8, sass/main.scss */
+body {
+  line-height: 1;
+}
+
+/* line 8, sass/main.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 8, sass/main.scss */
+nav ul {
+  list-style: none;
+}
+
+/* line 8, sass/main.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 8, sass/main.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none;
+}
+
+/* line 8, sass/main.scss */
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 8, sass/main.scss */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 8, sass/main.scss */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* line 8, sass/main.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 8, sass/main.scss */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* line 8, sass/main.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 8, sass/main.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 8, sass/main.scss */
+input, select {
+  vertical-align: middle;
+}
+
+/* line 12, sass/main.scss */
+body {
+  font-family: helvetica;
+}
+
+/* line 29, sass/main.scss */
+.segment_silence {
+  fill: white;
+}
+
+/* line 33, sass/main.scss */
+.segment_intro, .segment_outro {
+  fill: grey;
+}
+
+/* line 37, sass/main.scss */
+.segment_verse, .segment_verse_-_break, .segment_outro_verse {
+  fill: red;
+}
+
+/* line 41, sass/main.scss */
+.segment_chorus {
+  fill: blue;
+}
+
+/* line 45, sass/main.scss */
+.segment_refrain {
+  fill: cyan;
+}
+
+/* line 49, sass/main.scss */
+.segment_instrumental, .segment_verse_guitar_solo, .segment_sitar_solo, .segment_verse_instrumental, .segment_verse_instrumental_solo {
+  fill: orange;
+}
+
+/* line 53, sass/main.scss */
+.segment_refrain_with_ending {
+  fill: lightblue;
+}
+
+/* line 57, sass/main.scss */
+.segment_bridge, .segment_bridge_with_ending {
+  fill: green;
+}
+
+/* line 65, sass/main.scss */
+.track-title-label, .segment-label {
+  text-transform: uppercase;
+}
+
+/* line 69, sass/main.scss */
+.track-title-label {
+  font-size: .8em;
+  font-weight: normal;
+}
+
+/* line 74, sass/main.scss */
+.segment-label {
+  font-size: .6em;
+}
+
+/* line 78, sass/main.scss */
+.album-title-label {
+  font-size: 1.5em;
+  padding-top: 1em;
+}
+
+/* line 88, sass/main.scss */
+html {
+  width: 100%;
+  font-size: 1em;
+}
+
+/* line 93, sass/main.scss */
+#width-tester {
+  background-color: yellow;
+  height: 40px;
+  width: 100%;
+}
+
+/* line 99, sass/main.scss */
+#master-container {
+  /*background-color: silver;*/
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* line 108, sass/main.scss */
+.svg-track-container {
+  width: 100%;
+}
+
+/* line 113, sass/main.scss */
+.legend-cotnainer {
+  background: grey;
+}
+
+/* Medium screens (640px) */
+@media (min-width: 40rem) {
+  /* line 120, sass/main.scss */
+  .svg-track-container {
+    width: 75%;
+    float: left;
+  }
+
+  /* line 125, sass/main.scss */
+  .track-title-container {
+    width: 24%;
+    float: left;
+  }
+}
+/* Large screens (1024px) */
+@media (min-width: 64rem) {
+  /* line 134, sass/main.scss */
+  .svg-track-container {
+    background-color: red;
+  }
+}
