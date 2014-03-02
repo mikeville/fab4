@@ -11,6 +11,8 @@
 //add legend box for mobile
 //toggle labels on/off on mobile
 
+//add notes feature
+
 
 TimelineStructure1 = function(){
 
@@ -76,7 +78,25 @@ TimelineStructure1 = function(){
   initialize()
 }
 
+legendNavHider = function(){
+  // $("#context-nav").show()
+  // console.log("sticking")
+}
 
+
+ssmTest = function(){
+  ssm.addState({
+    id: 'desktop',
+    minWidth: 1024,
+    onEnter: function(){
+      contextModuleToSidebar();
+    }
+  }).ready()
+}
+
+contextModuleToSidebar = function(){
+  console.log("big mode now")
+}
 
 
 $(function(){
@@ -89,5 +109,14 @@ $(function(){
   d3.selectAll("svg").attr("width", width);
   d3.selectAll("svg").attr("height", height);
   });
+
+  // $("#context-nav").hide()
+
+  $("#context-module").stick_in_parent()
+    .on("sticky_kit:stick", function(e){
+      legendNavHider();
+    })
+
+  ssmTest()
 
 })

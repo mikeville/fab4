@@ -1,5 +1,11 @@
 @import 'compass/css3';
 
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .shadow {
   @include box-shadow(#000 5px 5px 5px);
 }
@@ -9,7 +15,8 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 
 
 
-body {
+* {
+  // @include box-sizing(border-box);
   font-family: helvetica;
 }
 
@@ -138,4 +145,16 @@ html {
   .track-title-container{
   }
 }
+
+
+#site-header{
+  padding-bottom: 1rem
+}
+
+#context-module {
+  background-color: silver;
+}
+
+
+
 
