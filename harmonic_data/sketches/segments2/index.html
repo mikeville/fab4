@@ -9,14 +9,16 @@
 	<script src='http://backbonejs.org/backbone.js'></script>
   <script src='javascripts/data_album_revolver.js'></script>
   <script src='javascripts/app-divs2.js'></script>
-  <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/style2.css" />
 
 </head>
 <body>
-<div id="timeline-container"></div>
-
+  <div id="master-container">
+    <div id="width-tester"></div>
+    <div id="timeline-container"></div>
+</div>
 <script id="album-container-template" type='text/x-handlebars-template'>
-  <div id="album-{{albumKey}}" class"album-container">
+  <div id="album-{{albumKey}}" class="album-container">
     <div class="album-title-container">
       <h3 class="album-title-label">{{albumTitle}}</h4>  
     </div>
@@ -24,7 +26,7 @@
 </script>
 
 <script id="track-container-template" type='text/x-handlebars-template'>
-  <div class"track-container">
+  <div class="track-container">
     <div class="track-title-container">
       <h6 class="track-title-label">{{order}}. {{trackTitle}}</h4>  
     </div>

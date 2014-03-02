@@ -38,11 +38,14 @@ TimelineStructure1 = function(){
     segments = trackData.segments
     trackKey = trackData.trackTitle.replace(/\s/g, '');
 
-    var width = 1000
-    var barHeight = 15
-    widthFactor = 3
+    var width = $("#timeline-container").width();
+    var barHeight = width/10
+    var widthFactor = 1
 
     var svg = d3.select(".track-"+trackData.trackIndex).append("svg")
+      // .attr("width", width)
+      .attr("preserveAspectRatio", "xMidYMid")
+      .attr("viewBox", "0 0 "+width+" "+barHeight)
       .attr("width", width)
       .attr("height", barHeight)
 
@@ -67,5 +70,12 @@ TimelineStructure1 = function(){
 $(function(){
 
   timeline = new TimelineStructure1()
+  
+  $(window).resize(function() {
+  var width = $("#timeline-container").width();
+  var height = width/10
+  d3.selectAll("svg").attr("width", width);
+  d3.selectAll("svg").attr("height", height);
+  });
 
 })
