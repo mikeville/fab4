@@ -35,6 +35,7 @@ TimelineStructure1 = function(){
   }
 
   var updateNotes = function(trackData){
+    $("#legend-container").hide()
     var source = $('#notes-template').html();
     var template = Handlebars.compile(source)
     $('#notes-container').html(template(trackData))
@@ -113,6 +114,28 @@ contextModuleToMobile = function(){
 
 }
 
+
+addNavEvents = function(){
+  $("#nav-link-legend").on("click", function(e){
+    e.preventDefault()
+    $("#notes-container").hide()
+    $("#legend-container").show()
+  })
+  $("#nav-link-notes").on("click", function(e){
+    e.preventDefault()
+    $("#legend-container").hide()
+    $("#notes-container").show()
+      .html("<p>Click tracks to read excerpts from Alan W. Pollack's <a href='http://www.icce.rug.nl/~soundscapes/DATABASES/AWP/awp-notes_on.shtml'>'Notes on...'</a> series</p>")
+  })
+  $("#nav-link-hide").on("click", function(e){
+    e.preventDefault()
+    $("#legend-container").hide()
+    $("#notes-container").hide()
+
+  })
+
+}
+
 $(function(){
 
   timeline = new TimelineStructure1()
@@ -133,5 +156,7 @@ $(function(){
     })
 
   ssmTest()
+
+  addNavEvents()
 
 })

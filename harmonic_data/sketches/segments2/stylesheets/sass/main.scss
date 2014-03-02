@@ -191,7 +191,7 @@ svg{
   width: 20%;
   float: right;
   height: 100%;
-  
+
 }
 
 #timeline-container {
@@ -203,3 +203,9 @@ svg{
   float: left;
 }
 
+
+#notes-container {
+  // height: 20rem;
+  max-height:10rem;
+  overflow-y: scroll;
+}
