@@ -10,7 +10,7 @@
   <script src='javascripts/ssm.js'></script>
 	<script src='http://backbonejs.org/backbone.js'></script>
   <script src='javascripts/data_album_revolver.js'></script>
-  <script src='javascripts/app-divs3.js'></script>
+  <script src='javascripts/app-notes1.js'></script>
   <link rel="stylesheet" type="text/css" href="stylesheets/main.css" />
   <link rel="stylesheet" type="text/css" href="stylesheets/ellipsis.css" />
 
@@ -71,6 +71,14 @@
     <div class="svg-track-container track-{{trackIndex}}">
     </div>
   </div>
+</script>
+
+
+<script id="notes-template" type='text/x-handlebars-template'>
+  <h6>{{trackTitle}}</h6>
+  {{#each notes}}
+  <p>{{this}}</p>
+  {{/each}}
 </script>
 
 </body>

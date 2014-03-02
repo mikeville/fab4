@@ -145,15 +145,15 @@ svg{
 }
 
 .track-title-container h6{
-    @include ellipsis;
+    // @include ellipsis;
   }
 
 
-// @media (max-width: 40rem) {
-//   .track-title-container h6{
-//     @include ellipsis;
-//   }
-// }
+@media (max-width: 40rem) {
+  .track-title-container h6{
+    @include ellipsis;
+  }
+}
 
 
 /* Medium screens (640px) */
@@ -191,6 +191,7 @@ svg{
   width: 20%;
   float: right;
   height: 100%;
+  
 }
 
 #timeline-container {

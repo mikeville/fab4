@@ -28,6 +28,16 @@ TimelineStructure1 = function(){
     var source = $('#track-container-template').html();
     var template = Handlebars.compile(source)
     $("#album-"+albumKey).append(template(trackData))
+
+    $(".track-"+trackData.trackIndex).on("click", function(){
+      updateNotes(trackData)
+    })
+  }
+
+  var updateNotes = function(trackData){
+    var source = $('#notes-template').html();
+    var template = Handlebars.compile(source)
+    $('#notes-container').html(template(trackData))
   }
 
   var d3Maker = function(trackData){

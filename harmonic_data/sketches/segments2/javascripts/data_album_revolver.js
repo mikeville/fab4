@@ -20,7 +20,11 @@ var dataSegments =[
       {"start":119.037,"end":134.037,"segment":"bridge"},
       {"start":134.037,"end":146.042,"segment":"versea"},
       {"start":146.042,"end":172.062,"segment":"verseb"},
-      {"start":172.062,"end":175.800,"segment":"silence"}]
+      {"start":172.062,"end":175.800,"segment":"silence"}],
+    notes: [
+      "The form is a fully cranked out two bridge model with two verses intervening, the latter of which is for guitar solo, thus making for comparatively long running time of 2:52.",
+      "Every section of the song starts off rhythmically with a pickup before the downbeat. This starts as early as the introductory bass note that falls between the word 'four' and the first measure. It all goes to enhance a general feeling of urgency already projected by other aspects of the music."
+    ]
     },
     {trackIndex: 1, order: 2, trackTitle: "Misery", segments:
       [{"start":0.000,"end":0.414,"segment":"silence"},
@@ -32,7 +36,12 @@ var dataSegments =[
       {"start":68.027,"end":82.535,"segment":"bridge"},
       {"start":82.535,"end":95.155,"segment":"verse"},
       {"start":95.155,"end":106.547,"segment":"outro"},
-      {"start":106.547,"end":110.160,"segment":"silence"}]
+      {"start":106.547,"end":110.160,"segment":"silence"}],
+    notes: [
+      "The form is the standard two-bridge model with one verse intervening. The relatively short duration of the finished song could have easily accommodated an additional instrumental-solo verse before the second bridge, but my theory is that the closed shape of those verse sections, especially built as they are from such a limited set of chords, would have been a claustrophobic mistake that they wisely avoided.",
+      "The lyrics of the four verses form a familiar pattern of ABCC.",
+      "Three of the four verses and the refrains all begin rhythmically on the downbeat. The lone exception is the second verse ('I've lost her now'), which begins with a pickup."
+    ]
     },
     {trackIndex: 2, order: 3, trackTitle: "Anna (Go to Him)", segments:
       [{"start":0.000,"end":0.708,"segment":"silence"},
