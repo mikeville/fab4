@@ -2,9 +2,12 @@
 //group hover
 //other features to lsit
 
-
+//add 1px padding between bars instead of the white stroke it hink? or make stroke same color as bg
 
 TimelineStructure1 = function(){
+
+  var self = this
+  self.maxWidth = 0
 
   var dataset = dataSegments
 
@@ -35,12 +38,13 @@ TimelineStructure1 = function(){
 
   var d3Maker = function(trackData){
 
-    segments = trackData.segments
-    trackKey = trackData.trackTitle.replace(/\s/g, '');
 
     var width = $("#timeline-container").width();
+    // var maxBarWidth = 502.200 //data's time length for Reovlution 9. todo: change to carnival's long length or make this programmatic using d3's .max method
+    var maxBarWidth = 290 //adjusting for while my guitar gently weeps
+
     var barHeight = width/10
-    var widthFactor = 1
+    var widthFactor = width/maxBarWidth //1.35 factor from 384 px wide on guitar weep
 
     var svg = d3.select(".track-"+trackData.trackIndex).append("svg")
       // .attr("width", width)
@@ -50,11 +54,11 @@ TimelineStructure1 = function(){
       .attr("height", barHeight)
 
     svg.selectAll("rect")
-        .data(segments)
+        .data(trackData.segments)
       .enter().append("rect")
         .attr("x", function(d) { return d.start*widthFactor })
         .attr("y", 0)
-        .attr("width", function(d) { return (d.end-d.start)*widthFactor })
+        .attr("width", function(d) { return (d.end-d.start)*widthFactor})
         .attr("height", barHeight)
         .style("stroke", "white")
         .attr("class", function(d) { return "segment_"+d.segment })
