@@ -155,13 +155,21 @@ html {
   background-color: silver;
 }
 
+.context-module-mobile {
+}
+
+.context-module-desktop {
+  width: 20%;
+  float: right;
+  height: 100%;
+}
+
 #timeline-container {
-  
+
 }
 
 .timeline-container-desktop {
-  background-color: green;
-  color: red;
-  width: 20%
+  width: 80%;
+  float: left;
 }
 

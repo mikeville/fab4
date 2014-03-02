@@ -104,13 +104,15 @@ ssmTest = function(){
 }
 
 contextModuleToSidebar = function(){
-  $("#context-module").hide()
+  $("#context-module").addClass("context-module-desktop")
+  $("#context-module").removeClass("context-module-mobile")
   $('#timeline-container').addClass("timeline-container-desktop")
   // $('#timeline-container').css("background-color", "black")
 }
 
 contextModuleToMobile = function(){
-  $("#context-module").show()
+  $("#context-module").removeClass("context-module-desktop")
+  $('#context-module').addClass("context-module-mobile")
   $('#timeline-container').removeClass("timeline-container-desktop")
 
 }

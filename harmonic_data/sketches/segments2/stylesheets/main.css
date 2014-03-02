@@ -227,9 +227,15 @@ html {
   background-color: silver;
 }
 
-/* line 162, sass/main.scss */
-.timeline-container-desktop {
-  background-color: green;
-  color: red;
+/* line 161, sass/main.scss */
+.context-module-desktop {
   width: 20%;
+  float: right;
+  height: 100%;
+}
+
+/* line 171, sass/main.scss */
+.timeline-container-desktop {
+  width: 80%;
+  float: left;
 }
