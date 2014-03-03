@@ -135,24 +135,23 @@ var dataSegments =[
       {"start":151.907,"end":158.067,"segment":"silence"}]
     },
     {trackIndex: 10, order: 11, trackTitle: "Do You Want To Know A Secret", segments:
-      [{"start":0.000,"end":0.416,"segment":"silence"},
-      {"start":0.416,"end":8.576,"segment":"intro"},
-      {"start":8.576,"end":38.499,"segment":"verse"},
-      {"start":38.499,"end":69.033,"segment":"verse"},
-      {"start":69.033,"end":96.571,"segment":"bridge"},
-      {"start":96.571,"end":127.233,"segment":"verse"},
-      {"start":127.233,"end":152.147,"segment":"bridge_with_ending"},
-      {"start":152.147,"end":153.267,"segment":"silence"}]
+      [{"start":0.000,"end":0.465,"segment":"silence"},
+{"start":0.465,"end":14.931,"segment":"intro"},
+{"start":14.931,"end":41.958,"segment":"verse"},
+{"start":41.958,"end":68.992,"segment":"verse"},
+{"start":68.992,"end":80.441,"segment":"bridge"},
+{"start":80.441,"end":103.607,"segment":"verse"},
+{"start":103.607,"end":114.808,"segment":"outro"},
+{"start":114.808,"end":119.333,"segment":"silence"}]
     },
     {trackIndex: 11, order: 12, trackTitle: "A Taste of Honey", segments:
-      [{"start":0.000,"end":0.416,"segment":"silence"},
-      {"start":0.416,"end":8.576,"segment":"intro"},
-      {"start":8.576,"end":38.499,"segment":"verse"},
-      {"start":38.499,"end":69.033,"segment":"verse"},
-      {"start":69.033,"end":96.571,"segment":"bridge"},
-      {"start":96.571,"end":127.233,"segment":"verse"},
-      {"start":127.233,"end":152.147,"segment":"bridge_with_ending"},
-      {"start":152.147,"end":153.267,"segment":"silence"}]
+      [{"start":0.000,"end":0.412,"segment":"silence"},
+{"start":0.412,"end":8.127,"segment":"intro"},
+{"start":8.127,"end":43.804,"segment":"verse"},
+{"start":43.804,"end":56.898,"segment":"bridge"},
+{"start":56.898,"end":92.522,"segment":"verse"},
+{"start":92.522,"end":120.505,"segment":"bridge_with_ending"},
+{"start":120.505,"end":125.133,"segment":"silence"}]
     },
     {trackIndex: 12, order: 13, trackTitle: "There's a Place", segments:
       [{"start":0.000,"end":0.435,"segment":"silence"},
@@ -166,13 +165,13 @@ var dataSegments =[
     },
     {trackIndex: 13, order: 14, trackTitle: "Twist and Shout", segments:
       [{"start":0.000,"end":0.416,"segment":"silence"},
-      {"start":0.416,"end":8.576,"segment":"intro"},
-      {"start":8.576,"end":38.499,"segment":"verse"},
-      {"start":38.499,"end":69.033,"segment":"verse"},
-      {"start":69.033,"end":96.571,"segment":"bridge"},
-      {"start":96.571,"end":127.233,"segment":"verse"},
-      {"start":127.233,"end":152.147,"segment":"bridge_with_ending"},
-      {"start":152.147,"end":153.267,"segment":"silence"}]
+{"start":0.416,"end":8.576,"segment":"intro"},
+{"start":8.576,"end":38.499,"segment":"verse"},
+{"start":38.499,"end":69.033,"segment":"verse"},
+{"start":69.033,"end":96.571,"segment":"bridge"},
+{"start":96.571,"end":127.233,"segment":"verse"},
+{"start":127.233,"end":152.147,"segment":"bridge_with_ending"},
+{"start":152.147,"end":153.267,"segment":"silence"}]
     }
   ]},
   {albumKey: "withTheBeatles", albumTitle: "With The Beatles",
@@ -536,41 +535,182 @@ var dataSegments =[
     day: 4
   },
   tracks: [
-    {trackIndex: 41, order: 1, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 41, order: 1, trackTitle: "No Reply", segments:
+      [{"start":0.000,"end":1.033,"segment":"silence"},
+      {"start":1.033,"end":32.949,"segment":"verse"},
+      {"start":32.949,"end":63.641,"segment":"verse"},
+      {"start":63.641,"end":94.250,"segment":"bridge"},
+      {"start":94.250,"end":124.784,"segment":"verse"},
+      {"start":124.784,"end":133.621,"segment":"outro"},
+      {"start":133.621,"end":137.827,"segment":"silence"}]
     },
-    {trackIndex: 42, order: 2, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 42, order: 2, trackTitle: "I'm a Loser", segments:
+      [{"start":0.000,"end":0.377,"segment":"silence"},
+      {"start":0.377,"end":11.453,"segment":"intro"},
+      {"start":11.453,"end":32.662,"segment":"verse"},
+      {"start":32.662,"end":43.375,"segment":"refrain"},
+      {"start":43.375,"end":64.547,"segment":"verse"},
+      {"start":64.547,"end":75.305,"segment":"refrain"},
+      {"start":75.305,"end":96.897,"segment":"solo_break_(half-verse_+_refrain)"},
+      {"start":96.897,"end":118.375,"segment":"verse"},
+      {"start":118.375,"end":128.964,"segment":"refrain"},
+      {"start":128.964,"end":148.098,"segment":"outro_(fade-out)"},
+      {"start":148.098,"end":153.507,"segment":"silence"}]
     },
-    {trackIndex: 43, order: 3, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 43, order: 3, trackTitle: "Baby's in Black", segments:
+      [{"start":0.000,"end":0.383,"segment":"silence"},
+      {"start":0.383,"end":3.914,"segment":"intro"},
+      {"start":3.914,"end":14.547,"segment":"refrain"},
+      {"start":14.547,"end":26.947,"segment":"verse"},
+      {"start":26.947,"end":37.558,"segment":"refrain"},
+      {"start":37.558,"end":49.981,"segment":"verse"},
+      {"start":49.981,"end":57.144,"segment":"bridge"},
+      {"start":57.144,"end":67.869,"segment":"refrain"},
+      {"start":67.869,"end":78.503,"segment":"refrain_(guitar_solo("},
+      {"start":78.503,"end":85.739,"segment":"bridge"},
+      {"start":85.739,"end":96.530,"segment":"refrain"},
+      {"start":96.530,"end":109.230,"segment":"verse"},
+      {"start":109.230,"end":123.069,"segment":"refrain"},
+      {"start":123.069,"end":127.560,"segment":"silence"}]
     },
-    {trackIndex: 44, order: 4, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 44, order: 4, trackTitle: "Rock and Roll Music", segments:
+      [{"start":0.000,"end":0.401,"segment":"silence"},
+      {"start":0.401,"end":2.363,"segment":"intro"},
+      {"start":2.363,"end":22.547,"segment":"refrain"},
+      {"start":22.547,"end":34.086,"segment":"verse"},
+      {"start":34.086,"end":54.343,"segment":"refrain"},
+      {"start":54.343,"end":65.722,"segment":"verse"},
+      {"start":65.722,"end":85.731,"segment":"refrain"},
+      {"start":85.731,"end":97.012,"segment":"verse"},
+      {"start":97.012,"end":117.142,"segment":"refrain"},
+      {"start":117.142,"end":128.429,"segment":"verse"},
+      {"start":128.429,"end":149.125,"segment":"outro"},
+      {"start":149.125,"end":153.733,"segment":"silence"}]
     },
-    {trackIndex: 45, order: 5, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 45, order: 5, trackTitle: "I'll Follow the Sun", segments:
+      [{"start":0.000,"end":0.408,"segment":"silence"},
+      {"start":0.408,"end":3.984,"segment":"intro"},
+      {"start":3.984,"end":18.181,"segment":"verse"},
+      {"start":18.181,"end":32.531,"segment":"verse"},
+      {"start":32.531,"end":46.940,"segment":"bridge"},
+      {"start":46.940,"end":61.367,"segment":"verse"},
+      {"start":61.367,"end":75.700,"segment":"verse_(half_guitar_solo)"},
+      {"start":75.700,"end":90.188,"segment":"bridge"},
+      {"start":90.188,"end":106.403,"segment":"verse"},
+      {"start":106.403,"end":111.040,"segment":"silence"}]
     },
-    {trackIndex: 46, order: 6, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 46, order: 6, trackTitle: "Mr. Moonlight", segments:
+      [{"start":0.000,"end":0.395,"segment":"silence"},
+      {"start":0.395,"end":5.549,"segment":"intro"},
+      {"start":5.549,"end":39.351,"segment":"verse_(initial)"},
+      {"start":39.351,"end":69.885,"segment":"verse_(variant)"},
+      {"start":69.885,"end":100.490,"segment":"verse_(half_vocal_half_solo)"},
+      {"start":100.490,"end":131.037,"segment":"verse_(variant)"},
+      {"start":131.037,"end":151.984,"segment":"outro_verse_(fade-out)"},
+      {"start":151.984,"end":157.200,"segment":"silence"}]
     },
-    {trackIndex: 47, order: 7, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 47, order: 7, trackTitle: "Kansas City- Hey, Hey, Hey", segments:
+      [{"start":0.000,"end":0.389,"segment":"silence"},
+      {"start":0.389,"end":8.072,"segment":"intro"},
+      {"start":8.072,"end":29.786,"segment":"verse"},
+      {"start":29.786,"end":51.545,"segment":"verse"},
+      {"start":51.545,"end":73.445,"segment":"verse_(solo)"},
+      {"start":73.445,"end":95.367,"segment":"verse"},
+      {"start":95.367,"end":117.413,"segment":"verse"},
+      {"start":117.413,"end":139.347,"segment":"verse"},
+      {"start":139.347,"end":146.147,"segment":"verse_(fade_out)"},
+      {"start":146.147,"end":153.467,"segment":"silence"}]
     },
-    {trackIndex: 48, order: 8, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 48, order: 8, trackTitle: "Eight Days a Week", segments:
+      [{"start":0.000,"end":0.394,"segment":"silence"},
+      {"start":0.394,"end":7.392,"segment":"intro"},
+      {"start":7.392,"end":35.051,"segment":"verse"},
+      {"start":35.051,"end":62.571,"segment":"verse"},
+      {"start":62.571,"end":76.539,"segment":"bridge"},
+      {"start":76.539,"end":104.115,"segment":"verse"},
+      {"start":104.115,"end":117.988,"segment":"bridge"},
+      {"start":117.988,"end":145.731,"segment":"verse"},
+      {"start":145.731,"end":160.987,"segment":"outro"},
+      {"start":160.987,"end":165.427,"segment":"silence"}]
     },
-    {trackIndex: 49, order: 9, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 49, order: 9, trackTitle: "Words of Love", segments:
+      [{"start":0.000,"end":15.927,"segment":"silence"},
+      {"start":15.927,"end":31.469,"segment":"verse"},
+      {"start":31.469,"end":47.160,"segment":"verse"},
+      {"start":47.160,"end":62.955,"segment":"verse_(solo)"},
+      {"start":62.955,"end":78.611,"segment":"verse_(solo)"},
+      {"start":78.611,"end":94.424,"segment":"verse"},
+      {"start":94.424,"end":110.306,"segment":"verse"},
+      {"start":110.306,"end":128.514,"segment":"outro_(fade_out)"},
+      {"start":128.514,"end":134.733,"segment":"silence"}]
     },
-    {trackIndex: 50, order: 10, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 50, order: 10, trackTitle: "Honey Don't", segments:
+      [{"start":0.000,"end":0.395,"segment":"silence"},
+      {"start":0.395,"end":7.580,"segment":"intro"},
+      {"start":7.580,"end":22.059,"segment":"verse"},
+      {"start":22.059,"end":42.347,"segment":"refrain"},
+      {"start":42.347,"end":56.982,"segment":"verse"},
+      {"start":56.982,"end":77.473,"segment":"refrain"},
+      {"start":77.473,"end":89.222,"segment":"verse_(solo"},
+      {"start":89.222,"end":106.905,"segment":"refrain"},
+      {"start":106.905,"end":121.673,"segment":"verse"},
+      {"start":121.673,"end":142.431,"segment":"refrain"},
+      {"start":142.431,"end":154.192,"segment":"verse_(solo)"},
+      {"start":154.192,"end":171.984,"segment":"refrain"},
+      {"start":171.984,"end":174.851,"segment":"outro"},
+      {"start":174.851,"end":179.600,"segment":"silence"}]
     },
-    {trackIndex: 51, order: 11, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 51, order: 11, trackTitle: "Every Little Thing", segments:
+      [{"start":0.000,"end":0.384,"segment":"silence"},
+      {"start":0.384,"end":3.686,"segment":"intro"},
+      {"start":3.686,"end":15.372,"segment":"verse"},
+      {"start":15.372,"end":27.121,"segment":"verse"},
+      {"start":27.121,"end":42.510,"segment":"refrain"},
+      {"start":42.510,"end":54.285,"segment":"verse"},
+      {"start":54.285,"end":66.194,"segment":"verse"},
+      {"start":66.194,"end":81.670,"segment":"refrain"},
+      {"start":81.670,"end":93.143,"segment":"verse_(guitar_solo)"},
+      {"start":93.143,"end":108.536,"segment":"refrain"},
+      {"start":108.536,"end":119.267,"segment":"outro_(fade_out)"},
+      {"start":119.267,"end":124.533,"segment":"silence"}]
     },
-    {trackIndex: 52, order: 12, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 52, order: 12, trackTitle: "I Don't Want to Spoil the Party", segments:
+      [{"start":0.000,"end":0.398,"segment":"silence"},
+      {"start":0.398,"end":10.416,"segment":"intro"},
+      {"start":10.416,"end":30.198,"segment":"verse"},
+      {"start":30.198,"end":50.057,"segment":"verse"},
+      {"start":50.057,"end":65.086,"segment":"bridge"},
+      {"start":65.086,"end":85.184,"segment":"verse"},
+      {"start":85.184,"end":105.465,"segment":"verse_(guitar_solo)"},
+      {"start":105.465,"end":120.604,"segment":"verse"},
+      {"start":120.604,"end":140.807,"segment":"bridge"},
+      {"start":140.807,"end":151.500,"segment":"outro"},
+      {"start":151.500,"end":156.173,"segment":"silence"}]
+    },
+    {trackIndex: 521, order: 13, trackTitle: "What You're Doing", segments:
+      [{"start":0.000,"end":0.376,"segment":"silence"},
+      {"start":0.376,"end":14.669,"segment":"intro"},
+      {"start":14.669,"end":31.408,"segment":"verse"},
+      {"start":31.408,"end":48.163,"segment":"verse"},
+      {"start":48.163,"end":61.071,"segment":"bridge"},
+      {"start":61.071,"end":77.821,"segment":"verse"},
+      {"start":77.821,"end":92.654,"segment":"verse_(guitar_solo)"},
+      {"start":92.654,"end":107.518,"segment":"bridge"},
+      {"start":107.518,"end":124.331,"segment":"verse"},
+      {"start":124.331,"end":148.707,"segment":"outro"},
+      {"start":148.707,"end":154.693,"segment":"silence"}]
+    },
+    {trackIndex: 522, order: 14, trackTitle: "Every body's Trying to Be My Baby", segments:
+      [{"start":0.000,"end":0.850,"segment":"silence"},
+      {"start":0.850,"end":18.935,"segment":"verse"},
+      {"start":18.935,"end":35.885,"segment":"verse"},
+      {"start":35.885,"end":52.727,"segment":"verse_(solo)"},
+      {"start":52.727,"end":69.573,"segment":"verse"},
+      {"start":69.573,"end":86.400,"segment":"verse_(solo)"},
+      {"start":86.400,"end":103.363,"segment":"verse_(solo)"},
+      {"start":103.363,"end":120.278,"segment":"verse"},
+      {"start":120.278,"end":142.465,"segment":"verse"},
+      {"start":142.465,"end":143.867,"segment":"silence"}]
     }
   ]},
   {albumKey: "help", albumTitle: "Help!",
@@ -580,41 +720,179 @@ var dataSegments =[
     day: 6
   },
   tracks: [
-    {trackIndex: 53, order: 1, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 53, order: 1, trackTitle: "Help!", segments:
+      [{"start":0.000,"end":1.050,"segment":"silence"},
+      {"start":1.050,"end":11.137,"segment":"intro"},
+      {"start":11.137,"end":31.199,"segment":"verse"},
+      {"start":31.199,"end":51.400,"segment":"refrain"},
+      {"start":51.400,"end":71.593,"segment":"verse"},
+      {"start":71.593,"end":91.864,"segment":"refrain"},
+      {"start":91.864,"end":112.196,"segment":"verse"},
+      {"start":112.196,"end":129.916,"segment":"refrain"},
+      {"start":129.916,"end":136.840,"segment":"outro"},
+      {"start":136.840,"end":141.067,"segment":"silence"}]
     },
-    {trackIndex: 54, order: 2, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 54, order: 2, trackTitle: "The Night Before", segments:
+      [{"start":0.000,"end":0.425,"segment":"silence"},
+{"start":0.425,"end":11.884,"segment":"intro"},
+{"start":11.884,"end":34.551,"segment":"verse"},
+{"start":34.551,"end":57.191,"segment":"verse"},
+{"start":57.191,"end":68.335,"segment":"bridge"},
+{"start":68.335,"end":91.004,"segment":"verse"},
+{"start":91.004,"end":113.665,"segment":"verse_(half_solo)"},
+{"start":113.665,"end":124.784,"segment":"bridge"},
+{"start":124.784,"end":146.094,"segment":"verse"},
+{"start":146.094,"end":152.932,"segment":"outro"},
+{"start":152.932,"end":156.693,"segment":"silence"}]
     },
-    {trackIndex: 55, order: 3, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 55, order: 3, trackTitle: "You've Got to Hide Your Love Away", segments:
+      [{"start":0.000,"end":0.490,"segment":"silence"},
+{"start":0.490,"end":2.473,"segment":"intro"},
+{"start":2.473,"end":19.955,"segment":"verse"},
+{"start":19.955,"end":39.457,"segment":"verse'"},
+{"start":39.457,"end":55.004,"segment":"refrain"},
+{"start":55.004,"end":72.612,"segment":"verse"},
+{"start":72.612,"end":92.204,"segment":"verse'"},
+{"start":92.204,"end":107.698,"segment":"refrain"},
+{"start":107.698,"end":127.036,"segment":"verse_(solo)_with_ending"},
+{"start":127.036,"end":131.440,"segment":"silence"}]
     },
-    {trackIndex: 56, order: 4, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 56, order: 4, trackTitle: "I Need You", segments:
+      [{"start":0.000,"end":0.486,"segment":"silence"},
+      {"start":0.486,"end":3.984,"segment":"intro"},
+      {"start":3.984,"end":28.367,"segment":"verse"},
+      {"start":28.367,"end":52.802,"segment":"verse"},
+      {"start":52.802,"end":68.669,"segment":"bridge"},
+      {"start":68.669,"end":93.363,"segment":"verse"},
+      {"start":93.363,"end":109.388,"segment":"bridge"},
+      {"start":109.388,"end":134.371,"segment":"verse"},
+      {"start":134.371,"end":147.307,"segment":"outro"},
+      {"start":147.307,"end":151.493,"segment":"silence"}]
     },
-    {trackIndex: 57, order: 5, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 57, order: 5, trackTitle: "Another Girl", segments:
+      [{"start":0.000,"end":0.412,"segment":"silence"},
+{"start":0.412,"end":6.784,"segment":"intro"},
+{"start":6.784,"end":28.167,"segment":"verse"},
+{"start":28.167,"end":49.678,"segment":"verse"},
+{"start":49.678,"end":60.522,"segment":"bridge"},
+{"start":60.522,"end":82.306,"segment":"verse"},
+{"start":82.306,"end":93.286,"segment":"bridge"},
+{"start":93.286,"end":118.039,"segment":"verse"},
+{"start":118.039,"end":123.214,"segment":"outro"},
+{"start":123.214,"end":128.000,"segment":"silence"}]
     },
-    {trackIndex: 58, order: 6, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 58, order: 6, trackTitle: "You're Going to Lose That Girl", segments:
+      [{"start":0.000,"end":0.493,"segment":"silence"},
+{"start":0.493,"end":8.835,"segment":"intro"},
+{"start":8.835,"end":30.604,"segment":"verse"},
+{"start":30.604,"end":56.033,"segment":"verse'"},
+{"start":56.033,"end":68.708,"segment":"bridge"},
+{"start":68.708,"end":94.261,"segment":"solo/verse'"},
+{"start":94.261,"end":106.906,"segment":"bridge"},
+{"start":106.906,"end":128.859,"segment":"verse'"},
+{"start":128.859,"end":136.359,"segment":"outro"},
+{"start":136.359,"end":140.440,"segment":"silence"}]
     },
-    {trackIndex: 59, order: 7, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 59, order: 7, trackTitle: "Ticket to Ride", segments:
+      [{"start":0.000,"end":0.410,"segment":"silence"},
+{"start":0.410,"end":7.964,"segment":"intro"},
+{"start":7.964,"end":38.700,"segment":"verse"},
+{"start":38.700,"end":69.660,"segment":"verse"},
+{"start":69.660,"end":87.118,"segment":"bridge"},
+{"start":87.118,"end":118.747,"segment":"verse"},
+{"start":118.747,"end":136.081,"segment":"bridge"},
+{"start":136.081,"end":167.620,"segment":"verse"},
+{"start":167.620,"end":186.514,"segment":"outro"},
+{"start":186.514,"end":192.493,"segment":"silence"}]
     },
-    {trackIndex: 60, order: 8, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 60, order: 8, trackTitle: "Act Naturally", segments:
+      [{"start":0.000,"end":0.445,"segment":"silence"},
+{"start":0.445,"end":6.415,"segment":"intro"},
+{"start":6.415,"end":27.004,"segment":"verse"},
+{"start":27.004,"end":47.543,"segment":"bridge"},
+{"start":47.543,"end":68.309,"segment":"verse"},
+{"start":68.309,"end":78.563,"segment":"break"},
+{"start":78.563,"end":99.323,"segment":"verse"},
+{"start":99.323,"end":120.105,"segment":"bridge"},
+{"start":120.105,"end":140.889,"segment":"verse"},
+{"start":140.889,"end":147.934,"segment":"outro"},
+{"start":147.934,"end":153.173,"segment":"silence"}]
     },
-    {trackIndex: 61, order: 9, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 61, order: 9, trackTitle: "It's Only Love", segments:
+      [{"start":0.000,"end":0.441,"segment":"silence"},
+{"start":0.441,"end":8.770,"segment":"intro"},
+{"start":8.770,"end":34.220,"segment":"verse"},
+{"start":34.220,"end":51.229,"segment":"refrain"},
+{"start":51.229,"end":76.705,"segment":"verse"},
+{"start":76.705,"end":97.919,"segment":"refrain"},
+{"start":97.919,"end":114.233,"segment":"outro"},
+{"start":114.233,"end":118.800,"segment":"silence"}]
     },
-    {trackIndex: 62, order: 10, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 62, order: 10, trackTitle: "You Like Me Too Much", segments:
+      [{"start":0.000,"end":0.464,"segment":"silence"},
+{"start":0.464,"end":9.288,"segment":"intro"},
+{"start":9.288,"end":31.804,"segment":"verse"},
+{"start":31.804,"end":53.568,"segment":"verse"},
+{"start":53.568,"end":64.435,"segment":"bridge"},
+{"start":64.435,"end":86.100,"segment":"verse"},
+{"start":86.100,"end":102.423,"segment":"break"},
+{"start":102.423,"end":118.596,"segment":"bridge"},
+{"start":118.596,"end":145.821,"segment":"verse"},
+{"start":145.821,"end":154.826,"segment":"outro"},
+{"start":154.826,"end":158.800,"segment":"silence"}]
     },
-    {trackIndex: 63, order: 11, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 63, order: 11, trackTitle: "Tell Me What You See", segments:
+      [{"start":0.000,"end":0.478,"segment":"silence"},
+{"start":0.478,"end":4.174,"segment":"intro"},
+{"start":4.174,"end":32.125,"segment":"verse"},
+{"start":32.125,"end":60.073,"segment":"verse"},
+{"start":60.073,"end":74.131,"segment":"bridge"},
+{"start":74.131,"end":102.465,"segment":"verse"},
+{"start":102.465,"end":116.669,"segment":"bridge"},
+{"start":116.669,"end":144.898,"segment":"verse"},
+{"start":144.898,"end":155.016,"segment":"outro"},
+{"start":155.016,"end":159.693,"segment":"silence"}]
     },
-    {trackIndex: 64, order: 12, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 64, order: 12, trackTitle: "I've Just Seen A Face", segments:
+      [{"start":0.000,"end":0.445,"segment":"silence"},
+{"start":0.445,"end":11.668,"segment":"intro"},
+{"start":11.668,"end":23.771,"segment":"verse"},
+{"start":23.771,"end":35.771,"segment":"verse"},
+{"start":35.771,"end":43.771,"segment":"refrain"},
+{"start":43.771,"end":55.739,"segment":"verse"},
+{"start":55.739,"end":63.657,"segment":"refrain"},
+{"start":63.657,"end":75.559,"segment":"verse_(solo)"},
+{"start":75.559,"end":83.527,"segment":"refrain"},
+{"start":83.527,"end":95.497,"segment":"verse"},
+{"start":95.497,"end":103.433,"segment":"refrain"},
+{"start":103.433,"end":111.316,"segment":"refrain"},
+{"start":111.316,"end":117.261,"segment":"refrain"},
+{"start":117.261,"end":122.687,"segment":"outro"},
+{"start":122.687,"end":127.173,"segment":"silence"}]
+    },
+    {trackIndex: 641, order: 13, trackTitle: "Yesterday", segments:
+      [{"start":0.000,"end":0.461,"segment":"silence"},
+{"start":0.461,"end":5.433,"segment":"intro"},
+{"start":5.433,"end":22.669,"segment":"verse"},
+{"start":22.669,"end":39.893,"segment":"verse"},
+{"start":39.893,"end":59.703,"segment":"bridge"},
+{"start":59.703,"end":77.371,"segment":"verse"},
+{"start":77.371,"end":97.318,"segment":"bridge"},
+{"start":97.318,"end":114.914,"segment":"verse"},
+{"start":114.914,"end":122.853,"segment":"outro"},
+{"start":122.853,"end":127.427,"segment":"silence"}]
+    },
+    {trackIndex: 642, order: 14, trackTitle: "Dizzy Miss Lizzy", segments:
+      [{"start":0.000,"end":0.415,"segment":"silence"},
+{"start":0.415,"end":22.384,"segment":"intro"},
+{"start":22.384,"end":43.314,"segment":"verse"},
+{"start":43.314,"end":64.328,"segment":"verse_repeat"},
+{"start":64.328,"end":85.479,"segment":"verse_(solo)"},
+{"start":85.479,"end":106.646,"segment":"verse"},
+{"start":106.646,"end":127.894,"segment":"verse_(solo)_repeat"},
+{"start":127.894,"end":149.046,"segment":"verse_repeat"},
+{"start":149.046,"end":172.609,"segment":"verse"},
+{"start":172.609,"end":174.267,"segment":"silence"}]
     }
   ]},
   {albumKey: "rubberSoul", albumTitle: "Rubber Soul",
@@ -624,41 +902,193 @@ var dataSegments =[
     day: 3
   },
   tracks: [
-    {trackIndex: 65, order: 1, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 65, order: 1, trackTitle: "Drive My Car", segments:
+      [{"start":0.000,"end":1.120,"segment":"silence"},
+{"start":1.120,"end":5.227,"segment":"intro"},
+{"start":5.227,"end":20.792,"segment":"verse"},
+{"start":20.792,"end":36.382,"segment":"refrain"},
+{"start":36.382,"end":52.061,"segment":"verse"},
+{"start":52.061,"end":67.779,"segment":"refrain"},
+{"start":67.779,"end":83.441,"segment":"verse_(solo)"},
+{"start":83.441,"end":99.155,"segment":"refrain"},
+{"start":99.155,"end":114.776,"segment":"verse"},
+{"start":114.776,"end":130.506,"segment":"refrain"},
+{"start":130.506,"end":145.649,"segment":"outro_(fade-out)"},
+{"start":145.649,"end":150.267,"segment":"silence"}]
     },
-    {trackIndex: 66, order: 2, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 66, order: 2, trackTitle: "Norwegian Wood (This Bird Has Flown)", segments:
+      [{"start":0.000,"end":0.441,"segment":"silence"},
+{"start":0.441,"end":16.196,"segment":"verse_(instrumental_intro)"},
+{"start":16.196,"end":31.971,"segment":"verse"},
+{"start":31.971,"end":47.943,"segment":"bridge"},
+{"start":47.943,"end":64.122,"segment":"verse"},
+{"start":64.122,"end":80.263,"segment":"verse_(instrumental_solo)"},
+{"start":80.263,"end":96.620,"segment":"bridge"},
+{"start":96.620,"end":112.971,"segment":"verse"},
+{"start":112.971,"end":122.694,"segment":"outro"},
+{"start":122.694,"end":125.427,"segment":"silence"}]
     },
-    {trackIndex: 67, order: 3, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 67, order: 3, trackTitle: "You Won't See Me", segments:
+      [{"start":0.000,"end":0.473,"segment":"silence"},
+{"start":0.473,"end":4.482,"segment":"intro"},
+{"start":4.482,"end":40.951,"segment":"verse"},
+{"start":40.951,"end":77.912,"segment":"verse"},
+{"start":77.912,"end":94.531,"segment":"bridge"},
+{"start":94.531,"end":132.165,"segment":"verse"},
+{"start":132.165,"end":148.930,"segment":"bridge"},
+{"start":148.930,"end":186.853,"segment":"verse"},
+{"start":186.853,"end":196.020,"segment":"outro_(fade-out)"},
+{"start":196.020,"end":202.600,"segment":"silence"}]
     },
-    {trackIndex: 68, order: 4, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 68, order: 4, trackTitle: "Nowhere Man", segments:
+      [{"start":0.000,"end":0.441,"segment":"silence"},
+{"start":0.441,"end":16.701,"segment":"verse"},
+{"start":16.701,"end":32.444,"segment":"verse"},
+{"start":32.444,"end":48.233,"segment":"bridge"},
+{"start":48.233,"end":64.041,"segment":"verse_(guitar_solo)"},
+{"start":64.041,"end":79.829,"segment":"verse"},
+{"start":79.829,"end":95.722,"segment":"bridge"},
+{"start":95.722,"end":111.514,"segment":"verse"},
+{"start":111.514,"end":127.373,"segment":"bridge"},
+{"start":127.373,"end":143.122,"segment":"verse"},
+{"start":143.122,"end":161.037,"segment":"11.3"},
+{"start":161.037,"end":164.307,"segment":"11.4"}]
     },
-    {trackIndex: 69, order: 5, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 69, order: 5, trackTitle: "Think for Yourself", segments:
+      [{"start":0.000,"end":0.435,"segment":"silence"},
+{"start":0.435,"end":4.116,"segment":"intro"},
+{"start":4.116,"end":26.279,"segment":"verse"},
+{"start":26.279,"end":40.879,"segment":"refrain"},
+{"start":40.879,"end":63.240,"segment":"verse"},
+{"start":63.240,"end":77.927,"segment":"refrain"},
+{"start":77.927,"end":100.327,"segment":"verse"},
+{"start":100.327,"end":114.981,"segment":"refrain"},
+{"start":114.981,"end":129.600,"segment":"refrain"},
+{"start":129.600,"end":136.539,"segment":"outro"},
+{"start":136.539,"end":139.333,"segment":"silence"}]
     },
-    {trackIndex: 70, order: 6, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 70, order: 6, trackTitle: "The Word", segments:
+      [{"start":0.000,"end":0.424,"segment":"silence"},
+{"start":0.424,"end":5.355,"segment":"intro"},
+{"start":5.355,"end":28.784,"segment":"verse"},
+{"start":28.784,"end":36.649,"segment":"bridge"},
+{"start":36.649,"end":60.102,"segment":"verse"},
+{"start":60.102,"end":67.943,"segment":"bridge"},
+{"start":67.943,"end":91.382,"segment":"verse"},
+{"start":91.382,"end":99.257,"segment":"bridge"},
+{"start":99.257,"end":122.896,"segment":"verse"},
+{"start":122.896,"end":130.759,"segment":"bridge_(instrumental)"},
+{"start":130.759,"end":154.291,"segment":"verse_(partly_instrumental)"},
+{"start":154.291,"end":160.719,"segment":"bridge_outro_(fade-out)"},
+{"start":160.719,"end":163.693,"segment":"silence"}]
     },
-    {trackIndex: 71, order: 7, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 71, order: 7, trackTitle: "Michelle", segments:
+      [{"start":0.000,"end":0.421,"segment":"silence"},
+{"start":0.421,"end":8.510,"segment":"intro"},
+{"start":8.510,"end":20.886,"segment":"verse"},
+{"start":20.886,"end":33.216,"segment":"verse"},
+{"start":33.216,"end":53.545,"segment":"bridge"},
+{"start":53.545,"end":65.726,"segment":"verse"},
+{"start":65.726,"end":85.931,"segment":"bridge"},
+{"start":85.931,"end":98.058,"segment":"verse_(instrumental)"},
+{"start":98.058,"end":118.335,"segment":"bridge"},
+{"start":118.335,"end":131.265,"segment":"verse"},
+{"start":131.265,"end":139.918,"segment":"outro_bridge"},
+{"start":139.918,"end":160.869,"segment":"outro_verse_(instrumental)"},
+{"start":160.869,"end":162.373,"segment":"silence"}]
     },
-    {trackIndex: 72, order: 8, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 72, order: 8, trackTitle: "What Goes On", segments:
+      [{"start":0.000,"end":0.464,"segment":"silence"},
+{"start":0.464,"end":6.356,"segment":"intro"},
+{"start":6.356,"end":31.065,"segment":"refrain"},
+{"start":31.065,"end":48.515,"segment":"verse"},
+{"start":48.515,"end":73.300,"segment":"refrain"},
+{"start":73.300,"end":90.581,"segment":"verse"},
+{"start":90.581,"end":115.217,"segment":"refrain_(solo)"},
+{"start":115.217,"end":132.537,"segment":"verse"},
+{"start":132.537,"end":157.234,"segment":"refrain"},
+{"start":157.234,"end":165.938,"segment":"outro"},
+{"start":165.938,"end":170.800,"segment":"silence"}]
     },
-    {trackIndex: 73, order: 9, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 73, order: 9, trackTitle: "Girl", segments:
+      [{"start":0.000,"end":1.053,"segment":"silence"},
+{"start":1.053,"end":21.107,"segment":"verse"},
+{"start":21.107,"end":30.994,"segment":"refrain"},
+{"start":30.994,"end":50.968,"segment":"verse"},
+{"start":50.968,"end":60.987,"segment":"refrain"},
+{"start":60.987,"end":80.686,"segment":"bridge"},
+{"start":80.686,"end":90.558,"segment":"refrain"},
+{"start":90.558,"end":110.497,"segment":"verse"},
+{"start":110.497,"end":120.392,"segment":"refrain"},
+{"start":120.392,"end":140.351,"segment":"verse_(instrumental)"},
+{"start":140.351,"end":148.200,"segment":"refrain_(fade-out)"},
+{"start":148.200,"end":153.867,"segment":"silence"}]
     },
-    {trackIndex: 74, order: 10, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 74, order: 10, trackTitle: "I'm Looking Through You", segments:
+      [{"start":0.000,"end":0.401,"segment":"silence"},
+{"start":0.401,"end":8.612,"segment":"intro"},
+{"start":8.612,"end":33.714,"segment":"verse"},
+{"start":33.714,"end":58.770,"segment":"verse"},
+{"start":58.770,"end":69.959,"segment":"bridge"},
+{"start":69.959,"end":96.702,"segment":"verse"},
+{"start":96.702,"end":107.868,"segment":"bridge"},
+{"start":107.868,"end":142.498,"segment":"verse_with_outro_(fade-out)"},
+{"start":142.498,"end":147.827,"segment":"silence"}]
     },
-    {trackIndex: 75, order: 11, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 75, order: 11, trackTitle: "In My Life", segments:
+      [{"start":0.000,"end":0.416,"segment":"silence"},
+{"start":0.416,"end":9.616,"segment":"intro"},
+{"start":9.616,"end":28.302,"segment":"verse"},
+{"start":28.302,"end":46.719,"segment":"bridge"},
+{"start":46.719,"end":51.438,"segment":"half-intro"},
+{"start":51.438,"end":70.206,"segment":"verse"},
+{"start":70.206,"end":88.700,"segment":"bridge"},
+{"start":88.700,"end":107.253,"segment":"verse_(instrumental)"},
+{"start":107.253,"end":125.659,"segment":"bridge"},
+{"start":125.659,"end":143.715,"segment":"outro"},
+{"start":143.715,"end":147.973,"segment":"silence"}]
     },
-    {trackIndex: 77, order: 12, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 77, order: 12, trackTitle: "Wait", segments:
+      [{"start":0.000,"end":1.094,"segment":"silence"},
+{"start":1.094,"end":12.486,"segment":"verse"},
+{"start":12.486,"end":21.764,"segment":"refrain"},
+{"start":21.764,"end":33.070,"segment":"verse"},
+{"start":33.070,"end":42.253,"segment":"refrain"},
+{"start":42.253,"end":57.121,"segment":"bridge"},
+{"start":57.121,"end":68.487,"segment":"verse"},
+{"start":68.487,"end":77.785,"segment":"refrain"},
+{"start":77.785,"end":92.971,"segment":"bridge"},
+{"start":92.971,"end":104.359,"segment":"verse"},
+{"start":104.359,"end":113.649,"segment":"refrain"},
+{"start":113.649,"end":132.629,"segment":"verse_with_outro"},
+{"start":132.629,"end":136.960,"segment":"silence"}]
+    },
+    {trackIndex: 771, order: 13, trackTitle: "If I Needed Someone", segments:
+      [{"start":0.000,"end":0.429,"segment":"silence"},
+{"start":0.429,"end":7.789,"segment":"intro"},
+{"start":7.789,"end":22.672,"segment":"verse"},
+{"start":22.672,"end":37.465,"segment":"verse"},
+{"start":37.465,"end":52.376,"segment":"bridge"},
+{"start":52.376,"end":67.473,"segment":"verse"},
+{"start":67.473,"end":82.542,"segment":"verse_(instrumental)"},
+{"start":82.542,"end":97.628,"segment":"verse"},
+{"start":97.628,"end":112.913,"segment":"bridge"},
+{"start":112.913,"end":128.261,"segment":"verse"},
+{"start":128.261,"end":139.977,"segment":"outro"},
+{"start":139.977,"end":143.840,"segment":"silence"}]
+    },
+    {trackIndex: 772, order: 14, trackTitle: "Run for Your Life", segments:
+      [{"start":0.000,"end":0.412,"segment":"silence"},
+{"start":0.412,"end":8.613,"segment":"intro"},
+{"start":8.613,"end":30.269,"segment":"verse"},
+{"start":30.269,"end":35.677,"segment":"refrain"},
+{"start":35.677,"end":57.371,"segment":"verse"},
+{"start":57.371,"end":73.689,"segment":"break_(instrumental)"},
+{"start":73.689,"end":95.469,"segment":"verse"},
+{"start":95.469,"end":100.844,"segment":"refrain"},
+{"start":100.844,"end":122.661,"segment":"verse"},
+{"start":122.661,"end":136.795,"segment":"refrain_outro_(fade-out)"},
+{"start":136.795,"end":138.800,"segment":"silence"}]
     }
   ]},
   {albumKey: "revolver", albumTitle: "Revolver",
@@ -871,41 +1301,161 @@ var dataSegments =[
     day: 1
   },
   tracks: [
-    {trackIndex: 92, order: 1, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 92, order: 1, trackTitle: "Sgt. Pepper's Lonely Hearts Club Band", segments:
+      [{"start":0.000,"end":22.599,"segment":"intro"},
+{"start":22.599,"end":42.952,"segment":"verse"},
+{"start":42.952,"end":55.665,"segment":"bridge_instr"},
+{"start":55.665,"end":85.746,"segment":"refrain"},
+{"start":85.746,"end":97.937,"segment":"bridge"},
+{"start":97.937,"end":117.650,"segment":"verse"},
+{"start":117.650,"end":122.427,"segment":"outro"}]
     },
-    {trackIndex: 93, order: 2, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 93, order: 2, trackTitle: "With a Little Help from My Friends", segments:
+      [{"start":0.000,"end":8.818,"segment":"intro"},
+{"start":8.818,"end":26.431,"segment":"verse"},
+{"start":26.431,"end":43.579,"segment":"refrain"},
+{"start":43.579,"end":60.738,"segment":"verse"},
+{"start":60.738,"end":73.567,"segment":"refrain"},
+{"start":73.567,"end":90.645,"segment":"bridge"},
+{"start":90.645,"end":107.735,"segment":"verse"},
+{"start":107.735,"end":120.599,"segment":"refrain"},
+{"start":120.599,"end":137.654,"segment":"bridge"},
+{"start":137.654,"end":150.448,"segment":"refrain"},
+{"start":150.448,"end":164.008,"segment":"outro"},
+{"start":164.008,"end":164.009,"segment":"silence"}]
     },
-    {trackIndex: 94, order: 3, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 94, order: 3, trackTitle: "Lucy in the Sky with Diamonds", segments:
+      [{"start":0.000,"end":0.212,"segment":"silence"},
+{"start":0.212,"end":6.145,"segment":"intro"},
+{"start":6.145,"end":32.453,"segment":"verse"},
+{"start":32.453,"end":50.507,"segment":"bridge"},
+{"start":50.507,"end":68.467,"segment":"refrain"},
+{"start":68.467,"end":93.638,"segment":"verse"},
+{"start":93.638,"end":111.064,"segment":"bridge"},
+{"start":111.064,"end":128.932,"segment":"refrain"},
+{"start":128.932,"end":153.951,"segment":"verse"},
+{"start":153.951,"end":173.712,"segment":"refrain"},
+{"start":173.712,"end":193.356,"segment":"refrain"},
+{"start":193.356,"end":205.727,"segment":"refrain"},
+{"start":205.727,"end":208.440,"segment":"silence"}]
     },
-    {trackIndex: 95, order: 4, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 95, order: 4, trackTitle: "Getting Better", segments:
+      [{"start":0.000,"end":0.391,"segment":"silence"},
+{"start":0.391,"end":8.772,"segment":"intro"},
+{"start":8.772,"end":24.840,"segment":"verse"},
+{"start":24.840,"end":40.792,"segment":"refrain"},
+{"start":40.792,"end":60.425,"segment":"verse"},
+{"start":60.425,"end":76.133,"segment":"refrain"},
+{"start":76.133,"end":95.742,"segment":"bridge"},
+{"start":95.742,"end":117.314,"segment":"verse"},
+{"start":117.314,"end":132.941,"segment":"refrain"},
+{"start":132.941,"end":156.439,"segment":"bridge"},
+{"start":156.439,"end":167.511,"segment":"outro"},
+{"start":167.511,"end":167.867,"segment":"silence"}]
     },
-    {trackIndex: 96, order: 5, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 96, order: 5, trackTitle: "Fixing a Hole", segments:
+      [{"start":0.000,"end":0.353,"segment":"silence"},
+{"start":0.353,"end":6.705,"segment":"intro"},
+{"start":6.705,"end":24.840,"segment":"verse"},
+{"start":24.840,"end":42.325,"segment":"verse"},
+{"start":42.325,"end":59.496,"segment":"bridge"},
+{"start":59.496,"end":76.609,"segment":"verse"},
+{"start":76.609,"end":93.258,"segment":"verse_guitar"},
+{"start":93.258,"end":109.802,"segment":"bridge"},
+{"start":109.802,"end":126.578,"segment":"verse"},
+{"start":126.578,"end":154.077,"segment":"outro"},
+{"start":154.077,"end":156.627,"segment":"silence"}]
     },
-    {trackIndex: 97, order: 6, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 97, order: 6, trackTitle: "She's Leaving Home", segments:
+      [{"start":0.000,"end":0.569,"segment":"silence"},
+{"start":0.569,"end":5.916,"segment":"intro"},
+{"start":5.916,"end":28.195,"segment":"verse"},
+{"start":28.195,"end":50.754,"segment":"verse"},
+{"start":50.754,"end":77.642,"segment":"refrain"},
+{"start":77.642,"end":100.932,"segment":"verse"},
+{"start":100.932,"end":124.175,"segment":"verse"},
+{"start":124.175,"end":150.983,"segment":"refrain"},
+{"start":150.983,"end":174.017,"segment":"verse"},
+{"start":174.017,"end":201.962,"segment":"refrain"},
+{"start":201.962,"end":213.916,"segment":"outro"},
+{"start":213.916,"end":215.040,"segment":"silence"}]
     },
-    {trackIndex: 98, order: 7, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 98, order: 7, trackTitle: "Being for the Benefit of Mr. Kite!", segments:
+      [{"start":0.000,"end":0.547,"segment":"silence"},
+{"start":0.547,"end":6.938,"segment":"intro"},
+{"start":6.938,"end":37.135,"segment":"verse"},
+{"start":37.135,"end":60.576,"segment":"verse"},
+{"start":60.576,"end":89.136,"segment":"bridge"},
+{"start":89.136,"end":112.844,"segment":"verse"},
+{"start":112.844,"end":154.776,"segment":"bridge"},
+{"start":154.776,"end":157.093,"segment":"silence"}]
     },
-    {trackIndex: 99, order: 8, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 99, order: 8, trackTitle: "Within You Without You", segments:
+      [{"start":0.000,"end":1.824,"segment":"silence"},
+{"start":1.824,"end":23.328,"segment":"intro"},
+{"start":23.328,"end":76.134,"segment":"verse"},
+{"start":76.134,"end":118.926,"segment":"verse"},
+{"start":118.926,"end":143.555,"segment":"refrain"},
+{"start":143.555,"end":211.448,"segment":"verse_instr"},
+{"start":211.448,"end":221.282,"segment":"intro"},
+{"start":221.282,"end":273.463,"segment":"verse"},
+{"start":273.463,"end":304.001,"segment":"refrain"},
+{"start":304.001,"end":305.067,"segment":"silence"}]
     },
-    {trackIndex: 100, order: 9, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 100, order: 9, trackTitle: "When I'm Sixty-Four", segments:
+      [{"start":0.000,"end":0.343,"segment":"silence"},
+      {"start":0.343,"end":10.734,"segment":"intro"},
+      {"start":10.734,"end":38.401,"segment":"verse"},
+      {"start":38.401,"end":67.298,"segment":"bridge"},
+      {"start":67.298,"end":94.488,"segment":"verse"},
+      {"start":94.488,"end":123.211,"segment":"bridge"},
+      {"start":123.211,"end":150.344,"segment":"verse"},
+      {"start":150.344,"end":157.073,"segment":"outro"},
+      {"start":157.073,"end":157.707,"segment":"silence"}]
     },
-    {trackIndex: 101, order: 10, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 101, order: 10, trackTitle: "Lovely Rita", segments:
+      [{"start":0.000,"end":0.320,"segment":"silence"},
+{"start":0.320,"end":22.170,"segment":"intro"},
+{"start":22.170,"end":33.199,"segment":"verse"},
+{"start":33.199,"end":52.460,"segment":"bridge"},
+{"start":52.460,"end":71.756,"segment":"verse"},
+{"start":71.756,"end":82.739,"segment":"verse_piano"},
+{"start":82.739,"end":101.826,"segment":"bridge"},
+{"start":101.826,"end":110.069,"segment":"verse"},
+{"start":110.069,"end":131.745,"segment":"outro_a"},
+{"start":131.745,"end":161.359,"segment":"outro_b"},
+{"start":161.359,"end":162.093,"segment":"silence"}]
     },
-    {trackIndex: 102, order: 11, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 102, order: 11, trackTitle: "Good Morning Good Morning", segments:
+      [{"start":0.000,"end":11.732,"segment":"intro"},
+{"start":11.732,"end":33.873,"segment":"verse_a"},
+{"start":33.873,"end":42.766,"segment":"verse_b"},
+{"start":42.766,"end":54.666,"segment":"bridge"},
+{"start":54.666,"end":76.876,"segment":"verse_a"},
+{"start":76.876,"end":85.734,"segment":"verse_b_guitar"},
+{"start":85.734,"end":97.519,"segment":"bridge"},
+{"start":97.519,"end":119.624,"segment":"verse"},
+{"start":119.624,"end":161.307,"segment":"outro"}]
     },
-    {trackIndex: 103, order: 12, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 103, order: 12, trackTitle: "Sgt. Pepper's Lonely Hearts Club Band (Reprise)", segments:
+      [{"start":0.000,"end":20.533,"segment":"intro"},
+{"start":20.533,"end":44.821,"segment":"refrain"},
+{"start":44.821,"end":78.893,"segment":"refrain_trans"}]
+    },
+    {trackIndex: 1031, order: 13, trackTitle: "A Day in the Life", segments:
+      [{"start":0.000,"end":12.848,"segment":"intro"},
+{"start":12.848,"end":43.950,"segment":"verse"},
+{"start":43.950,"end":71.698,"segment":"verse"},
+{"start":71.698,"end":100.897,"segment":"verse"},
+{"start":100.897,"end":135.680,"segment":"bridge"},
+{"start":135.680,"end":169.152,"segment":"vocal"},
+{"start":169.152,"end":198.340,"segment":"instrumental"},
+{"start":198.340,"end":226.354,"segment":"verse"},
+{"start":226.354,"end":261.154,"segment":"bridge"},
+{"start":261.154,"end":303.624,"segment":"outro"},
+{"start":303.624,"end":306.860,"segment":"silence"},
+{"start":306.860,"end":333.876,"segment":"postscript"},
+{"start":333.876,"end":333.907,"segment":"silence"}]
     }
   ]},
   {albumKey: "magicalMysteryTour", albumTitle: "Magical Mystery Tour",
@@ -1434,41 +1984,156 @@ var dataSegments =[
     day: 8
   },
   tracks: [
-    {trackIndex: 127, order: 1, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 127, order: 1, trackTitle: "Two of Us", segments:
+      [{"start":0.000,"end":0.995,"segment":"silence"},
+{"start":0.995,"end":18.856,"segment":"intro"},
+{"start":18.856,"end":49.673,"segment":"verse"},
+{"start":49.673,"end":58.396,"segment":"(intro)"},
+{"start":58.396,"end":89.373,"segment":"verse"},
+{"start":89.373,"end":104.623,"segment":"bridge"},
+{"start":104.623,"end":136.011,"segment":"verse"},
+{"start":136.011,"end":151.499,"segment":"bridge"},
+{"start":151.499,"end":183.271,"segment":"verse"},
+{"start":183.271,"end":213.499,"segment":"outro"},
+{"start":213.499,"end":216.667,"segment":"silence"}]
     },
-    {trackIndex: 128, order: 2, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 128, order: 2, trackTitle: "Dig a Pony", segments:
+      [{"start":0.000,"end":0.749,"segment":"silence"},
+{"start":0.749,"end":20.480,"segment":"intro"},
+{"start":20.480,"end":40.472,"segment":"verse"},
+{"start":40.472,"end":60.682,"segment":"verse"},
+{"start":60.682,"end":76.225,"segment":"refrain"},
+{"start":76.225,"end":96.485,"segment":"verse"},
+{"start":96.485,"end":116.728,"segment":"verse"},
+{"start":116.728,"end":132.142,"segment":"refrain"},
+{"start":132.142,"end":151.982,"segment":"verse_(instrumental)"},
+{"start":151.982,"end":172.038,"segment":"verse"},
+{"start":172.038,"end":192.607,"segment":"verse"},
+{"start":192.607,"end":208.217,"segment":"refrain"},
+{"start":208.217,"end":231.245,"segment":"outro"},
+{"start":231.245,"end":234.800,"segment":"silence"}]
     },
-    {trackIndex: 129, order: 3, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 129, order: 3, trackTitle: "Across the Universe", segments:
+      [{"start":0.000,"end":0.350,"segment":"silence"},
+{"start":0.350,"end":10.078,"segment":"intro"},
+{"start":10.078,"end":23.555,"segment":"verse"},
+{"start":23.555,"end":34.608,"segment":"verse'"},
+{"start":34.608,"end":44.341,"segment":"mantra"},
+{"start":44.341,"end":69.517,"segment":"refrain"},
+{"start":69.517,"end":82.060,"segment":"verse"},
+{"start":82.060,"end":95.394,"segment":"verse"},
+{"start":95.394,"end":105.041,"segment":"mantra"},
+{"start":105.041,"end":130.000,"segment":"refrain"},
+{"start":130.000,"end":140.839,"segment":"verse'"},
+{"start":140.839,"end":153.235,"segment":"verse"},
+{"start":153.235,"end":162.843,"segment":"mantra"},
+{"start":162.843,"end":187.510,"segment":"refrain"},
+{"start":187.510,"end":222.748,"segment":"outro"},
+{"start":222.748,"end":228.560,"segment":"silence"}]
     },
-    {trackIndex: 130, order: 4, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 130, order: 4, trackTitle: "I Me Mine", segments:
+      [{"start":0.000,"end":0.375,"segment":"silence"},
+{"start":0.375,"end":6.743,"segment":"intro"},
+{"start":6.743,"end":39.048,"segment":"verse"},
+{"start":39.048,"end":57.570,"segment":"refrain"},
+{"start":57.570,"end":89.020,"segment":"verse"},
+{"start":89.020,"end":107.511,"segment":"refrain"},
+{"start":107.511,"end":144.349,"segment":"verse_(with_complete_ending)"},
+{"start":144.349,"end":145.733,"segment":"silence"}]
     },
-    {trackIndex: 131, order: 5, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 131, order: 5, trackTitle: "Dig It", segments:
+      [{"start":0.000,"end":1.480,"segment":"silence"},
+{"start":1.480,"end":15.381,"segment":"refrain_(fade-in)"},
+{"start":15.381,"end":29.261,"segment":"refrain'"},
+{"start":29.261,"end":50.000,"segment":"refrain''_(fade-out)"},
+{"start":50.000,"end":50.000,"segment":"silence"}]
     },
-    {trackIndex: 132, order: 6, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 132, order: 6, trackTitle: "Let It Be", segments:
+      [{"start":0.000,"end":13.392,"segment":"intro"},
+{"start":13.392,"end":38.821,"segment":"verse"},
+{"start":38.821,"end":52.048,"segment":"refrain"},
+{"start":52.048,"end":78.485,"segment":"verse"},
+{"start":78.485,"end":91.942,"segment":"refrain"},
+{"start":91.942,"end":105.217,"segment":"refrain"},
+{"start":105.217,"end":119.192,"segment":"coda"},
+{"start":119.192,"end":146.724,"segment":"verse_(instrumental)"},
+{"start":146.724,"end":160.902,"segment":"refrain"},
+{"start":160.902,"end":188.725,"segment":"verse"},
+{"start":188.725,"end":202.598,"segment":"refrain"},
+{"start":202.598,"end":216.549,"segment":"refrain"},
+{"start":216.549,"end":241.500,"segment":"coda/outro"},
+{"start":241.500,"end":243.307,"segment":"silence"}]
     },
-    {trackIndex: 133, order: 7, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 133, order: 7, trackTitle: "Maggie Mae", segments:
+      [{"start":0.000,"end":0.345,"segment":"silence"},
+{"start":0.345,"end":3.020,"segment":"intro"},
+{"start":3.020,"end":14.233,"segment":"verse"},
+{"start":14.233,"end":25.692,"segment":"verse"},
+{"start":25.692,"end":38.050,"segment":"outro"},
+{"start":38.050,"end":40.600,"segment":"silence"}]
     },
-    {trackIndex: 134, order: 8, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 134, order: 8, trackTitle: "I've Got A Feeling", segments:
+      [{"start":0.000,"end":0.395,"segment":"silence"},
+{"start":0.395,"end":6.317,"segment":"intro"},
+{"start":6.317,"end":41.411,"segment":"verse"},
+{"start":41.411,"end":75.933,"segment":"verse"},
+{"start":75.933,"end":90.512,"segment":"bridge"},
+{"start":90.512,"end":119.456,"segment":"verse"},
+{"start":119.456,"end":154.059,"segment":"verse'"},
+{"start":154.059,"end":165.494,"segment":"outro"},
+{"start":165.494,"end":188.640,"segment":"verse/verse'_(superimposed)"},
+{"start":188.640,"end":214.150,"segment":"outro"},
+{"start":214.150,"end":217.960,"segment":"silence"}]
     },
-    {trackIndex: 135, order: 9, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 135, order: 9, trackTitle: "One After 909", segments:
+      [{"start":0.000,"end":0.350,"segment":"silence"},
+{"start":0.350,"end":9.169,"segment":"intro"},
+{"start":9.169,"end":30.066,"segment":"verse"},
+{"start":30.066,"end":51.165,"segment":"verse"},
+{"start":51.165,"end":72.289,"segment":"bridge"},
+{"start":72.289,"end":93.172,"segment":"verse_"},
+{"start":93.172,"end":114.139,"segment":"verse_(guitar_solo)"},
+{"start":114.139,"end":135.359,"segment":"bridge"},
+{"start":135.359,"end":153.897,"segment":"verse"},
+{"start":153.897,"end":170.535,"segment":"outro"},
+{"start":170.535,"end":175.507,"segment":"silence"}]
     },
-    {trackIndex: 136, order: 10, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 136, order: 10, trackTitle: "The Long and Winding Road", segments:
+      [{"start":0.000,"end":0.345,"segment":"silence"},
+{"start":0.345,"end":43.331,"segment":"verse"},
+{"start":43.331,"end":86.926,"segment":"verse"},
+{"start":86.926,"end":101.414,"segment":"bridge"},
+{"start":101.414,"end":145.019,"segment":"verse"},
+{"start":145.019,"end":159.415,"segment":"bridge_(instrumental)"},
+{"start":159.415,"end":203.301,"segment":"verse"},
+{"start":203.301,"end":215.900,"segment":"outro"},
+{"start":215.900,"end":217.867,"segment":"silence"}]
     },
-    {trackIndex: 137, order: 11, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 137, order: 11, trackTitle: "For You Blue", segments:
+      [{"start":0.000,"end":0.450,"segment":"silence"},
+{"start":0.450,"end":13.507,"segment":"intro"},
+{"start":13.507,"end":35.843,"segment":"verse"},
+{"start":35.843,"end":58.272,"segment":"verse"},
+{"start":58.272,"end":80.617,"segment":"break_(instrumental)"},
+{"start":80.617,"end":103.034,"segment":"break_(instrumental)"},
+{"start":103.034,"end":125.342,"segment":"verse"},
+{"start":125.342,"end":149.200,"segment":"verse/outro"},
+{"start":149.200,"end":152.733,"segment":"silence"}]
     },
-    {trackIndex: 138, order: 12, trackTitle: "XXX", segments:
-      []
+    {trackIndex: 138, order: 12, trackTitle: "Get Back", segments:
+      [{"start":0.000,"end":0.365,"segment":"silence"},
+{"start":0.365,"end":28.528,"segment":"intro"},
+{"start":28.528,"end":43.985,"segment":"verse"},
+{"start":43.985,"end":59.444,"segment":"refrain"},
+{"start":59.444,"end":75.018,"segment":"break_(guitar_solo)"},
+{"start":75.018,"end":92.603,"segment":"refrain'"},
+{"start":92.603,"end":108.338,"segment":"break_(piano_solo)"},
+{"start":108.338,"end":124.027,"segment":"verse"},
+{"start":124.027,"end":139.537,"segment":"refrain"},
+{"start":139.537,"end":155.054,"segment":"break_(guitar_solo)"},
+{"start":155.054,"end":170.473,"segment":"refrain'"},
+{"start":170.473,"end":185.355,"segment":"outro"},
+{"start":185.355,"end":187.093,"segment":"silence"}]
     }
   ]},
   {albumKey: "abbeyRoad", albumTitle: "Abbey Road",

@@ -247,7 +247,10 @@ legendNavHider = function(){
 
 $(function(){
 
-  timeline = new TimelineStructure1()
+  // timeline = new TimelineStructure1()
+  dataParse()
+
+  
   
   $(window).resize(function() {
   var ratioFactor = 30
@@ -268,6 +271,6 @@ $(function(){
 
   addNavEvents()
 
-  // dataParse()
+  
 
 })
