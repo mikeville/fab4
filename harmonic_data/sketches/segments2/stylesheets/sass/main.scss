@@ -135,10 +135,16 @@ html {
   margin: 0;
 }
 
-svg{
+.svg-track-container svg{
   display: block;
   margin-bottom: .15rem
 }
+
+svg.micro-svg{
+  display: block;
+  margin-bottom: 0rem
+}
+
 
 .track-title-container{
   width:20%;

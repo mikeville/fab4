@@ -55,6 +55,9 @@
     <div id="timeline-view-switcher">
       <p>order by <a id="sort-link-album" href="#">album</a> or <a id="sort-link-recording" href="#">recording date</a>
     </div>
+    <div id="micromacro-container">
+      <h3>microMacro</h3>
+    </div>
     <div id="timeline-container">
     </div>
 </div>
@@ -76,6 +79,16 @@
     </div>
   </div>
 </script>
+
+<script id="micro-track-container-template" type='text/x-handlebars-template'>
+  <div class="track-container">
+    <div class="track-title-container">
+    </div>
+    <div class="micro-svg-track-container micro-track-{{trackIndex}}">
+    </div>
+  </div>
+</script>
+
 
 
 <script id="notes-template" type='text/x-handlebars-template'>

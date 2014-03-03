@@ -77,83 +77,182 @@ contextModuleToMobile = function(){
 
 // SORT TRACKS BY DATE
 
-dataParse = function() {
-  var dataset = dataSegments
+sortTracksByDate = function(){
 
-  var tracksByDate = []
-  _.each(dataset, function(albumData){
-    _.each(albumData.tracks, function(trackData){
-      // track(trackData, albumData)
-      // d3Maker(trackData)
-      var trackIndex = function(){return trackData.trackIndex }
-      tracksByDate.push({trackIndex: trackData})
+  dataParse = function() {
+    var dataset = dataSegments
+
+    var tracksByDate = []
+    _.each(dataset, function(albumData){
+      _.each(albumData.tracks, function(trackData){
+        // track(trackData, albumData)
+        // d3Maker(trackData)
+        var trackIndex = function(){return trackData.trackIndex }
+        tracksByDate.push({trackIndex: trackData})
+      })
+
     })
 
-  })
-
-  // console.log(tracksByDate)
-  TimeLineStructureRecordingDate(tracksByDate)
-}
-
-
-TimeLineStructureRecordingDate = function(tracksByDate){
-
-  var self = this
-
-  var dataset = dataSegments
-
-  var initialize = function(){
+    // console.log(tracksByDate)
+    TimeLineStructureRecordingDate(tracksByDate)
   }
 
-  var trackMaker =function(trackData){
-    // var albumKey = albumData.albumKey
-    var source = $('#track-container-template').html();
-    var template = Handlebars.compile(source)
-    $("#timeline-container").append(template(trackData.trackIndex))
 
-    // $(".track-"+trackData.trackIndex).on("click", function(){
-    //   updateNotes(trackData)
-    // })
-  }
+  TimeLineStructureRecordingDate = function(tracksByDate){
 
-var d3Maker2TEMP = function(trackData){
+    var self = this
+
+    var dataset = dataSegments
+
+    var initialize = function(){
+    }
+
+    var trackMaker =function(trackData){
+      // var albumKey = albumData.albumKey
+      var source = $('#track-container-template').html();
+      var template = Handlebars.compile(source)
+      $("#timeline-container").append(template(trackData.trackIndex))
+
+      // $(".track-"+trackData.trackIndex).on("click", function(){
+      //   updateNotes(trackData)
+      // })
+    }
+
+    var d3Maker2TEMP = function(trackData){
 
 
-  var ratioFactor = 30
-  var width = $("#timeline-container").width();
-  var height = width/ratioFactor
-    // var maxBarWidth = 502.200 //data's time length for Reovlution 9. todo: change to carnival's long length or make this programmatic using d3's .max method
-    var maxBarWidth = 290 //adjusting for while my guitar gently weeps
+      var ratioFactor = 30
+      var width = $("#timeline-container").width();
+      var height = width/ratioFactor
+      // var maxBarWidth = 502.200 //data's time length for Reovlution 9. todo: change to carnival's long length or make this programmatic using d3's .max method
+      var maxBarWidth = 290 //adjusting for while my guitar gently weeps
 
-    // var barHeight = width/20 //todo: fix bug for floating text weird height gaps
-    var widthFactor = width/maxBarWidth //1.35 factor from 384 px wide on guitar weep
+      // var barHeight = width/20 //todo: fix bug for floating text weird height gaps
+      var widthFactor = width/maxBarWidth //1.35 factor from 384 px wide on guitar weep
 
-    var svg = d3.select(".track-"+trackData.trackIndex).append("svg")
-      // .attr("width", width)
-      .attr("preserveAspectRatio", "xMidYMid")
-      .attr("viewBox", "0 0 "+width+" "+height)
-      .attr("width", width)
-      .attr("height", height)
-
-    svg.selectAll("rect")
-        .data(trackData.segments)
-      .enter().append("rect")
-        .attr("x", function(d) { return d.start*widthFactor })
-        .attr("y", 0)
-        .attr("width", function(d) { return (d.end-d.start)*widthFactor})
+      var svg = d3.select(".track-"+trackData.trackIndex).append("svg")
+        // .attr("width", width)
+        .attr("preserveAspectRatio", "xMidYMid")
+        .attr("viewBox", "0 0 "+width+" "+height)
+        .attr("width", width)
         .attr("height", height)
-        .style("stroke", "white")
-        .attr("class", function(d) { return "segment_"+d.segment })
+
+      svg.selectAll("rect")
+          .data(trackData.segments)
+        .enter().append("rect")
+          .attr("x", function(d) { return d.start*widthFactor })
+          .attr("y", 0)
+          .attr("width", function(d) { return (d.end-d.start)*widthFactor})
+          .attr("height", height)
+          .style("stroke", "white")
+          .attr("class", function(d) { return "segment_"+d.segment })
+
+    }
+
+    _.each(tracksByDate, function(trackData){
+      trackMaker(trackData)
+      d3Maker2TEMP(trackData.trackIndex)
+    })
+
+
+    }
+
+  dataParse()
+
+}
+
+
+// MICRO BY DATE
+
+sortTracksByDateMicro = function(){
+
+  dataParseMicro = function() {
+    var dataset = dataSegments
+
+    var tracksByDate = []
+    _.each(dataset, function(albumData){
+      _.each(albumData.tracks, function(trackData){
+        // track(trackData, albumData)
+        // d3Maker(trackData)
+        var trackIndex = function(){return trackData.trackIndex }
+        tracksByDate.push({trackIndex: trackData})
+      })
+
+    })
+
+    // console.log(tracksByDate)
+    TimeLineStructureRecordingDateMicro(tracksByDate)
+  }
+
+
+  TimeLineStructureRecordingDateMicro = function(tracksByDate){
+
+    var self = this
+
+    var dataset = dataSegments
+
+    var initialize = function(){
+    }
+
+    var trackMakerMicro =function(trackData){
+      // var albumKey = albumData.albumKey
+      var source = $('#micro-track-container-template').html();
+      var template = Handlebars.compile(source)
+      $("#micromacro-container").append(template(trackData.trackIndex))
+
+      // $(".track-"+trackData.trackIndex).on("click", function(){
+      //   updateNotes(trackData)
+      // })
+    }
+
+  var d3Maker2TEMPMicro = function(trackData){
+
+
+    var ratioFactor = 160
+    var width = $("#timeline-container").width();
+    var height = width/ratioFactor
+      // var maxBarWidth = 502.200 //data's time length for Reovlution 9. todo: change to carnival's long length or make this programmatic using d3's .max method
+      var maxBarWidth = 290 //adjusting for while my guitar gently weeps
+
+      // var barHeight = width/20 //todo: fix bug for floating text weird height gaps
+      var widthFactor = width/maxBarWidth //1.35 factor from 384 px wide on guitar weep
+
+      var svg = d3.select(".micro-track-"+trackData.trackIndex).append("svg")
+        // .attr("width", width)
+        .attr("preserveAspectRatio", "xMidYMid")
+        .attr("viewBox", "0 0 "+width+" "+height)
+        .attr("width", width)
+        .attr("height", height)
+        .attr("class", "micro-svg")
+
+      svg.selectAll("rect")
+          .data(trackData.segments)
+        .enter().append("rect")
+          .attr("x", function(d) { return d.start*widthFactor })
+          .attr("y", 0)
+          .attr("width", function(d) { return (d.end-d.start)*widthFactor})
+          .attr("height", height)
+          // .style("stroke", "white")
+          .attr("class", function(d) { return "segment_"+d.segment })
+
+    }
+
+    _.each(tracksByDate, function(trackData){
+      trackMakerMicro(trackData)
+      d3Maker2TEMPMicro(trackData.trackIndex)
+    })
+
 
   }
 
-  _.each(tracksByDate, function(trackData){
-    trackMaker(trackData)
-    d3Maker2TEMP(trackData.trackIndex)
-  })
-
+  dataParseMicro()
 
 }
+
+
+
+
+
 
 
 
@@ -248,9 +347,10 @@ legendNavHider = function(){
 $(function(){
 
   // timeline = new TimelineStructure1()
-  dataParse()
+  sortTracksByDateMicro()
+  sortTracksByDate()
 
-  
+
   
   $(window).resize(function() {
   var ratioFactor = 30
