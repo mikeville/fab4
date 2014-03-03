@@ -292,3 +292,13 @@ svg {
   width: 80%;
   float: left;
 }
+
+/* line 223, sass/main.scss */
+#timeline-view-switcher {
+  padding-top: 3rem;
+}
+
+/* line 227, sass/main.scss */
+#timeline-header-container {
+  padding-bottom: 3rem;
+}

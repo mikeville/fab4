@@ -1,3 +1,82 @@
+// EVENTS
+
+
+addNavEvents = function(){
+  $("#nav-link-legend").on("click", function(e){
+    e.preventDefault()
+    $("#notes-container").hide()
+    $("#legend-container").show()
+  })
+  $("#nav-link-notes").on("click", function(e){
+    e.preventDefault()
+    $("#legend-container").hide()
+    $("#notes-container").show()
+      .html("<p>Click tracks to read excerpts from Alan W. Pollack's <a href='http://www.icce.rug.nl/~soundscapes/DATABASES/AWP/awp-notes_on.shtml'>'Notes on...'</a> series</p>")
+  })
+  $("#nav-link-hide").on("click", function(e){
+    e.preventDefault()
+    $("#legend-container").hide()
+    $("#notes-container").hide()
+  })
+  $("#sort-link-album").on("click", sortByAlbum)
+  $("#sort-link-recording").on("click", function(e){
+    e.preventDefault;
+    $("#timeline-container").empty();
+    TimeLineStructureRecordingDate();
+  })
+}
+
+sortByAlbum = function(){
+  console.log("album sort")
+}
+
+
+
+
+// RESPONSIVENESS
+
+ssmTest = function(){
+  ssm.addStates([
+  {
+    id: 'mobile',
+    maxWidth: 640,
+    onEnter: function(){
+      contextModuleToMobile();
+    }
+  },
+  {
+    id: 'tablet-desktop',
+    minWidth: 640,
+    onEnter: function(){
+      contextModuleToSidebar();
+    }
+  }
+  ]).ready()
+}
+
+contextModuleToSidebar = function(){
+  $("#context-module").removeClass("context-module-mobile")
+    .addClass("context-module-desktop")
+    // .css("float", "right")
+  $('#timeline-container').addClass("timeline-container-desktop")
+  $('#nav-link-hide').hide();
+
+}
+
+contextModuleToMobile = function(){
+  $("#context-module").removeClass("context-module-desktop")
+  $('#timeline-container').removeClass("timeline-container-desktop")
+  $('#context-module').addClass("context-module-mobile")
+  $('#nav-link-hide').show();
+}
+
+
+
+
+
+
+// SORT TRACKS BY DATE
+
 dataParse = function() {
   var dataset = dataSegments
 
@@ -75,6 +154,10 @@ var d3Maker2TEMP = function(trackData){
 
 
 }
+
+
+
+// SORT TRACKS BY ALBUM
 
 
 TimelineStructure1 = function(){
@@ -161,74 +244,10 @@ legendNavHider = function(){
 }
 
 
-ssmTest = function(){
-  ssm.addStates([
-  {
-    id: 'mobile',
-    maxWidth: 640,
-    onEnter: function(){
-      contextModuleToMobile();
-    }
-  },
-  {
-    id: 'tablet-desktop',
-    minWidth: 640,
-    onEnter: function(){
-      contextModuleToSidebar();
-    }
-  }
-  ]).ready()
-}
-
-contextModuleToSidebar = function(){
-  $("#context-module").removeClass("context-module-mobile")
-    .addClass("context-module-desktop")
-    // .css("float", "right")
-  $('#timeline-container').addClass("timeline-container-desktop")
-  $('#nav-link-hide').hide();
-
-}
-
-contextModuleToMobile = function(){
-  $("#context-module").removeClass("context-module-desktop")
-  $('#timeline-container').removeClass("timeline-container-desktop")
-  $('#context-module').addClass("context-module-mobile")
-  $('#nav-link-hide').show();
-}
-
-
-addNavEvents = function(){
-  $("#nav-link-legend").on("click", function(e){
-    e.preventDefault()
-    $("#notes-container").hide()
-    $("#legend-container").show()
-  })
-  $("#nav-link-notes").on("click", function(e){
-    e.preventDefault()
-    $("#legend-container").hide()
-    $("#notes-container").show()
-      .html("<p>Click tracks to read excerpts from Alan W. Pollack's <a href='http://www.icce.rug.nl/~soundscapes/DATABASES/AWP/awp-notes_on.shtml'>'Notes on...'</a> series</p>")
-  })
-  $("#nav-link-hide").on("click", function(e){
-    e.preventDefault()
-    $("#legend-container").hide()
-    $("#notes-container").hide()
-  })
-  $("#sort-link-album").on("click", sortByAlbum)
-  $("#sort-link-recording").on("click", function(e){
-    e.preventDefault;
-    $("#timeline-container").empty();
-    TimeLineStructureRecordingDate();
-  })
-}
-
-sortByAlbum = function(){
-  console.log("album sort")
-}
 
 $(function(){
 
-  // timeline = new TimelineStructure1()
+  timeline = new TimelineStructure1()
   
   $(window).resize(function() {
   var ratioFactor = 30
@@ -249,6 +268,6 @@ $(function(){
 
   addNavEvents()
 
-  dataParse()
+  // dataParse()
 
 })
