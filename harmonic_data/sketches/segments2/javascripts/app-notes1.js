@@ -1,3 +1,82 @@
+dataParse = function() {
+  var dataset = dataSegments
+
+  var tracksByDate = []
+  _.each(dataset, function(albumData){
+    _.each(albumData.tracks, function(trackData){
+      // track(trackData, albumData)
+      // d3Maker(trackData)
+      var trackIndex = function(){return trackData.trackIndex }
+      tracksByDate.push({trackIndex: trackData})
+    })
+
+  })
+
+  // console.log(tracksByDate)
+  TimeLineStructureRecordingDate(tracksByDate)
+}
+
+
+TimeLineStructureRecordingDate = function(tracksByDate){
+
+  var self = this
+
+  var dataset = dataSegments
+
+  var initialize = function(){
+  }
+
+  var trackMaker =function(trackData){
+    // var albumKey = albumData.albumKey
+    var source = $('#track-container-template').html();
+    var template = Handlebars.compile(source)
+    $("#timeline-container").append(template(trackData.trackIndex))
+
+    // $(".track-"+trackData.trackIndex).on("click", function(){
+    //   updateNotes(trackData)
+    // })
+  }
+
+var d3Maker2TEMP = function(trackData){
+
+
+  var ratioFactor = 30
+  var width = $("#timeline-container").width();
+  var height = width/ratioFactor
+    // var maxBarWidth = 502.200 //data's time length for Reovlution 9. todo: change to carnival's long length or make this programmatic using d3's .max method
+    var maxBarWidth = 290 //adjusting for while my guitar gently weeps
+
+    // var barHeight = width/20 //todo: fix bug for floating text weird height gaps
+    var widthFactor = width/maxBarWidth //1.35 factor from 384 px wide on guitar weep
+
+    var svg = d3.select(".track-"+trackData.trackIndex).append("svg")
+      // .attr("width", width)
+      .attr("preserveAspectRatio", "xMidYMid")
+      .attr("viewBox", "0 0 "+width+" "+height)
+      .attr("width", width)
+      .attr("height", height)
+
+    svg.selectAll("rect")
+        .data(trackData.segments)
+      .enter().append("rect")
+        .attr("x", function(d) { return d.start*widthFactor })
+        .attr("y", 0)
+        .attr("width", function(d) { return (d.end-d.start)*widthFactor})
+        .attr("height", height)
+        .style("stroke", "white")
+        .attr("class", function(d) { return "segment_"+d.segment })
+
+  }
+
+  _.each(tracksByDate, function(trackData){
+    trackMaker(trackData)
+    d3Maker2TEMP(trackData.trackIndex)
+  })
+
+
+}
+
+
 TimelineStructure1 = function(){
 
   var self = this
@@ -36,6 +115,7 @@ TimelineStructure1 = function(){
 
   var updateNotes = function(trackData){
     $("#legend-container").hide()
+    $("#notes-container").show()
     var source = $('#notes-template').html();
     var template = Handlebars.compile(source)
     $('#notes-container').html(template(trackData))
@@ -84,15 +164,15 @@ legendNavHider = function(){
 ssmTest = function(){
   ssm.addStates([
   {
-    id: 'mobile-tablet',
-    maxWidth: 1024,
+    id: 'mobile',
+    maxWidth: 640,
     onEnter: function(){
       contextModuleToMobile();
     }
   },
   {
-    id: 'desktop',
-    minWidth: 1024,
+    id: 'tablet-desktop',
+    minWidth: 640,
     onEnter: function(){
       contextModuleToSidebar();
     }
@@ -102,16 +182,18 @@ ssmTest = function(){
 
 contextModuleToSidebar = function(){
   $("#context-module").removeClass("context-module-mobile")
-  $("#context-module").addClass("context-module-desktop")
+    .addClass("context-module-desktop")
+    // .css("float", "right")
   $('#timeline-container').addClass("timeline-container-desktop")
-  // $('#timeline-container').css("background-color", "black")
+  $('#nav-link-hide').hide();
+
 }
 
 contextModuleToMobile = function(){
   $("#context-module").removeClass("context-module-desktop")
   $('#timeline-container').removeClass("timeline-container-desktop")
   $('#context-module').addClass("context-module-mobile")
-
+  $('#nav-link-hide').show();
 }
 
 
@@ -131,14 +213,22 @@ addNavEvents = function(){
     e.preventDefault()
     $("#legend-container").hide()
     $("#notes-container").hide()
-
   })
+  $("#sort-link-album").on("click", sortByAlbum)
+  $("#sort-link-recording").on("click", function(e){
+    e.preventDefault;
+    $("#timeline-container").empty();
+    TimeLineStructureRecordingDate();
+  })
+}
 
+sortByAlbum = function(){
+  console.log("album sort")
 }
 
 $(function(){
 
-  timeline = new TimelineStructure1()
+  // timeline = new TimelineStructure1()
   
   $(window).resize(function() {
   var ratioFactor = 30
@@ -158,5 +248,7 @@ $(function(){
   ssmTest()
 
   addNavEvents()
+
+  dataParse()
 
 })
