@@ -18,7 +18,7 @@ var sortDataMasterByRelease = function(){
 
 var trackWidth;
 var trackHeight;
-var trackAspect = 30;
+var trackAspect = 60;
 
 
 //ROUTES (coming soon)
@@ -76,15 +76,39 @@ var Track = Backbone.View.extend({
     var maxBarWidth = 290 //TODO: clean this up. right now it's for guitar gently weeps.
     var widthFactor = trackWidth/maxBarWidth;
 
-    var dataset
-
     var svg = d3.select("#micromacro-container").append("div")
-
+        .attr("class", "track-container-"+trackData.trackIndex)
       .append("svg")
         .attr("preserveAspectRatio", "xMidYMid")
         .attr("viewBox", "0 0 "+trackWidth+" "+trackHeight)
         .attr("width", trackWidth)
         .attr("height", trackHeight)
+
+    svg.selectAll("rect")
+        .data(trackData.segments)
+      .enter().append("rect")
+        .attr("x", function(d) { return d.start*widthFactor })
+        .attr("y", 0)
+        .attr("width", function(d) { return (d.end-d.start)*widthFactor})
+        .attr("height", trackHeight)
+        .attr("class", function(d) { return "segment_"+d.segment })
+      .on("click", function(d){
+        console.log(d.segment)
+        sortTest(d)
+      })
+
+    var sortTest = function(d){
+      svg.selectAll("rect")
+        // .style("fill", "black")
+        .sort(function(a, b){
+          return d3.ascending(a, b);
+        })
+        .transition()
+        .duration(1000)
+        .attr("x", function(d) { return d.start*widthFactor })
+        .attr("width", function(d) { return (d.end-d.start)*widthFactor})
+
+    }
   }
 })
 

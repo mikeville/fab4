@@ -8,11 +8,44 @@ html {
 #master-container {
   width: 1000px;
   margin: 0 auto;
-  background-color: red;
 }
 
-/* line 12, sass/main.scss */
+/* line 11, sass/main.scss */
 #timeline-container {
   width: 80%;
-  background-color: blue;
+}
+
+/* line 34, sass/main.scss */
+.segment_intro, .segment_outro, .segment_silence {
+  fill: grey;
+}
+
+/* line 38, sass/main.scss */
+.segment_verse, .segment_verse_-_break, .segment_outro_verse {
+  fill: red;
+}
+
+/* line 42, sass/main.scss */
+.segment_chorus {
+  fill: blue;
+}
+
+/* line 46, sass/main.scss */
+.segment_refrain {
+  fill: cyan;
+}
+
+/* line 50, sass/main.scss */
+.segment_instrumental, .segment_verse_guitar_solo, .segment_sitar_solo, .segment_verse_instrumental, .segment_verse_instrumental_solo {
+  fill: orange;
+}
+
+/* line 54, sass/main.scss */
+.segment_refrain_with_ending {
+  fill: lightblue;
+}
+
+/* line 58, sass/main.scss */
+.segment_bridge, .segment_bridge_with_ending {
+  fill: green;
 }

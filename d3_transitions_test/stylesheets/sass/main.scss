@@ -6,10 +6,56 @@ html {
 #master-container{
   width: 1000px;
   margin: 0 auto;
-  background-color: red;
 }
 
 #timeline-container{
   width: 80%;
-  background-color: blue;
 }
+
+
+
+
+
+
+// *************** Segment color variables
+
+$intro-outro: grey;
+$verse: red;
+$chorus: cyan;
+$bridge: green;
+
+$silence: white;
+
+$instrumental: orange;
+
+
+
+
+.segment_intro, .segment_outro, .segment_silence {
+  fill: $intro-outro;
+}
+
+.segment_verse, .segment_verse_-_break, .segment_outro_verse {
+  fill: $verse;
+}
+
+.segment_chorus {
+  fill: blue;
+}
+
+.segment_refrain {
+  fill: $chorus;
+}
+
+.segment_instrumental, .segment_verse_guitar_solo, .segment_sitar_solo, .segment_verse_instrumental, .segment_verse_instrumental_solo {
+  fill: $instrumental;
+}
+
+.segment_refrain_with_ending {
+  fill: lightblue;
+}
+
+.segment_bridge, .segment_bridge_with_ending {
+  fill: $bridge;
+}
+
