@@ -24,13 +24,13 @@ var trackHeight;
 var trackAspect = 30;
 
 
-//ROUTES
+//ROUTES (coming soon)
 
 var App = Backbone.Router.extend({
   initialize: function(){
-    this.makeAppFrame()
+    this.TEMP_makeAppFrame()
   },
-  makeAppFrame: function(){
+  TEMP_makeAppFrame: function(){
     console.log("app frame drawn. welcome to app")
   },
   TEMP_drawTimeline: function(){
@@ -44,11 +44,6 @@ var timeline = Backbone.View.extend({
   }
 })
 
-var microMacro = Backbone.View.extend({
-})
-
-
-
 
 var TinyTimeline = Backbone.View.extend({
   initialize: function(){
@@ -61,33 +56,26 @@ var TinyTimeline = Backbone.View.extend({
     var dataset = sortDataMasterByRelease()
     _.each(dataset, function(trackData){
       var track = new Track()
-      track.render()
+      track.render(trackData)
     })
-    // this.render()
+  },
+
+  render: function(){
+
   }
-
-  // render: function(){
-
-  // }
-
-  // drawD3: function(){
-  //   console.log("drawing a track")
-
-  //   var svg = d3.select(".")
-  // }
-
 })
+
 
 var Track = Backbone.View.extend({
   // className: "svg-track-container",
   el: function(){
     return $("#micromacro-container")
   },
-  render: function(){
-    this.$el.append(this.drawD3)
+  render: function(trackData){
+    this.$el.append(this.drawD3(trackData))
   },
-  drawD3: function(){
-    return "test"
+  drawD3: function(trackData){
+    return "<p>"+trackData.trackIndex.trackTitle+"</p>"
   }
 })
 
