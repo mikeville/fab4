@@ -15,18 +15,23 @@
   <link rel="stylesheet" type="text/css" href="stylesheets/main.css" />
   <link rel="stylesheet" type="text/css" href="stylesheets/ellipsis.css" />
   <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700,700italic,500italic,500,400italic,300italic,300,100italic,100' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <div id="master-container">
     <div id="site-header">
-      <a href="#"><h1 id="site-title">Charting the Beatles</h1></a>
-      <div id="nav-timelines"> 
-        <a href="#song-structure">1</a>
-        <a href="#authorship-and-collaboration">2</a>
-        <a href="#working-schedule">3</a>
-        <a href="#in-the-studio">4</a>
-        <a href="#lyrical-syntax">5</a>
-        <a href="#self-reference">6</a>
+      <div id="site-title-container">
+        <a  id="site-title" href="#"><h1>Charting the Beatles</h1></a>
+      </div>
+      <div id="nav-timeline-container">
+        <div id="nav-timelines"> 
+          <a href="#song-structure">1</a>
+          <a href="#authorship-and-collaboration">2</a>
+          <a href="#working-schedule">3</a>
+          <a href="#in-the-studio">4</a>
+          <a href="#lyrical-syntax">5</a>
+          <a href="#self-reference">6</a>
+        </div>
       </div>
     </div>
     <div id="timeline-header-container">
@@ -91,7 +96,7 @@
 </script>
 
 <script id='timeline-header-template' type='text/x-handlebars-template'>
-  <h2>{{timelineTitle}}</h2>
+  <h2 id='timeline-title'>{{timelineTitle}}</h2>
   <p>{{oneLiner}}</p>
 </script>
 

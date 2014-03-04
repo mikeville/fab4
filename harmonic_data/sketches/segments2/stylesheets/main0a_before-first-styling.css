@@ -1,4 +1,4 @@
-/* line 3, sass/main.scss */
+/* line 3, sass/main0a_before-first-styling.scss */
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -9,32 +9,32 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
   background: transparent;
 }
 
-/* line 3, sass/main.scss */
+/* line 3, sass/main0a_before-first-styling.scss */
 body {
   line-height: 1;
 }
 
-/* line 3, sass/main.scss */
+/* line 3, sass/main0a_before-first-styling.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 3, sass/main.scss */
+/* line 3, sass/main0a_before-first-styling.scss */
 nav ul {
   list-style: none;
 }
 
-/* line 3, sass/main.scss */
+/* line 3, sass/main0a_before-first-styling.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 3, sass/main.scss */
+/* line 3, sass/main0a_before-first-styling.scss */
 blockquote:before, blockquote:after, q:before, q:after {
   content: none;
 }
 
-/* line 3, sass/main.scss */
+/* line 3, sass/main0a_before-first-styling.scss */
 a {
   margin: 0;
   padding: 0;
@@ -43,14 +43,14 @@ a {
   background: transparent;
 }
 
-/* line 3, sass/main.scss */
+/* line 3, sass/main0a_before-first-styling.scss */
 ins {
   background-color: #ff9;
   color: #000;
   text-decoration: none;
 }
 
-/* line 3, sass/main.scss */
+/* line 3, sass/main0a_before-first-styling.scss */
 mark {
   background-color: #ff9;
   color: #000;
@@ -58,24 +58,24 @@ mark {
   font-weight: bold;
 }
 
-/* line 3, sass/main.scss */
+/* line 3, sass/main0a_before-first-styling.scss */
 del {
   text-decoration: line-through;
 }
 
-/* line 3, sass/main.scss */
+/* line 3, sass/main0a_before-first-styling.scss */
 abbr[title], dfn[title] {
   border-bottom: 1px dotted;
   cursor: help;
 }
 
-/* line 3, sass/main.scss */
+/* line 3, sass/main0a_before-first-styling.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 3, sass/main.scss */
+/* line 3, sass/main0a_before-first-styling.scss */
 hr {
   display: block;
   height: 1px;
@@ -85,19 +85,19 @@ hr {
   padding: 0;
 }
 
-/* line 3, sass/main.scss */
+/* line 3, sass/main0a_before-first-styling.scss */
 input, select {
   vertical-align: middle;
 }
 
-/* line 8, sass/main.scss */
+/* line 8, sass/main0a_before-first-styling.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 56, sass/main.scss */
+/* line 56, sass/main0a_before-first-styling.scss */
 .ellipsis {
   white-space: nowrap;
   overflow: hidden;
@@ -107,39 +107,39 @@ input, select {
   -moz-binding: url('xml/ellipsis.xml#ellipsis');
 }
 
-/* line 61, sass/main.scss */
+/* line 61, sass/main0a_before-first-styling.scss */
 .shadow {
   -webkit-box-shadow: black 5px 5px 5px;
   -moz-box-shadow: black 5px 5px 5px;
   box-shadow: black 5px 5px 5px;
 }
 
-/* line 90, sass/main.scss */
+/* line 90, sass/main0a_before-first-styling.scss */
 .author_McCartney {
   fill: #ffce06;
 }
 
-/* line 94, sass/main.scss */
+/* line 94, sass/main0a_before-first-styling.scss */
 .author_Lennon {
   fill: #57caef;
 }
 
-/* line 98, sass/main.scss */
+/* line 98, sass/main0a_before-first-styling.scss */
 .author_Harrison {
   fill: #74c044;
 }
 
-/* line 102, sass/main.scss */
+/* line 102, sass/main0a_before-first-styling.scss */
 .author_Starr {
   fill: #ee3766;
 }
 
-/* line 106, sass/main.scss */
+/* line 106, sass/main0a_before-first-styling.scss */
 .author_Other {
   fill: #555244;
 }
 
-/* line 129, sass/main.scss */
+/* line 129, sass/main0a_before-first-styling.scss */
 .segment_intro,
 .segment_outro,
 .segment_outro_a,
@@ -151,7 +151,7 @@ input, select {
   fill: #555244;
 }
 
-/* line 156, sass/main.scss */
+/* line 156, sass/main0a_before-first-styling.scss */
 .segment_verse,
 .segment_versea,
 .segment_verseb,
@@ -182,7 +182,7 @@ input, select {
   fill: #57caef;
 }
 
-/* line 170, sass/main.scss */
+/* line 170, sass/main0a_before-first-styling.scss */
 .segment_chorus,
 .segment_refrain,
 .segment_refrain_trans,
@@ -194,7 +194,7 @@ input, select {
   fill: #ffce06;
 }
 
-/* line 180, sass/main.scss */
+/* line 180, sass/main0a_before-first-styling.scss */
 .segment_instrumental,
 .segment_verse_guitar_solo,
 .segment_sitar_solo,
@@ -205,12 +205,12 @@ input, select {
   fill: #ee3766;
 }
 
-/* line 184, sass/main.scss */
+/* line 184, sass/main0a_before-first-styling.scss */
 .segment_refrain_with_ending {
   fill: lightblue;
 }
 
-/* line 195, sass/main.scss */
+/* line 195, sass/main0a_before-first-styling.scss */
 .segment_bridge,
 .segment_bridge_--solo--,
 .segment_bridge_instru,
@@ -221,7 +221,7 @@ input, select {
   fill: #ee3766;
 }
 
-/* line 204, sass/main.scss */
+/* line 204, sass/main0a_before-first-styling.scss */
 html {
   width: 100%;
   font-size: 1em;
@@ -230,138 +230,117 @@ html {
   background-color: #1e1e1a;
   color: #fff8cd;
 }
-/* line 214, sass/main.scss */
+/* line 214, sass/main0a_before-first-styling.scss */
 html a {
   color: #fff8cd;
 }
-/* line 217, sass/main.scss */
+/* line 217, sass/main0a_before-first-styling.scss */
 html a:hover {
   color: #74c044;
 }
 
-/* line 226, sass/main.scss */
-#site-header {
-  height: 1.5rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #fff8cd;
-  margin-bottom: 0.5rem;
-}
-/* line 228, sass/main.scss */
-#site-header #site-title-container {
-  width: 50%;
-  float: left;
-}
-/* line 232, sass/main.scss */
-#site-header #site-title-container #site-title {
+/* line 223, sass/main0a_before-first-styling.scss */
+#site-title {
   font-size: 1.5rem;
   font-weight: 300;
   text-decoration: none;
 }
-/* line 236, sass/main.scss */
-#site-header #site-title-container #site-title :hover {
+/* line 227, sass/main0a_before-first-styling.scss */
+#site-title :hover {
   color: #fff8cd;
 }
-/* line 239, sass/main.scss */
-#site-header #site-title-container #site-title h1 {
-  font-weight: 300;
-}
-/* line 244, sass/main.scss */
-#site-header #nav-timeline-container {
-  width: 50%;
-  float: right;
-}
 
-/* line 262, sass/main.scss */
+/* line 232, sass/main0a_before-first-styling.scss */
 #timeline-title {
   font-size: 3rem;
   font-weight: 100;
 }
 
-/* line 268, sass/main.scss */
+/* line 238, sass/main0a_before-first-styling.scss */
 .track-title-label, .segment-label {
   text-transform: uppercase;
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 300;
 }
 
-/* line 274, sass/main.scss */
+/* line 244, sass/main0a_before-first-styling.scss */
 .track-title-label {
   font-size: .6em;
   font-weight: normal;
 }
 
-/* line 279, sass/main.scss */
+/* line 249, sass/main0a_before-first-styling.scss */
 .segment-label {
   font-size: .6em;
 }
 
-/* line 283, sass/main.scss */
+/* line 253, sass/main0a_before-first-styling.scss */
 .album-title-label {
   font-size: 1.5em;
   display: inline;
 }
 
-/* line 289, sass/main.scss */
+/* line 259, sass/main0a_before-first-styling.scss */
 .album-title-container {
   width: 100%;
   overflow: hidden;
 }
 
-/* line 303, sass/main.scss */
+/* line 273, sass/main0a_before-first-styling.scss */
 #master-container {
   max-width: 900px;
   margin: 0 auto;
   padding: 1rem;
 }
 
-/* line 314, sass/main.scss */
+/* line 284, sass/main0a_before-first-styling.scss */
 #context-module {
   background-color: #2d2e27;
 }
 
-/* line 321, sass/main.scss */
+/* line 291, sass/main0a_before-first-styling.scss */
 .context-module-desktop {
   width: 20%;
   float: right;
   height: 100%;
 }
 
-/* line 328, sass/main.scss */
+/* line 298, sass/main0a_before-first-styling.scss */
 .timeline-container-desktop {
   width: 80%;
   float: left;
 }
 
-/* line 340, sass/main.scss */
+/* line 310, sass/main0a_before-first-styling.scss */
 svg.tiny-track, svg.track {
   display: block;
   margin-bottom: 0rem;
 }
 
-/* line 347, sass/main.scss */
+/* line 317, sass/main0a_before-first-styling.scss */
 #timeline-container #tiny-container .tiny-album-separator {
   margin-top: .25rem;
 }
-/* line 354, sass/main.scss */
+/* line 324, sass/main0a_before-first-styling.scss */
 #timeline-container #big-timeline-container .album-label-container {
   width: 100%;
   overflow: hidden;
 }
-/* line 357, sass/main.scss */
+/* line 327, sass/main0a_before-first-styling.scss */
 #timeline-container #big-timeline-container .album-label-container h3 {
   display: inline;
 }
-/* line 362, sass/main.scss */
+/* line 332, sass/main0a_before-first-styling.scss */
 #timeline-container #big-timeline-container .track-container {
   width: 100%;
   display: block;
   overflow: hidden;
 }
-/* line 368, sass/main.scss */
+/* line 338, sass/main0a_before-first-styling.scss */
 #timeline-container #big-timeline-container .track-container .track-title-container {
   float: left;
 }
-/* line 372, sass/main.scss */
+/* line 342, sass/main0a_before-first-styling.scss */
 #timeline-container #big-timeline-container .track-container .track-title-container h6 {
   white-space: nowrap;
   overflow: hidden;
@@ -370,20 +349,20 @@ svg.tiny-track, svg.track {
   text-overflow: ellipsis;
   -moz-binding: url('xml/ellipsis.xml#ellipsis');
 }
-/* line 377, sass/main.scss */
+/* line 347, sass/main0a_before-first-styling.scss */
 #timeline-container #big-timeline-container .track-container .svg-track-container {
   overflow: hidden;
   padding: 0;
   margin: 0;
 }
 
-/* line 390, sass/main.scss */
+/* line 360, sass/main0a_before-first-styling.scss */
 p.year-mark-label {
   display: none;
 }
 
 @media (max-width: 40rem) {
-  /* line 395, sass/main.scss */
+  /* line 365, sass/main0a_before-first-styling.scss */
   .track-title-container h6 {
     white-space: nowrap;
     overflow: hidden;
@@ -393,7 +372,7 @@ p.year-mark-label {
     -moz-binding: url('xml/ellipsis.xml#ellipsis');
   }
 
-  /* line 399, sass/main.scss */
+  /* line 369, sass/main0a_before-first-styling.scss */
   #notes-container {
     max-height: 10rem;
     overflow-y: scroll;
@@ -401,24 +380,24 @@ p.year-mark-label {
 }
 /* Medium screens (640px) */
 @media (min-width: 40rem) {
-  /* line 410, sass/main.scss */
+  /* line 380, sass/main0a_before-first-styling.scss */
   .track-title-label {
     font-size: .8em;
   }
 
-  /* line 414, sass/main.scss */
+  /* line 384, sass/main0a_before-first-styling.scss */
   #notes-container {
     height: 100%;
   }
 }
 @media (max-width: 64rem) {
-  /* line 422, sass/main.scss */
+  /* line 392, sass/main0a_before-first-styling.scss */
   .track-title-container {
     width: 25%;
     float: left;
   }
 
-  /* line 426, sass/main.scss */
+  /* line 396, sass/main0a_before-first-styling.scss */
   .svg-track-container {
     width: 75%;
     float: left;
@@ -426,18 +405,18 @@ p.year-mark-label {
 }
 /* Large screens (1024px) */
 @media (min-width: 64rem) {
-  /* line 434, sass/main.scss */
+  /* line 404, sass/main0a_before-first-styling.scss */
   .album-label-container {
     padding-left: 10.11%;
   }
 
-  /* line 437, sass/main.scss */
+  /* line 407, sass/main0a_before-first-styling.scss */
   .year-mark-container {
     display: block;
     float: left;
     width: 10.11%;
   }
-  /* line 438, sass/main.scss */
+  /* line 408, sass/main0a_before-first-styling.scss */
   .year-mark-container p {
     display: block;
     width: 100;
@@ -449,13 +428,13 @@ p.year-mark-label {
     letter-spacing: -.1rem;
   }
 
-  /* line 454, sass/main.scss */
+  /* line 424, sass/main0a_before-first-styling.scss */
   .track-title-container {
     float: left;
     width: 22.22%;
   }
 
-  /* line 459, sass/main.scss */
+  /* line 429, sass/main0a_before-first-styling.scss */
   .svg-track-container {
     float: right;
     width: 66.66%;
