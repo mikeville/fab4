@@ -219,7 +219,7 @@ html {
 }
 
 /* line 143, sass/main.scss */
-svg.tiny-track {
+svg.tiny-track, svg.track {
   display: block;
   margin-bottom: 0rem;
 }

@@ -17,8 +17,9 @@ var sortDataMasterByRecording = function(){
 //GLOBAL VARIABLES...TODO: contain these in timeline object?
 
 var trackWidth;
+var tinyTrackHeight;
 var trackHeight;
-var trackAspect = 60;
+var trackAspect = 20;
 var tinyTrackAspect = 200;
 
 
@@ -141,7 +142,7 @@ structureTrackTiny = function(trackData){
   var svg = d3.select("#tiny-container").append("div")
       .attr("class", "tiny-track-container")
     .append("svg")
-      .attr("class", "tiny-track track-"+trackData.trackIndex)
+      .attr("class", "tiny-track tiny-track-"+trackData.trackIndex)
       .attr("preserveAspectRatio", "xMidYMid")
       .attr("viewBox", "0 0 "+trackWidth+" "+tinyTrackHeight)
       .attr("width", trackWidth)
@@ -161,6 +162,55 @@ structureTrackTiny = function(trackData){
     })
 }
 
+
+
+
+structureByRecording = function(){
+  _.each(dataMasterByRelease, function(trackData){
+    structureTrack(trackData)
+  }) 
+}
+
+structureByRelease = function(){
+  _.each(dataMaster, function(albumData){
+    d3.select("#big-timeline-container").append("div")
+        .attr("class", "album-separator album-separator-"+albumData.albumKey)
+    _.each(albumData.tracks, function(trackData){
+      structureTrack(trackData)
+    })
+  }) 
+}
+
+
+structureTrack = function(trackData){
+  trackWidth = $("#timeline-container").width(); //or this.el.width() w/ backbone
+  trackHeight = trackWidth/trackAspect
+
+  var maxBarWidth = 290 //TODO: clean this up. right now it's for guitar gently weeps.
+  var widthFactor = trackWidth/maxBarWidth;
+
+  var svg = d3.select("#big-timeline-container").append("div")
+      .attr("class", "track-container")
+    .append("svg")
+      .attr("class", "track track-"+trackData.trackIndex)
+      .attr("preserveAspectRatio", "xMidYMid")
+      .attr("viewBox", "0 0 "+trackWidth+" "+trackHeight)
+      .attr("width", trackWidth)
+      .attr("height", trackHeight)
+
+  svg.selectAll("rect")
+      .data(trackData.segments)
+    .enter().append("rect")
+      .attr("x", function(d) { return d.start*widthFactor })
+      .attr("y", 0)
+      .attr("width", function(d) { return (d.end-d.start)*widthFactor})
+      .attr("height", trackHeight)
+      .attr("class", function(d) { return "segment_"+d.segment })
+    .on("click", function(d){
+      console.log(d.segment)
+      // sortTest(d)
+    })
+}
 
 
 
@@ -192,6 +242,7 @@ $(function(){
 
     sortDataMasterByRecording() //TODO: make it only load data if it doesn't exist yet. (esepcially cause it will just push it)
     structureTinyByRelease() //TODO: this should go in routes i think, not in callback? i don't know
+    structureByRelease()
   })
   
 
@@ -202,6 +253,11 @@ $(function(){
     tinyTrackHeight = trackWidth/tinyTrackAspect
     d3.selectAll(".tiny-track").attr("width", trackWidth);
     d3.selectAll(".tiny-track").attr("height", tinyTrackHeight);
+
+    trackHeight = trackWidth/trackAspect
+    d3.selectAll(".track").attr("width", trackWidth);
+    d3.selectAll(".track").attr("height", trackHeight);
+
   });
 
   ssmTest()
