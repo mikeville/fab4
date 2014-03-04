@@ -10,16 +10,16 @@
       {"start":0.000,"end":2.612,"segment":"silence"},
       {"start":2.612,"end":8.424,"segment":"intro"},
       {"start":8.424,"end":20.410,"segment":"versea"},
-      {"start":20.410,"end":32.392,"segment":"verseb"},
+      {"start":20.410,"end":32.392,"segment":"verseb_MD_or_chorus"},
       {"start":32.392,"end":44.246,"segment":"versea"},
-      {"start":44.246,"end":56.111,"segment":"verseb"},
+      {"start":44.246,"end":56.111,"segment":"verseb_MD_or_chorus"},
       {"start":56.111,"end":71.192,"segment":"bridge"},
       {"start":71.192,"end":83.209,"segment":"versea"},
-      {"start":83.209,"end":95.053,"segment":"verseb"},
+      {"start":83.209,"end":95.053,"segment":"verseb_MD_or_chorus"},
       {"start":95.053,"end":119.037,"segment":"verseguitar"},
       {"start":119.037,"end":134.037,"segment":"bridge"},
       {"start":134.037,"end":146.042,"segment":"versea"},
-      {"start":146.042,"end":172.062,"segment":"verseb"},
+      {"start":146.042,"end":172.062,"segment":"verseb_MD_or_chorus"},
       {"start":172.062,"end":175.800,"segment":"silence"}],
     "notes": [
       "The form is a fully cranked out two bridge model with two verses intervening, the latter of which is for guitar solo, thus making for comparatively long running time of 2:52.",
@@ -74,10 +74,10 @@
       {"start":7.332,"end":27.109,"segment":"verse"},
       {"start":27.109,"end":47.015,"segment":"verse"},
       {"start":47.015,"end":67.123,"segment":"bridge"},
-      {"start":67.123,"end":87.103,"segment":"verse_(guitar_solo)"},
+      {"start":67.123,"end":87.103,"segment":"verse_--guitar_solo--"},
       {"start":87.103,"end":107.649,"segment":"verse"},
       {"start":107.649,"end":128.114,"segment":"bridge"},
-      {"start":128.114,"end":142.763,"segment":"outro_(fade-out)"},
+      {"start":128.114,"end":142.763,"segment":"outro_--fade-out--"},
       {"start":142.763,"end":147.507,"segment":"silence"}]
     },
     {"trackIndex": 5, "order": 6, "trackTitle": "Ask Me Why", "segments":
@@ -131,7 +131,7 @@
       {"start":0.414,"end":49.429,"segment":"verse"},
       {"start":49.429,"end":94.389,"segment":"verse"},
       {"start":94.389,"end":139.238,"segment":"verse_(half_solo)"},
-      {"start":139.238,"end":151.907,"segment":"outro_(fade-out)"},
+      {"start":139.238,"end":151.907,"segment":"outro_--fade-out--"},
       {"start":151.907,"end":158.067,"segment":"silence"}]
     },
     {"trackIndex": 10, "order": 11, "trackTitle": "Do You Want To Know A Secret", "segments":
@@ -447,7 +447,7 @@
       {"start":26.004,"end":42.696,"segment":"verse"},
       {"start":42.696,"end":53.880,"segment":"refrain"},
       {"start":53.880,"end":72.162,"segment":"verse"},
-      {"start":72.162,"end":89.020,"segment":"verse_(guitar_solo)"},
+      {"start":72.162,"end":89.020,"segment":"verse_--guitar_solo--"},
       {"start":89.020,"end":100.281,"segment":"refrain"},
       {"start":100.281,"end":117.220,"segment":"verse"},
       {"start":117.220,"end":130.322,"segment":"outro"},
@@ -508,7 +508,7 @@
       {"start":29.927,"end":52.203,"segment":"verse"},
       {"start":52.203,"end":67.184,"segment":"bridge"},
       {"start":67.184,"end":89.420,"segment":"verse"},
-      {"start":89.420,"end":111.804,"segment":"verse_(guitar_solo)"},
+      {"start":89.420,"end":111.804,"segment":"verse_--guitar_solo--"},
       {"start":111.804,"end":126.950,"segment":"bridge"},
       {"start":126.950,"end":147.703,"segment":"verse"},
       {"start":147.703,"end":152.671,"segment":"outro"},
@@ -554,7 +554,7 @@
       {"start":75.305,"end":96.897,"segment":"solo_break_(half-verse_+_refrain)"},
       {"start":96.897,"end":118.375,"segment":"verse"},
       {"start":118.375,"end":128.964,"segment":"refrain"},
-      {"start":128.964,"end":148.098,"segment":"outro_(fade-out)"},
+      {"start":128.964,"end":148.098,"segment":"outro_--fade-out--"},
       {"start":148.098,"end":153.507,"segment":"silence"}]
     },
     {"trackIndex": 43, "order": 3, "trackTitle": "Baby's in Black", "segments":
@@ -606,7 +606,7 @@
       {"start":39.351,"end":69.885,"segment":"verse_(variant)"},
       {"start":69.885,"end":100.490,"segment":"verse_(half_vocal_half_solo)"},
       {"start":100.490,"end":131.037,"segment":"verse_(variant)"},
-      {"start":131.037,"end":151.984,"segment":"outro_verse_(fade-out)"},
+      {"start":131.037,"end":151.984,"segment":"outro_verse_--fade-out--"},
       {"start":151.984,"end":157.200,"segment":"silence"}]
     },
     {"trackIndex": 47, "order": 7, "trackTitle": "Kansas City- Hey, Hey, Hey", "segments":
@@ -669,7 +669,7 @@
       {"start":42.510,"end":54.285,"segment":"verse"},
       {"start":54.285,"end":66.194,"segment":"verse"},
       {"start":66.194,"end":81.670,"segment":"refrain"},
-      {"start":81.670,"end":93.143,"segment":"verse_(guitar_solo)"},
+      {"start":81.670,"end":93.143,"segment":"verse_--guitar_solo--"},
       {"start":93.143,"end":108.536,"segment":"refrain"},
       {"start":108.536,"end":119.267,"segment":"outro_(fade_out)"},
       {"start":119.267,"end":124.533,"segment":"silence"}]
@@ -681,7 +681,7 @@
       {"start":30.198,"end":50.057,"segment":"verse"},
       {"start":50.057,"end":65.086,"segment":"bridge"},
       {"start":65.086,"end":85.184,"segment":"verse"},
-      {"start":85.184,"end":105.465,"segment":"verse_(guitar_solo)"},
+      {"start":85.184,"end":105.465,"segment":"verse_--guitar_solo--"},
       {"start":105.465,"end":120.604,"segment":"verse"},
       {"start":120.604,"end":140.807,"segment":"bridge"},
       {"start":140.807,"end":151.500,"segment":"outro"},
@@ -694,7 +694,7 @@
       {"start":31.408,"end":48.163,"segment":"verse"},
       {"start":48.163,"end":61.071,"segment":"bridge"},
       {"start":61.071,"end":77.821,"segment":"verse"},
-      {"start":77.821,"end":92.654,"segment":"verse_(guitar_solo)"},
+      {"start":77.821,"end":92.654,"segment":"verse_--guitar_solo--"},
       {"start":92.654,"end":107.518,"segment":"bridge"},
       {"start":107.518,"end":124.331,"segment":"verse"},
       {"start":124.331,"end":148.707,"segment":"outro"},
@@ -913,7 +913,7 @@
 {"start":83.441,"end":99.155,"segment":"refrain"},
 {"start":99.155,"end":114.776,"segment":"verse"},
 {"start":114.776,"end":130.506,"segment":"refrain"},
-{"start":130.506,"end":145.649,"segment":"outro_(fade-out)"},
+{"start":130.506,"end":145.649,"segment":"outro_--fade-out--"},
 {"start":145.649,"end":150.267,"segment":"silence"}]
     },
     {"trackIndex": 66, "order": 2, "trackTitle": "Norwegian Wood (This Bird Has Flown)", "segments":
@@ -937,7 +937,7 @@
 {"start":94.531,"end":132.165,"segment":"verse"},
 {"start":132.165,"end":148.930,"segment":"bridge"},
 {"start":148.930,"end":186.853,"segment":"verse"},
-{"start":186.853,"end":196.020,"segment":"outro_(fade-out)"},
+{"start":186.853,"end":196.020,"segment":"outro_--fade-out--"},
 {"start":196.020,"end":202.600,"segment":"silence"}]
     },
     {"trackIndex": 68, "order": 4, "trackTitle": "Nowhere Man", "segments":
@@ -945,7 +945,7 @@
 {"start":0.441,"end":16.701,"segment":"verse"},
 {"start":16.701,"end":32.444,"segment":"verse"},
 {"start":32.444,"end":48.233,"segment":"bridge"},
-{"start":48.233,"end":64.041,"segment":"verse_(guitar_solo)"},
+{"start":48.233,"end":64.041,"segment":"verse_--guitar_solo--"},
 {"start":64.041,"end":79.829,"segment":"verse"},
 {"start":79.829,"end":95.722,"segment":"bridge"},
 {"start":95.722,"end":111.514,"segment":"verse"},
@@ -979,7 +979,7 @@
 {"start":99.257,"end":122.896,"segment":"verse"},
 {"start":122.896,"end":130.759,"segment":"bridge_(instrumental)"},
 {"start":130.759,"end":154.291,"segment":"verse_(partly_instrumental)"},
-{"start":154.291,"end":160.719,"segment":"bridge_outro_(fade-out)"},
+{"start":154.291,"end":160.719,"segment":"bridge_outro_--fade-out--"},
 {"start":160.719,"end":163.693,"segment":"silence"}]
     },
     {"trackIndex": 71, "order": 7, "trackTitle": "Michelle", "segments":
@@ -1021,7 +1021,7 @@
 {"start":90.558,"end":110.497,"segment":"verse"},
 {"start":110.497,"end":120.392,"segment":"refrain"},
 {"start":120.392,"end":140.351,"segment":"verse_(instrumental)"},
-{"start":140.351,"end":148.200,"segment":"refrain_(fade-out)"},
+{"start":140.351,"end":148.200,"segment":"refrain_--fade-out--"},
 {"start":148.200,"end":153.867,"segment":"silence"}]
     },
     {"trackIndex": 74, "order": 10, "trackTitle": "I'm Looking Through You", "segments":
@@ -1032,7 +1032,7 @@
 {"start":58.770,"end":69.959,"segment":"bridge"},
 {"start":69.959,"end":96.702,"segment":"verse"},
 {"start":96.702,"end":107.868,"segment":"bridge"},
-{"start":107.868,"end":142.498,"segment":"verse_with_outro_(fade-out)"},
+{"start":107.868,"end":142.498,"segment":"verse_with_outro_--fade-out--"},
 {"start":142.498,"end":147.827,"segment":"silence"}]
     },
     {"trackIndex": 75, "order": 11, "trackTitle": "In My Life", "segments":
@@ -1087,7 +1087,7 @@
 {"start":73.689,"end":95.469,"segment":"verse"},
 {"start":95.469,"end":100.844,"segment":"refrain"},
 {"start":100.844,"end":122.661,"segment":"verse"},
-{"start":122.661,"end":136.795,"segment":"refrain_outro_(fade-out)"},
+{"start":122.661,"end":136.795,"segment":"refrain_outro_--fade-out--"},
 {"start":136.795,"end":138.800,"segment":"silence"}]
     }
   ]},
@@ -1593,7 +1593,7 @@
       {"start":75.236,"end":104.962,"segment":"refrain"},
       {"start":104.962,"end":132.070,"segment":"verse"},
       {"start":132.070,"end":161.634,"segment":"refrain"},
-      {"start":161.634,"end":177.998,"segment":"outro_(fade-out)"},
+      {"start":161.634,"end":177.998,"segment":"outro_--fade-out--"},
       {"start":177.998,"end":183.760,"segment":"silence"}]
     },
     {"trackIndex": 114, "order": 11, "trackTitle": "All You Need Is Love", "segments":
@@ -1602,12 +1602,12 @@
       {"start":26.773,"end":44.262,"segment":"verse"},
       {"start":44.262,"end":61.581,"segment":"verse"},
       {"start":61.581,"end":79.219,"segment":"refrain"},
-      {"start":79.219,"end":96.068,"segment":"verse_(guitar_solo)"},
+      {"start":79.219,"end":96.068,"segment":"verse_--guitar_solo--"},
       {"start":96.068,"end":113.459,"segment":"refrain"},
       {"start":113.459,"end":130.091,"segment":"verse"},
       {"start":130.091,"end":147.170,"segment":"refrain"},
       {"start":147.170,"end":164.257,"segment":"refrain"},
-      {"start":164.257,"end":224.000,"segment":"outro_(fade-out)"},
+      {"start":164.257,"end":224.000,"segment":"outro_--fade-out--"},
       {"start":224.000,"end":228.440,"segment":"silence"}]
     }
   ]},
@@ -1626,7 +1626,7 @@
       {"start":40.159,"end":53.711,"segment":"verse"},
       {"start":53.711,"end":66.183,"segment":"refrain"},
       {"start":66.183,"end":83.061,"segment":"bridge"},
-      {"start":83.061,"end":96.490,"segment":"verse_(guitar_solo)"},
+      {"start":83.061,"end":96.490,"segment":"verse_--guitar_solo--"},
       {"start":96.490,"end":106.580,"segment":"refrain"},
       {"start":106.580,"end":123.588,"segment":"bridge"},
       {"start":123.588,"end":137.183,"segment":"verse"},
@@ -1835,8 +1835,8 @@
       {"start":61.633,"end":90.874,"segment":"verse_b"},
       {"start":90.874,"end":120.094,"segment":"verse_b_"},
       {"start":120.094,"end":147.953,"segment":"verse_b"},
-      {"start":147.953,"end":174.416,"segment":"verse_c_(guitar_solo)"},
-      {"start":174.416,"end":198.078,"segment":"verse_c_(guitar_solo)"},
+      {"start":147.953,"end":174.416,"segment":"verse_c_--guitar_solo--"},
+      {"start":174.416,"end":198.078,"segment":"verse_c_--guitar_solo--"},
       {"start":198.078,"end":237.593,"segment":"outro_verse_a"},
       {"start":237.593,"end":241.093,"segment":"silence"}]
     },
@@ -2045,7 +2045,7 @@
       [{"start":0.000,"end":1.480,"segment":"silence"},
 {"start":1.480,"end":15.381,"segment":"refrain_(fade-in)"},
 {"start":15.381,"end":29.261,"segment":"refrain'"},
-{"start":29.261,"end":50.000,"segment":"refrain''_(fade-out)"},
+{"start":29.261,"end":50.000,"segment":"refrain''_--fade-out--"},
 {"start":50.000,"end":50.000,"segment":"silence"}]
     },
     {"trackIndex": 132, "order": 6, "trackTitle": "Let It Be", "segments":
@@ -2092,7 +2092,7 @@
 {"start":30.066,"end":51.165,"segment":"verse"},
 {"start":51.165,"end":72.289,"segment":"bridge"},
 {"start":72.289,"end":93.172,"segment":"verse_"},
-{"start":93.172,"end":114.139,"segment":"verse_(guitar_solo)"},
+{"start":93.172,"end":114.139,"segment":"verse_--guitar_solo--"},
 {"start":114.139,"end":135.359,"segment":"bridge"},
 {"start":135.359,"end":153.897,"segment":"verse"},
 {"start":153.897,"end":170.535,"segment":"outro"},
@@ -2125,12 +2125,12 @@
 {"start":0.365,"end":28.528,"segment":"intro"},
 {"start":28.528,"end":43.985,"segment":"verse"},
 {"start":43.985,"end":59.444,"segment":"refrain"},
-{"start":59.444,"end":75.018,"segment":"break_(guitar_solo)"},
+{"start":59.444,"end":75.018,"segment":"break_--guitar_solo--"},
 {"start":75.018,"end":92.603,"segment":"refrain'"},
 {"start":92.603,"end":108.338,"segment":"break_(piano_solo)"},
 {"start":108.338,"end":124.027,"segment":"verse"},
 {"start":124.027,"end":139.537,"segment":"refrain"},
-{"start":139.537,"end":155.054,"segment":"break_(guitar_solo)"},
+{"start":139.537,"end":155.054,"segment":"break_--guitar_solo--"},
 {"start":155.054,"end":170.473,"segment":"refrain'"},
 {"start":170.473,"end":185.355,"segment":"outro"},
 {"start":185.355,"end":187.093,"segment":"silence"}]
