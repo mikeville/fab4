@@ -1,12 +1,30 @@
-// EVENTS
+
 
 var dataMaster
+var dataMasterByRelease = []
 
-xhrTest = function(){
-  console.log("we got data?:")
-  console.log(dataMaster)
+var loadApp = function(){
+
+  //load the router.
+  //at the end of loading the whole app to see on screen, tehn do the data format to get masterDataByRelease
+  sortDataMasterByRelease()
 }
 
+
+var sortDataMasterByRelease = function(){
+  //TODO: add if then statement that doesn't parse the data if it already exists
+  _.each(dataMaster, function(albumData){
+    _.each(albumData.tracks, function(trackData){
+      var trackIndex = function(){
+        return trackData.trackIndex
+      }
+      dataMasterByRelease.push({trackIndex: trackData})
+    })
+
+  })
+}
+
+// EVENTS
 
 addNavEvents = function(){
   $("#nav-link-legend").on("click", function(e){
@@ -359,8 +377,9 @@ $(function(){
 
   d3.json("/javascripts/dataSegments.json", function(error, json) {
     if (error) return console.warn(error);
-    dataMaster = json;
-    xhrTest();
+    dataMaster = json.beatlesData;
+    console.log("loaded Beatles data")
+    loadApp();
   })
   
   $(window).resize(function() {
@@ -369,6 +388,8 @@ $(function(){
   var height = width/ratioFactor
   d3.selectAll("svg").attr("width", width);
   d3.selectAll("svg").attr("height", height);
+      console.log("width: "+width+", height: "+height)
+
   });
 
   // $("#context-nav").hide()
