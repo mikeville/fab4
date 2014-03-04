@@ -124,7 +124,8 @@ structureTinyByRecording = function(){
 structureTinyByRelease = function(){
   _.each(dataMaster, function(albumData){
     d3.select("#tiny-container").append("div")
-        .attr("class", "tiny-album-separator tiny-album-separator-"+albumData.albumKey)
+        .attr("class", "tiny-album-container tiny-album-container-"+albumData.albumKey)
+
     _.each(albumData.tracks, function(trackData){
       structureTrackTiny(trackData)
     })
@@ -189,7 +190,7 @@ $(function(){
   // **** DRAW TIMELINE
     // this may need to move into routes?
     app.TEMP_drawTimeline()
-
+    
     sortDataMasterByRecording() //TODO: make it only load data if it doesn't exist yet. (esepcially cause it will just push it)
     structureTinyByRelease() //TODO: this should go in routes i think, not in callback? i don't know
   })
@@ -200,8 +201,8 @@ $(function(){
   $(window).resize(function() {
     trackWidth = $("#timeline-container").width();
     tinyTrackHeight = trackWidth/tinyTrackAspect
-    d3.selectAll(".tiny-track").attr("width", trackWidth);
-    d3.selectAll(".tiny-track").attr("height", tinyTrackHeight);
+    d3.selectAll("#tiny-track").attr("width", trackWidth);
+    d3.selectAll("#tiny-track").attr("height", tinyTrackHeight);
   });
 
   ssmTest()

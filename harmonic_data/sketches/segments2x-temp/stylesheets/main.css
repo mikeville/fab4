@@ -219,23 +219,18 @@ html {
 }
 
 /* line 143, sass/main.scss */
-svg.tiny-track {
+svg.micro-svg {
   display: block;
   margin-bottom: 0rem;
 }
 
-/* line 148, sass/main.scss */
-.tiny-album-separator {
-  margin-top: .25rem;
-}
-
-/* line 153, sass/main.scss */
+/* line 149, sass/main.scss */
 .track-title-container {
   width: 20%;
   float: left;
 }
 
-/* line 158, sass/main.scss */
+/* line 154, sass/main.scss */
 .track-title-container h6 {
   white-space: nowrap;
   overflow: hidden;
@@ -246,7 +241,7 @@ svg.tiny-track {
 }
 
 @media (max-width: 40rem) {
-  /* line 164, sass/main.scss */
+  /* line 160, sass/main.scss */
   .track-title-container h6 {
     white-space: nowrap;
     overflow: hidden;
@@ -256,7 +251,7 @@ svg.tiny-track {
     -moz-binding: url('xml/ellipsis.xml#ellipsis');
   }
 
-  /* line 168, sass/main.scss */
+  /* line 164, sass/main.scss */
   #notes-container {
     max-height: 10rem;
     overflow-y: scroll;
@@ -264,46 +259,46 @@ svg.tiny-track {
 }
 /* Medium screens (640px) */
 @media (min-width: 40rem) {
-  /* line 179, sass/main.scss */
+  /* line 175, sass/main.scss */
   .track-title-label {
     font-size: .8em;
   }
 
-  /* line 183, sass/main.scss */
+  /* line 179, sass/main.scss */
   #notes-container {
     height: 100%;
   }
 }
 /* Large screens (1024px) */
-/* line 203, sass/main.scss */
+/* line 199, sass/main.scss */
 #site-header {
   padding-bottom: 1rem;
 }
 
-/* line 207, sass/main.scss */
+/* line 203, sass/main.scss */
 #context-module {
   background-color: silver;
 }
 
-/* line 214, sass/main.scss */
+/* line 210, sass/main.scss */
 .context-module-desktop {
   width: 20%;
   float: right;
   height: 100%;
 }
 
-/* line 226, sass/main.scss */
+/* line 222, sass/main.scss */
 .timeline-container-desktop {
   width: 80%;
   float: left;
 }
 
-/* line 233, sass/main.scss */
+/* line 229, sass/main.scss */
 #timeline-view-switcher {
   padding-top: 3rem;
 }
 
-/* line 237, sass/main.scss */
+/* line 233, sass/main.scss */
 #timeline-header-container {
   padding-bottom: 3rem;
 }

@@ -1,56 +1,27 @@
-@import 'compass/css3';
-// @import 'compass/reset';
+/* html5doctor.com Reset v1.6.1 - http://cssreset.com */
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{background-color:#ff9;color:#000;text-decoration:none}mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}input,select{vertical-align:middle}
 
-$use-mozilla-ellipsis-binding: true;
-@import "compass/typography/text/ellipsis";
-
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.ellipsis {
-  @include ellipsis;
-}
-
-
-.shadow {
-  @include box-shadow(#000 5px 5px 5px);
-}
-
-
-
-
-html {
-  // @include box-sizing(border-box);
+body {
   font-family: helvetica;
 }
 
 
-// *************** Segment color variables
-
-$intro-outro: grey;
-$verse: red;
-$chorus: cyan;
-$bridge: green;
-
-$silence: white;
-
-$instrumental: orange;
-
+/***********SEGMENT COLORS*/
 
 .segment_silence {
-  fill: $silence;
+  fill: white;
 }
 
 .segment_intro, .segment_outro {
-  fill: $intro-outro;
+  fill: grey;
 }
 
 .segment_verse, .segment_verse_-_break, .segment_outro_verse {
-  fill: $verse;
+  fill: red;
+}
+
+.segment_instrumental, .segment_verse_guitar_solo, .segment_sitar_solo, .segment_verse_instrumental, .segment_verse_instrumental_solo {
+  fill: orange;
 }
 
 .segment_chorus {
@@ -58,11 +29,7 @@ $instrumental: orange;
 }
 
 .segment_refrain {
-  fill: $chorus;
-}
-
-.segment_instrumental, .segment_verse_guitar_solo, .segment_sitar_solo, .segment_verse_instrumental, .segment_verse_instrumental_solo {
-  fill: $instrumental;
+  fill: cyan;
 }
 
 .segment_refrain_with_ending {
@@ -70,19 +37,20 @@ $instrumental: orange;
 }
 
 .segment_bridge, .segment_bridge_with_ending {
-  fill: $bridge;
+  fill: green;
 }
 
 
 
-// *************** Label typography
+/*********** LABEL TYPOGRAPHY */
+
 
 .track-title-label, .segment-label {
   text-transform: uppercase;
 }
 
 .track-title-label {
-  font-size: .6em;
+  font-size: .8em;
   font-weight: normal;
 }
 
@@ -93,19 +61,44 @@ $instrumental: orange;
 .album-title-label {
   font-size: 1.5em;
   padding-top: 1em;
-  display:inline;
 }
 
-.album-title-container {
-  width: 100%;
+
+
+
+/*********** DIAGNOSTIC BG COLORS*/
+/*
+.album-container{ background-color: blue; }
+.track-title-container{ background-color: yellow; }
+.svg-track-container{ background-color: green; }
+*/
+
+
+/*********** FLOATING*/
+
+/*.timeline-container, .album-container, .album-title-label{
+  float:left;
+}
+
+.album-container2{
+  height: 50px;
+  min-height: 20px;
+}
+
+.album-title-label {
+  width: 800px;
+}
+
+.track-title-container {
+  width: 300px;
   overflow: hidden;
-  padding-top: 3rem;
+  float: left;
 }
 
-
-
-
-// *************** Grid
+.svg-track-container {
+  width: 600px;
+  float: left;
+}*/
 
 html {
   width: 100%;
@@ -128,112 +121,36 @@ html {
 }
 
 .svg-track-container{
-  width: 75%;
-  float: left;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-}
-
-// .svg-track-container svg{
-//   display: block;
-//   margin-bottom: .15rem
-// }
-
-svg.tiny-track{
-  display: block;
-  margin-bottom: 0rem;
-}
-
-.tiny-album-separator{
-  margin-top:.25rem;
+  width: 100%;
 }
 
 
-.track-title-container{
-  width:20%;
-  float: left;
-}
-
-.track-title-container h6{
-    @include ellipsis;
-  }
-
-
-@media (max-width: 40rem) {
-  .track-title-container h6{
-    @include ellipsis;
-  }
-
-  #notes-container {
-    // height: 20rem;
-    max-height:10rem;
-    overflow-y: scroll;
-  }
+.legend-cotnainer {
+  background: grey;
 }
 
 
 /* Medium screens (640px) */
 @media (min-width: 40rem) { 
-
-  .track-title-label {
-    font-size: .8em;
+  .svg-track-container{
+    width: 75%;
+    float: left;
   }
 
-  #notes-container {
-    height: 100%;
-    // max-height:10rem;
-    // overflow-y: scroll;
+  .track-title-container{
+    width:24%;
+    float: left;
   }
-
 }
 
 
 /* Large screens (1024px) */
 @media (min-width: 64rem) { 
   .svg-track-container{
-    // background-color: red;
+    background-color: red;
   }
 
   .track-title-container{
   }
 }
 
-
-#site-header{
-  padding-bottom: 1rem
-}
-
-#context-module {
-  background-color: silver;
-}
-
-.context-module-mobile {
-}
-
-.context-module-desktop {
-  width: 20%;
-  float: right;
-  height: 100%;
-  // right:0;
-
-}
-
-#timeline-container {
-
-}
-
-.timeline-container-desktop {
-  width: 80%;
-  float: left;
-}
-
-
-
-#timeline-view-switcher{
-  padding-top: 3rem;
-}
-
-#timeline-header-container{
-  padding-bottom: 3rem
-}
