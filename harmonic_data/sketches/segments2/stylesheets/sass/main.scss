@@ -224,14 +224,15 @@ html {
 
 
 #site-header{
-  height: 1.5rem;
+  height: auto;
+  min-height: 1.5rem;
   #site-title-container{
     width: 50%;
     float: left;
 
     #site-title {
       font-size: 1.5rem;
-      font-weight: 300;
+      font-weight: 900;
       text-decoration: none;
       :hover{
         color: $text;
@@ -247,7 +248,7 @@ html {
   }
 
   padding-bottom: 2rem;
-  border-bottom: 1px solid $text;
+  border-bottom: 3px solid $text;
   margin-bottom: 0.5rem;
 
 }
@@ -255,14 +256,34 @@ html {
 
 
 
+#timeline-header-container{
+  #timeline-title {
+    font-size: 3rem;
+    font-weight: 100;
+    margin-bottom: .5rem;
+  }
+  #timeline-intro{
+    width: 75%;
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 1.75rem;
+  }
 
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $text;
+  margin-bottom: 0.5rem;
 
-
-
-#timeline-title {
-  font-size: 3rem;
-  font-weight: 100;
 }
+
+#timeline-view-switcher{
+  font-size: 1rem;
+  font-weight: 100;
+  // padding-bottom: .5rem;
+  // border-bottom: 1px solid $text;
+  margin-bottom: 3rem;
+}
+
+
 
 
 .track-title-label, .segment-label {
