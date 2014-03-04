@@ -41,7 +41,7 @@ var App = Backbone.Router.extend({
   },
 
   songTest: function(){
-    
+    songSketch();
   },
 
   songStructure: function(){
@@ -493,6 +493,45 @@ legendNavHider = function(){
   // $("#context-nav").show()
   // console.log("sticking")
 }
+
+
+var chordSample
+
+songSketch = function(){
+  $('#tiny-container').html("");
+  $('#big-timeline-container').html("");
+  console.log("starting test")
+
+
+    chordSample = dataMaster[0].tracks[0].chords
+    var songHeight = 2000
+
+    svg = d3.select("#song-container").append("svg")
+      .attr("preserveAspectRatio", "xMidYMid")
+      // .attr("viewBox", "0 0 "+trackWidth+" "+trackHeight)
+      .attr("width", trackWidth)
+      .attr("height", songHeight)
+
+    svg.style("background-color", "red")
+
+}
+
+chordParser = function(){
+  _.each(chordSample, function(chordData){
+    switch(chordData.chord)
+    {
+      case "N": chordData.chordNumber = 48; break;
+      case "A": chordData.chordNumber = 1; break;
+      case "E": chordData.chordNumber = 8; break;
+      case "B": chordData.chordNumber = 3; break;
+      default: chordData.chordNumber = 0;
+    }
+  console.log(chordData.chordNumber)
+  })
+}
+
+
+
 
 
 
