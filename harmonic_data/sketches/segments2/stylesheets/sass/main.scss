@@ -21,8 +21,6 @@ $use-mozilla-ellipsis-binding: true;
 }
 
 
-
-
 html {
   // @include box-sizing(border-box);
   font-family: helvetica;
@@ -228,11 +226,6 @@ svg.tiny-track, svg.track{
   float: left;
 }
 
-
-
-#timeline-view-switcher{
-  padding-top: 3rem;
-}
 
 #timeline-header-container{
   padding-bottom: 3rem
