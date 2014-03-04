@@ -2303,7 +2303,7 @@
     },
     {"trackIndex": 103, "order": 12, "trackTitle": "Sgt. Pepper's Lonely Hearts Club Band (Reprise)",
     "authorship":[
-      {"McCartney": 0},
+      {"McCartney": 1},
       {"Lennon": 0},
       {"Harrison": 0},
       {"Starr": 0},
@@ -3063,7 +3063,7 @@
     {"trackIndex": 126508, "order": 8, "trackTitle": "Revolution 1",
     "authorship":[
       {"McCartney": 0},
-      {"Lennon": 0},
+      {"Lennon": 1},
       {"Harrison": 0},
       {"Starr": 0},
       {"Other": 0}

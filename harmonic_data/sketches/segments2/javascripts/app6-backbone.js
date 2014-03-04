@@ -1,17 +1,20 @@
 //GLOBAL DATA
 
 var dataMaster,
-    dataMasterByRelease = [];
+    dataMasterByRecording = [];
 
 var sortDataMasterByRecording = function(){
-  //TODO: add if then statement that doesn't parse the data if it already exists
-  _.each(dataMaster, function(albumData){
-    _.each(albumData.tracks, function(trackData){
-      dataMasterByRelease.push(trackData)
+  if (dataMasterByRecording.length != 0){
+    return dataMasterByRecording
+  } else {
+    // dataMasterByRecording = [];
+    _.each(dataMaster, function(albumData){
+      _.each(albumData.tracks, function(trackData){
+        dataMasterByRecording.push(trackData)
+      })
     })
-
-  })
-  return dataMasterByRelease
+    return dataMasterByRecording
+  }
 }
 
 //GLOBAL VARIABLES...TODO: contain these in timeline object?
@@ -41,12 +44,12 @@ var App = Backbone.Router.extend({
     //if data hasn't been prepared...prepare it...then set it to the metaData thing.
     app.metaData = metaDataMaster.songStructure
     app.uiMaker()
-    //draw timeline specific stuff
+    sortByRelease()
   },
 
   authorship: function(){
     app.metaData = metaDataMaster.authorship
-    // app.uiMaker()
+    app.uiMaker()
     app.authorshipTest()
   },
 
@@ -274,15 +277,15 @@ addNavEvents = function(){
 }
 
 sortByRelease = function(){
-  $('#tiny-container').empty()
-  $('#big-timeline-container').empty()
+  $('#tiny-container').html("");
+  $('#big-timeline-container').html("");
   structureTinyByRelease() //TODO: this should go in routes i think, not in callback? i don't know
   structureByRelease() 
 }
 
 sortByRecording = function(){
-  $('#tiny-container').empty()
-  $('#big-timeline-container').empty()
+  $('#tiny-container').html("");
+  $('#big-timeline-container').html("");
   sortDataMasterByRecording() //TODO: make it only load data if it doesn't exist yet. (esepcially cause it will just push it)
   structureTinyByRecording() //TODO: this should go in routes i think, not in callback? i don't know
   structureByRecording() 
@@ -367,7 +370,7 @@ desktopMode = function(){
 
 
 structureTinyByRecording = function(){
-  _.each(dataMasterByRelease, function(trackData){
+  _.each(dataMasterByRecording, function(trackData){
     structureTrackTiny(trackData)
   }) 
 }
@@ -416,7 +419,7 @@ structureTrackTiny = function(trackData){
 
 
 structureByRecording = function(){
-  _.each(dataMasterByRelease, function(trackData){
+  _.each(dataMasterByRecording, function(trackData){
     structureTrack(trackData)
   }) 
 }
@@ -489,8 +492,7 @@ $(function(){
 
 
   // **** START APP
-  window.app = new App();
-  Backbone.history.start();
+  
 
 
 
@@ -503,10 +505,12 @@ $(function(){
 
   // **** DRAW TIMELINE
     // this may need to move into routes?
-    app.TEMP_drawTimeline()
+    window.app = new App();
+    Backbone.history.start();
+    // app.TEMP_drawTimeline()
 
     // sortByRelease()
-    app.authorship()
+    // app.authorship()
   })
   
 
