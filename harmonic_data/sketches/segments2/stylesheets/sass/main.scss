@@ -85,39 +85,65 @@ $instrumental: orange;
 
 .segment_intro,
 .segment_outro,
+.segment_outro_a,
+.segment_outro_b, //TODO: VARIATION
 .segment_outro_--fade-out--,
-.segment_silence {
+.segment_silence,
+.segment_postscript, // TODO: VARIATION (on day in teh life....needs more variation pattern)
+.segment_closing //TODO: ??? WHAT TO DO WITH THIS
+ {
   fill: $intro-outro;
 }
 
 .segment_verse,
 .segment_versea,
 .segment_verseb, //TODO: VARIATION1
+.segment_verse_b_guitar, //TODO: VARIATION1 and INSTRUMENTAL
+.segment_verse_a, 
+.segment_verse_b, //TODO: VARIATION1
+.segment_verse_--initial--,
+.segment_verse_--variant--, //TODO: VARIATION1
+.segment_verse_--variant_1--, //TODO: VARIATION1
+.segment_verse_--variant_2--, //TODO: VARIATION2
+.segment_verse_--variant_2_with_ending--, //TODO: VARIATION2
+.segment_verse_refrain, //TODO: ???
 .segment_verseguitar, //TODO: INSTRUMENTATION1??
+.segment_verse_guitar, //TODO: INSTRUMENTATION1??
+.segment_verse_instr, //TODO: INSTRUMENTATION1??
+.segment_verse_piano, //TODO: INSTRUMENTATION1??
 .segment_verse_--guitar_solo--, //TODO: INSTRUMENTATION1??
+.segment_verse_--half_solo--, //TODO: INSTRUMENTATION1??
+.segment_verse_half_solo, //TODO: INSTRUMENTATION1??
 .segment_verse_-_break,
-.segment_outro_verse {
+.segment_verse_with_ending,
+.segment_verse_outro,
+.segment_outro_verse
+ {
   background-color: $verse;
   @include pattern-dots4(5);
   fill: $verse;
 }
 
 .segment_chorus,
+.segment_refrain,
+.segment_refrain_trans, //TODO: variation?
+.segment_refrain_solo, //TODO: instrumentation
+.segment_refrain_a,
+.segment_refrain_b, //TODO: variation
+.segment_refrain_b_fade, //TODO: variation
 .segment_verseb_MD_or_chorus //TODO: from saw her standing there
 {
-  fill: blue;
-}
-
-.segment_refrain {
   fill: $chorus;
 }
 
 .segment_instrumental,
 .segment_verse_guitar_solo,
 .segment_sitar_solo,
+.segment_guitar_solo,
 .segment_verse_instrumental,
+.segment_vocal, //todo: variation? instrumentation? day in the life
 .segment_verse_instrumental_solo {
-  fill: $instrumental;
+  fill: $bridge; //TODO: ALL OF THESE ARE INSTRUMENTAL
 }
 
 .segment_refrain_with_ending {
@@ -125,7 +151,13 @@ $instrumental: orange;
 }
 
 .segment_bridge,
-.segment_bridge_with_ending {
+.segment_bridge_--solo--, //TODO - instrumentation
+.segment_bridge_instru, //TODO - instrumentation
+.segment_bridge_instr, //TODO - instrumentation
+.segment_bridge_with_ending,
+.segment_break, //TODO- VARIATION?
+.segment_bridge_re_intro //TODO- VARIATION?
+{
   fill: $bridge;
 }
 

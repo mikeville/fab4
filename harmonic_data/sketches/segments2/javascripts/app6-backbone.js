@@ -46,7 +46,8 @@ var App = Backbone.Router.extend({
 
   authorship: function(){
     app.metaData = metaDataMaster.authorship
-    app.uiMaker()
+    // app.uiMaker()
+    app.authorshipTest()
   },
 
   schedule: function(){
@@ -70,6 +71,31 @@ var App = Backbone.Router.extend({
   },
 
 
+  authorshipTest: function(){
+    console.log("starting autorship test")
+    // $('#tiny-container').empty()
+    // $('#big-timeline-container').empty().append("hi test")
+    $('#big-timeline-container').html("test")
+    $('#tiny-container').html("testtiny")
+
+
+    _.each(dataMaster, function(albumData){
+        var source = $('#album-label-template').html();
+        var template = Handlebars.compile(source)
+        $("#big-timeline-container").append(template(albumData))
+        console.log("should be appending this album"+albumData)
+
+      _.each(albumData.tracks, function(trackData){
+        console.log("should be appending this track"+trackData)
+        authorshipTestDrawD3(trackData)
+      })
+    }) 
+  
+
+  },
+
+
+
   uiMaker: function(){
     //create/append all stuff common to every timeline
     if (ui) ui.remove()
@@ -87,6 +113,72 @@ var App = Backbone.Router.extend({
     console.log("we'd do d3 stuff now")
   }
 })
+
+
+
+
+authorshipTestDrawD3 = function(trackData){
+  trackWidth = $("#timeline-container").width(); //or this.el.width() w/ backbone
+  trackHeight = trackWidth/trackAspect
+
+  var maxBarWidth = 600 //TODO: clean this up. right now it's for guitar gently weeps.
+  var widthFactor = trackWidth/maxBarWidth;
+
+
+  var source = $('#track-container-template').html();
+      var template = Handlebars.compile(source)
+      $("#big-timeline-container").append(template(trackData))
+
+  var widthFactor = 20
+  var authorArray = [{author: "McCartney", start: 0, end:0},
+                     {author: "Lennon", start: 0, end:0},
+                     {author: "Harrison", start: 0, end:0},
+                     {author: "Starr", start: 0, end:0},
+                     {author: "Other", start: 0, end:0}]  
+      authorArray[0].end = (trackData.authorship[0].McCartney) * widthFactor      //******GIVE THIS A FUCKING TOWEL
+      authorArray[1].start = (trackData.authorship[0].McCartney) * widthFactor    //******GIVE THIS A FUCKING TOWEL
+      authorArray[1].end = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon) * widthFactor
+      authorArray[2].start = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon) * widthFactor
+      authorArray[2].end = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison) * widthFactor
+      authorArray[3].start = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison) * widthFactor
+      authorArray[3].end = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison + trackData.authorship[3].Starr) * widthFactor
+      authorArray[4].start = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison + trackData.authorship[3].Starr) * widthFactor
+      authorArray[4].end = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison + trackData.authorship[3].Starr + trackData.authorship[4].Other) * widthFactor
+
+
+  var svg = d3.select(".track-"+trackData.trackIndex).append("svg")
+      .attr("class", "track track-"+trackData.trackIndex)
+      .attr("preserveAspectRatio", "xMidYMid")
+      .attr("viewBox", "0 0 "+trackWidth+" "+trackHeight)
+      .attr("width", trackWidth)
+      .attr("height", trackHeight)
+
+  svg.selectAll("rect")
+      .data(authorArray)
+    .enter().append("rect")
+      .attr("x", function(d) { return d.start*widthFactor })
+      .attr("y", 0)
+      .attr("width", function(d) { return (d.end-d.start)*widthFactor})
+      .attr("height", trackHeight)
+      .attr("class", function(d) { return "author_"+d.author })
+      .style("stroke", "white")
+    .on("click", function(d){
+      console.log(d.author)
+      // sortTest(d)
+    })
+
+   $(".track-"+trackData.trackIndex).on("click", function(){
+        updateNotes(trackData)
+      })
+
+
+}
+
+
+
+
+
+
 
 
 var UI = Backbone.View.extend({
@@ -334,7 +426,7 @@ structureTrack = function(trackData){
   trackWidth = $("#timeline-container").width(); //or this.el.width() w/ backbone
   trackHeight = trackWidth/trackAspect
 
-  var maxBarWidth = 290 //TODO: clean this up. right now it's for guitar gently weeps.
+  var maxBarWidth = 600 //TODO: clean this up. right now it's for guitar gently weeps.
   var widthFactor = trackWidth/maxBarWidth;
 
 
@@ -401,7 +493,8 @@ $(function(){
     // this may need to move into routes?
     app.TEMP_drawTimeline()
 
-    sortByRelease()
+    // sortByRelease()
+    app.authorship()
   })
   
 
