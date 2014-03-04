@@ -69,6 +69,33 @@ html {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
+// *************** Authorship color variables
+
+$mcCartney: yellow;
+$lennon: blue;
+$harrison: green;
+$starr: pink;
+$other: grey;
+
+.author_McCartney{
+  fill: $mcCartney;
+}
+
+.author_Lennon{
+  fill: $lennon;
+}
+
+.author_Harrison{
+  fill: $harrison;
+}
+
+.author_Starr{
+  fill: $starr;
+}
+
+.author_Other{
+  fill: $other;
+}
 
 
 // *************** Segment color variables

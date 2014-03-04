@@ -72,7 +72,6 @@ var App = Backbone.Router.extend({
 
 
   authorshipTest: function(){
-    console.log("starting autorship test")
     // $('#tiny-container').empty()
     // $('#big-timeline-container').empty().append("hi test")
     $('#big-timeline-container').html("test")
@@ -83,10 +82,8 @@ var App = Backbone.Router.extend({
         var source = $('#album-label-template').html();
         var template = Handlebars.compile(source)
         $("#big-timeline-container").append(template(albumData))
-        console.log("should be appending this album"+albumData)
 
       _.each(albumData.tracks, function(trackData){
-        console.log("should be appending this track"+trackData)
         authorshipTestDrawD3(trackData)
       })
     }) 
@@ -129,21 +126,21 @@ authorshipTestDrawD3 = function(trackData){
       var template = Handlebars.compile(source)
       $("#big-timeline-container").append(template(trackData))
 
-  var widthFactor = 20
+  var authorWidth = 200 //TODO: make this relative, not hardcoded
   var authorArray = [{author: "McCartney", start: 0, end:0},
                      {author: "Lennon", start: 0, end:0},
                      {author: "Harrison", start: 0, end:0},
                      {author: "Starr", start: 0, end:0},
                      {author: "Other", start: 0, end:0}]  
-      authorArray[0].end = (trackData.authorship[0].McCartney) * widthFactor      //******GIVE THIS A FUCKING TOWEL
-      authorArray[1].start = (trackData.authorship[0].McCartney) * widthFactor    //******GIVE THIS A FUCKING TOWEL
-      authorArray[1].end = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon) * widthFactor
-      authorArray[2].start = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon) * widthFactor
-      authorArray[2].end = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison) * widthFactor
-      authorArray[3].start = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison) * widthFactor
-      authorArray[3].end = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison + trackData.authorship[3].Starr) * widthFactor
-      authorArray[4].start = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison + trackData.authorship[3].Starr) * widthFactor
-      authorArray[4].end = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison + trackData.authorship[3].Starr + trackData.authorship[4].Other) * widthFactor
+      authorArray[0].end = (trackData.authorship[0].McCartney) * authorWidth      //******GIVE THIS A FUCKING TOWEL
+      authorArray[1].start = (trackData.authorship[0].McCartney) * authorWidth    //******GIVE THIS A FUCKING TOWEL
+      authorArray[1].end = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon) * authorWidth
+      authorArray[2].start = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon) * authorWidth
+      authorArray[2].end = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison) * authorWidth
+      authorArray[3].start = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison) * authorWidth
+      authorArray[3].end = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison + trackData.authorship[3].Starr) * authorWidth
+      authorArray[4].start = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison + trackData.authorship[3].Starr) * authorWidth
+      authorArray[4].end = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison + trackData.authorship[3].Starr + trackData.authorship[4].Other) * authorWidth
 
 
   var svg = d3.select(".track-"+trackData.trackIndex).append("svg")
@@ -161,11 +158,26 @@ authorshipTestDrawD3 = function(trackData){
       .attr("width", function(d) { return (d.end-d.start)*widthFactor})
       .attr("height", trackHeight)
       .attr("class", function(d) { return "author_"+d.author })
-      .style("stroke", "white")
+      // .style("stroke", "black")
+      // .style("fill", "none")
     .on("click", function(d){
       console.log(d.author)
       // sortTest(d)
     })
+
+  if (
+    ( trackData.authorship[0].McCartney != 1 )
+    && ( trackData.authorship[1].Lennon != 1 )
+    && ( trackData.authorship[2].Harrison != 1 )
+    && ( trackData.authorship[3].Starr != 1 )
+    && ( trackData.authorship[4].Other != 1 )) {
+    svg.append("ellipse")
+      .attr("cx", authorWidth+authorWidth/4)
+      .attr("cy", trackHeight/2)
+      .attr("rx", trackHeight/2)
+      .attr("ry", trackHeight/2)
+      .style("fill", "red")
+  }
 
    $(".track-"+trackData.trackIndex).on("click", function(){
         updateNotes(trackData)
