@@ -118,7 +118,7 @@ input, select {
 html {
   width: 100%;
   font-size: 1em;
-  font-family: helvetica;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 /* line 44, sass/main.scss */
@@ -236,12 +236,26 @@ svg.tiny-track, svg.track {
   margin-top: .25rem;
 }
 /* line 159, sass/main.scss */
-#timeline-container #big-timeline-container .track-title-container {
-  width: 20%;
+#timeline-container #big-timeline-container .album-label-container {
+  width: 100%;
+  overflow: hidden;
+}
+/* line 162, sass/main.scss */
+#timeline-container #big-timeline-container .album-label-container h3 {
+  display: inline;
+}
+/* line 167, sass/main.scss */
+#timeline-container #big-timeline-container .track-container {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+}
+/* line 173, sass/main.scss */
+#timeline-container #big-timeline-container .track-container .track-title-container {
   float: left;
 }
-/* line 163, sass/main.scss */
-#timeline-container #big-timeline-container .track-title-container h6 {
+/* line 177, sass/main.scss */
+#timeline-container #big-timeline-container .track-container .track-title-container h6 {
   white-space: nowrap;
   overflow: hidden;
   -ms-text-overflow: ellipsis;
@@ -249,18 +263,21 @@ svg.tiny-track, svg.track {
   text-overflow: ellipsis;
   -moz-binding: url('xml/ellipsis.xml#ellipsis');
 }
-/* line 168, sass/main.scss */
-#timeline-container #big-timeline-container .svg-track-container {
-  width: 75%;
-  float: left;
+/* line 182, sass/main.scss */
+#timeline-container #big-timeline-container .track-container .svg-track-container {
   overflow: hidden;
   padding: 0;
   margin: 0;
   margin-bottom: 0.15rem;
 }
 
+/* line 195, sass/main.scss */
+p.year-mark-label {
+  display: none;
+}
+
 @media (max-width: 40rem) {
-  /* line 183, sass/main.scss */
+  /* line 200, sass/main.scss */
   .track-title-container h6 {
     white-space: nowrap;
     overflow: hidden;
@@ -270,7 +287,7 @@ svg.tiny-track, svg.track {
     -moz-binding: url('xml/ellipsis.xml#ellipsis');
   }
 
-  /* line 187, sass/main.scss */
+  /* line 204, sass/main.scss */
   #notes-container {
     max-height: 10rem;
     overflow-y: scroll;
@@ -278,14 +295,63 @@ svg.tiny-track, svg.track {
 }
 /* Medium screens (640px) */
 @media (min-width: 40rem) {
-  /* line 198, sass/main.scss */
+  /* line 215, sass/main.scss */
   .track-title-label {
     font-size: .8em;
   }
 
-  /* line 202, sass/main.scss */
+  /* line 219, sass/main.scss */
   #notes-container {
     height: 100%;
   }
 }
+@media (max-width: 64rem) {
+  /* line 227, sass/main.scss */
+  .track-title-container {
+    width: 25%;
+    float: left;
+  }
+
+  /* line 231, sass/main.scss */
+  .svg-track-container {
+    width: 75%;
+    float: left;
+  }
+}
 /* Large screens (1024px) */
+@media (min-width: 64rem) {
+  /* line 239, sass/main.scss */
+  .album-label-container {
+    padding-left: 10.11%;
+  }
+
+  /* line 242, sass/main.scss */
+  .year-mark-container {
+    display: block;
+    float: left;
+    width: 10.11%;
+  }
+  /* line 243, sass/main.scss */
+  .year-mark-container p {
+    display: block;
+    width: 100;
+    font-size: 2rem;
+    line-height: 1.5rem;
+    overflow: visible;
+    vertical-align: text-top;
+    font-weight: 300;
+    letter-spacing: -.1rem;
+  }
+
+  /* line 259, sass/main.scss */
+  .track-title-container {
+    float: left;
+    width: 22.22%;
+  }
+
+  /* line 264, sass/main.scss */
+  .svg-track-container {
+    float: right;
+    width: 66.66%;
+  }
+}

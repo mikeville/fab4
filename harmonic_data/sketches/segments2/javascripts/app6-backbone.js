@@ -27,6 +27,7 @@ var tinyTrackAspect = 200;
 var App = Backbone.Router.extend({
 
   routes: {
+    '': 'songStructure',
     'song-structure': 'songStructure',
     'authorship-and-collaboration': 'authorship',
     'working-schedule': 'schedule',
@@ -157,19 +158,39 @@ addNavEvents = function(){
     $("#legend-container").hide()
     $("#notes-container").hide()
   })
-  $("#sort-link-album").on("click", sortByAlbum)
+
+  $("#sort-link-album").on("click", function(e){
+    e.preventDefault;
+    sortByRelease();
+  })
   $("#sort-link-recording").on("click", function(e){
     e.preventDefault;
-    $("#timeline-container").empty();
-    TimeLineStructureRecordingDate();
+    sortByRecording();
   })
 }
 
-sortByAlbum = function(){
-  console.log("album sort")
+sortByRelease = function(){
+  $('#tiny-container').empty()
+  $('#big-timeline-container').empty()
+  structureTinyByRelease() //TODO: this should go in routes i think, not in callback? i don't know
+  structureByRelease() 
 }
 
+sortByRecording = function(){
+  $('#tiny-container').empty()
+  $('#big-timeline-container').empty()
+  sortDataMasterByRecording() //TODO: make it only load data if it doesn't exist yet. (esepcially cause it will just push it)
+  structureTinyByRecording() //TODO: this should go in routes i think, not in callback? i don't know
+  structureByRecording() 
+}
 
+var updateNotes = function(trackData){
+  $("#legend-container").hide()
+  $("#notes-container").show()
+  var source = $('#notes-template').html();
+  var template = Handlebars.compile(source)
+  $('#notes-container').html(template(trackData))
+}
 
 
 // RESPONSIVENESS
@@ -184,10 +205,25 @@ ssmTest = function(){
     }
   },
   {
+  id: 'tablet',
+  minWidth: 640,
+  maxWidth: 1024,
+  onEnter: function(){
+    tabletMode();
+  }
+},
+  {
     id: 'tablet-desktop',
     minWidth: 640,
     onEnter: function(){
       contextModuleToSidebar();
+    }
+  },
+  {
+    id: 'desktop',
+    minWidth: 1024,
+    onEnter: function(){
+      desktopMode();
     }
   }
   ]).ready()
@@ -200,6 +236,7 @@ contextModuleToSidebar = function(){
   $('#timeline-container').addClass("timeline-container-desktop")
   $('#nav-link-hide').hide();
 
+
 }
 
 contextModuleToMobile = function(){
@@ -207,9 +244,17 @@ contextModuleToMobile = function(){
   $('#timeline-container').removeClass("timeline-container-desktop")
   $('#context-module').addClass("context-module-mobile")
   $('#nav-link-hide').show();
+
+  $('.year-mark-label').hide();
 }
 
+tabletMode = function(){
+  $('.year-mark-label').hide();
+}
 
+desktopMode = function(){
+  $('.year-mark-label').show();
+}
 
 
 
@@ -274,8 +319,10 @@ structureByRecording = function(){
 
 structureByRelease = function(){
   _.each(dataMaster, function(albumData){
-    d3.select("#big-timeline-container").append("div")
-        .attr("class", "album-separator album-separator-"+albumData.albumKey)
+      var source = $('#album-label-template').html();
+      var template = Handlebars.compile(source)
+      $("#big-timeline-container").append(template(albumData))
+
     _.each(albumData.tracks, function(trackData){
       structureTrack(trackData)
     })
@@ -315,6 +362,12 @@ structureTrack = function(trackData){
       console.log(d.segment)
       // sortTest(d)
     })
+
+   $(".track-"+trackData.trackIndex).on("click", function(){
+        updateNotes(trackData)
+      })
+
+
 }
 
 
@@ -348,9 +401,7 @@ $(function(){
     // this may need to move into routes?
     app.TEMP_drawTimeline()
 
-    sortDataMasterByRecording() //TODO: make it only load data if it doesn't exist yet. (esepcially cause it will just push it)
-    structureTinyByRelease() //TODO: this should go in routes i think, not in callback? i don't know
-    structureByRelease()
+    sortByRelease()
   })
   
 

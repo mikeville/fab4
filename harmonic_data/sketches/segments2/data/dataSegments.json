@@ -43,7 +43,7 @@
       "Three of the four verses and the refrains all begin rhythmically on the downbeat. The lone exception is the second verse ('I've lost her now'), which begins with a pickup."
     ]
     },
-    {"trackIndex": 2, "order": 3, "trackTitle": "Anna (Go to Him)", "segments":
+    {"trackIndex": 2, "order": 3, "trackTitle": "Anna (Go to Him)", "yearMark": 1966, "segments":
       [{"start":0.000,"end":0.708,"segment":"silence"},
       {"start":0.708,"end":9.670,"segment":"intro"},
       {"start":9.670,"end":29.411,"segment":"verse"},
