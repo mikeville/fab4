@@ -504,29 +504,41 @@ songSketch = function(){
 
 
     chordSample = dataMaster[0].tracks[0].chords
+    var chordsParsed = chordParser(chordSample)
     var songHeight = 2000
 
+    var pointWidthFactor = 500/48
+
     svg = d3.select("#song-container").append("svg")
-      .attr("preserveAspectRatio", "xMidYMid")
+      // .attr("preserveAspectRatio", "xMidYMid")
       // .attr("viewBox", "0 0 "+trackWidth+" "+trackHeight)
       .attr("width", trackWidth)
       .attr("height", songHeight)
+      // .style("background-color", "red")
 
-    svg.style("background-color", "red")
-
+    svg.selectAll("rect")
+        .data(chordsParsed)
+      .enter().append("rect")
+        .attr("x", function(d){ return d.chordNumber*pointWidthFactor })
+        .attr("y", function(d, i){ return i*pointWidthFactor })
+        .attr("width", pointWidthFactor )
+        .attr("height", pointWidthFactor)
+        .style("fill", "white")
 }
 
-chordParser = function(){
-  _.each(chordSample, function(chordData){
+chordParser = function(chordSample){
+  return _.each(chordSample, function(chordData){
     switch(chordData.chord)
     {
       case "N": chordData.chordNumber = 48; break;
       case "A": chordData.chordNumber = 1; break;
+      case "A:min/b3": chordData.chordNumber = 13; break;
       case "E": chordData.chordNumber = 8; break;
+      case "E:9": chordData.chordNumber = 8; break;
+      case "E:7/3": chordData.chordNumber = 8; break;
       case "B": chordData.chordNumber = 3; break;
       default: chordData.chordNumber = 0;
     }
-  console.log(chordData.chordNumber)
   })
 }
 
