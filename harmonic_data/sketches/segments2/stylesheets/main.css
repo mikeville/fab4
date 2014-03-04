@@ -114,129 +114,134 @@ input, select {
   box-shadow: black 5px 5px 5px;
 }
 
-/* line 24, sass/main.scss */
+/* line 23, sass/main.scss */
 html {
+  width: 100%;
+  font-size: 1em;
   font-family: helvetica;
 }
 
-/* line 42, sass/main.scss */
+/* line 44, sass/main.scss */
 .segment_silence {
   fill: white;
 }
 
-/* line 46, sass/main.scss */
+/* line 48, sass/main.scss */
 .segment_intro, .segment_outro {
   fill: grey;
 }
 
-/* line 50, sass/main.scss */
+/* line 52, sass/main.scss */
 .segment_verse, .segment_verse_-_break, .segment_outro_verse {
   fill: red;
 }
 
-/* line 54, sass/main.scss */
+/* line 56, sass/main.scss */
 .segment_chorus {
   fill: blue;
 }
 
-/* line 58, sass/main.scss */
+/* line 60, sass/main.scss */
 .segment_refrain {
   fill: cyan;
 }
 
-/* line 62, sass/main.scss */
+/* line 64, sass/main.scss */
 .segment_instrumental, .segment_verse_guitar_solo, .segment_sitar_solo, .segment_verse_instrumental, .segment_verse_instrumental_solo {
   fill: orange;
 }
 
-/* line 66, sass/main.scss */
+/* line 68, sass/main.scss */
 .segment_refrain_with_ending {
   fill: lightblue;
 }
 
-/* line 70, sass/main.scss */
+/* line 72, sass/main.scss */
 .segment_bridge, .segment_bridge_with_ending {
   fill: green;
 }
 
-/* line 78, sass/main.scss */
+/* line 80, sass/main.scss */
 .track-title-label, .segment-label {
   text-transform: uppercase;
 }
 
-/* line 82, sass/main.scss */
+/* line 84, sass/main.scss */
 .track-title-label {
   font-size: .6em;
   font-weight: normal;
 }
 
-/* line 87, sass/main.scss */
+/* line 89, sass/main.scss */
 .segment-label {
   font-size: .6em;
 }
 
-/* line 91, sass/main.scss */
+/* line 93, sass/main.scss */
 .album-title-label {
   font-size: 1.5em;
   padding-top: 1em;
   display: inline;
 }
 
-/* line 97, sass/main.scss */
+/* line 99, sass/main.scss */
 .album-title-container {
   width: 100%;
   overflow: hidden;
   padding-top: 3rem;
 }
 
-/* line 108, sass/main.scss */
-html {
-  width: 100%;
-  font-size: 1em;
-}
-
-/* line 113, sass/main.scss */
-#width-tester {
-  background-color: yellow;
-  height: 40px;
-  width: 100%;
-}
-
-/* line 119, sass/main.scss */
+/* line 111, sass/main.scss */
 #master-container {
-  /*background-color: silver;*/
   max-width: 900px;
   margin: 0 auto;
 }
 
-/* line 128, sass/main.scss */
-.svg-track-container {
-  width: 75%;
-  float: left;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
+/* line 117, sass/main.scss */
+#site-header {
+  padding-bottom: 1rem;
 }
 
-/* line 141, sass/main.scss */
+/* line 121, sass/main.scss */
+#context-module {
+  background-color: silver;
+}
+
+/* line 126, sass/main.scss */
+.context-module-desktop {
+  width: 20%;
+  float: right;
+  height: 100%;
+}
+
+/* line 133, sass/main.scss */
+.timeline-container-desktop {
+  width: 80%;
+  float: left;
+}
+
+/* line 139, sass/main.scss */
+#timeline-header-container {
+  padding-bottom: 3rem;
+}
+
+/* line 145, sass/main.scss */
 svg.tiny-track, svg.track {
   display: block;
   margin-bottom: 0rem;
 }
 
-/* line 146, sass/main.scss */
-.tiny-album-separator {
+/* line 152, sass/main.scss */
+#timeline-container #tiny-container .tiny-album-separator {
   margin-top: .25rem;
 }
-
-/* line 151, sass/main.scss */
-.track-title-container {
+/* line 159, sass/main.scss */
+#timeline-container #big-timeline-container .track-title-container {
   width: 20%;
   float: left;
 }
-
-/* line 156, sass/main.scss */
-.track-title-container h6 {
+/* line 163, sass/main.scss */
+#timeline-container #big-timeline-container .track-title-container h6 {
   white-space: nowrap;
   overflow: hidden;
   -ms-text-overflow: ellipsis;
@@ -244,9 +249,18 @@ svg.tiny-track, svg.track {
   text-overflow: ellipsis;
   -moz-binding: url('xml/ellipsis.xml#ellipsis');
 }
+/* line 168, sass/main.scss */
+#timeline-container #big-timeline-container .svg-track-container {
+  width: 75%;
+  float: left;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 0.15rem;
+}
 
 @media (max-width: 40rem) {
-  /* line 162, sass/main.scss */
+  /* line 183, sass/main.scss */
   .track-title-container h6 {
     white-space: nowrap;
     overflow: hidden;
@@ -256,7 +270,7 @@ svg.tiny-track, svg.track {
     -moz-binding: url('xml/ellipsis.xml#ellipsis');
   }
 
-  /* line 166, sass/main.scss */
+  /* line 187, sass/main.scss */
   #notes-container {
     max-height: 10rem;
     overflow-y: scroll;
@@ -264,41 +278,14 @@ svg.tiny-track, svg.track {
 }
 /* Medium screens (640px) */
 @media (min-width: 40rem) {
-  /* line 177, sass/main.scss */
+  /* line 198, sass/main.scss */
   .track-title-label {
     font-size: .8em;
   }
 
-  /* line 181, sass/main.scss */
+  /* line 202, sass/main.scss */
   #notes-container {
     height: 100%;
   }
 }
 /* Large screens (1024px) */
-/* line 201, sass/main.scss */
-#site-header {
-  padding-bottom: 1rem;
-}
-
-/* line 205, sass/main.scss */
-#context-module {
-  background-color: silver;
-}
-
-/* line 212, sass/main.scss */
-.context-module-desktop {
-  width: 20%;
-  float: right;
-  height: 100%;
-}
-
-/* line 224, sass/main.scss */
-.timeline-container-desktop {
-  width: 80%;
-  float: left;
-}
-
-/* line 230, sass/main.scss */
-#timeline-header-container {
-  padding-bottom: 3rem;
-}

@@ -20,11 +20,13 @@ $use-mozilla-ellipsis-binding: true;
   @include box-shadow(#000 5px 5px 5px);
 }
 
-
 html {
   // @include box-sizing(border-box);
+  width: 100%;
+  font-size: 1em;
   font-family: helvetica;
 }
+
 
 
 // *************** Segment color variables
@@ -105,57 +107,76 @@ $instrumental: orange;
 
 // *************** Grid
 
-html {
-  width: 100%;
-  font-size: 1em;
-}
-
-#width-tester{
-  background-color: yellow;
-  height:40px;
-  width: 100%;
-}
 
 #master-container{
-  /*background-color: silver;*/
   max-width: 900px;
   margin: 0 auto;
 }
 
-.album-container{
+
+#site-header{
+  padding-bottom: 1rem
 }
 
-.svg-track-container{
-  width: 75%;
+#context-module {
+  background-color: silver;
+}
+
+
+.context-module-desktop {
+  width: 20%;
+  float: right;
+  height: 100%;
+  // right:0;
+}
+
+.timeline-container-desktop {
+  width: 80%;
   float: left;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
 }
 
-// .svg-track-container svg{
-//   display: block;
-//   margin-bottom: .15rem
-// }
+
+#timeline-header-container{
+  padding-bottom: 3rem
+}
+
+
 
 svg.tiny-track, svg.track{
   display: block;
   margin-bottom: 0rem;
 }
 
-.tiny-album-separator{
-  margin-top:.25rem;
-}
+#timeline-container {
+  #tiny-container{
+    .tiny-album-separator{
+      margin-top:.25rem;
+    }
 
-
-.track-title-container{
-  width:20%;
-  float: left;
-}
-
-.track-title-container h6{
-    @include ellipsis;
   }
+
+  #big-timeline-container{
+    .track-title-container{
+      width:20%;
+      float: left;
+
+      h6{
+        @include ellipsis;
+      }
+
+    }
+    .svg-track-container{
+      width: 75%;
+      float: left;
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+      margin-bottom: .15rem
+    }
+  }  
+}
+
+
 
 
 @media (max-width: 40rem) {
@@ -186,7 +207,6 @@ svg.tiny-track, svg.track{
 
 }
 
-
 /* Large screens (1024px) */
 @media (min-width: 64rem) { 
   .svg-track-container{
@@ -195,38 +215,4 @@ svg.tiny-track, svg.track{
 
   .track-title-container{
   }
-}
-
-
-#site-header{
-  padding-bottom: 1rem
-}
-
-#context-module {
-  background-color: silver;
-}
-
-.context-module-mobile {
-}
-
-.context-module-desktop {
-  width: 20%;
-  float: right;
-  height: 100%;
-  // right:0;
-
-}
-
-#timeline-container {
-
-}
-
-.timeline-container-desktop {
-  width: 80%;
-  float: left;
-}
-
-
-#timeline-header-container{
-  padding-bottom: 3rem
 }
