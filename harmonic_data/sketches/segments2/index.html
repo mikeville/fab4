@@ -10,7 +10,8 @@
   <script src='javascripts/ssm.js'></script>
 	<script src='http://backbonejs.org/backbone.js'></script>
   <script src='javascripts/data_album_revolver.js'></script>
-  <script src='javascripts/app5-cleaning2.js'></script>
+  <script src='javascripts/metaData.js'></script>
+  <script src='javascripts/app6-backbone.js'></script>
   <link rel="stylesheet" type="text/css" href="stylesheets/main.css" />
   <link rel="stylesheet" type="text/css" href="stylesheets/ellipsis.css" />
 
@@ -19,16 +20,16 @@
   <div id="master-container">
     <div id="site-header">
       <h1>Charting the Beatles</h1>
-      <div id="nav-timelines">
-        <a href="#">previous</a>
-        <a href="#">next</a>
+      <div id="nav-timelines"> 
+        <a href="#song-structure">1</a>
+        <a href="#authorship-and-collaboration">2</a>
+        <a href="#working-schedule">3</a>
+        <a href="#in-the-studio">4</a>
+        <a href="#lyrical-syntax">5</a>
+        <a href="#self-reference">6</a>
       </div>
     </div>
     <div id="timeline-header-container">
-      <h2 id="timeline-title">Song Structure</h2>
-      <p id="timeline-one-liner">
-        How did song structure change over time lorem ipsum? Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
-      </p>
     </div>
     <div id="context-module">
       <div id="context-nav">
@@ -37,17 +38,6 @@
         <a id="nav-link-hide" href="#">Hide</a>
       </div>
       <div id="legend-container">
-        <div class="legend-column">
-          <div class="legend-item">Intro/Outro</div>
-          <div class="legend-item">Chorus</div>
-          <div class="legend-item">Verse</div>
-          <div class="legend-item">Bridge</div>
-        </div>
-        <div class="legend-column">
-          <div class="legend-item">Unique Section</div>
-          <div class="legend-item">Variation</div>
-          <div class="legend-item">Solos and Instrumental</div>
-        </div>
       </div>
       <div id="notes-container">
       </div>
@@ -91,6 +81,28 @@
     </div>
   </div>
 </script>
+
+<script id='legend-template' type='text/x-handlebars-template'>
+    <h4>How to read this timeline</h4>
+    <p>{{legendLine}}</p>
+    <div class="legend-column">
+      <div class="legend-item">Intro/Outro</div>
+      <div class="legend-item">Chorus</div>
+      <div class="legend-item">Verse</div>
+      <div class="legend-item">Bridge</div>
+    </div>
+    <div class="legend-column">
+      <div class="legend-item">Unique Section</div>
+      <div class="legend-item">Variation</div>
+      <div class="legend-item">Solos and Instrumental</div>
+    </div>
+</script>
+
+<script id='timeline-header-template' type='text/x-handlebars-template'>
+  <h2>{{timelineTitle}}</h2>
+  <p>{{oneLiner}}</p>
+</script>
+
 
 
 
