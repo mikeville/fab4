@@ -22,7 +22,7 @@ var sortDataMasterByRecording = function(){
 var trackWidth;
 var tinyTrackHeight;
 var trackHeight;
-var trackAspect = 20;
+var trackAspect = 40;
 var tinyTrackAspect = 200;
 
 
@@ -422,6 +422,11 @@ structureTrackTiny = function(trackData){
 structureByRecording = function(){
   _.each(dataMasterByRecording, function(trackData){
     structureTrack(trackData)
+    $(".track-container-"+trackData.trackIndex).prepend("<div class='year-mark-container'><p class='year-mark-label'>"+trackData.yearMark+".<p></div>")
+
+    // <div class="year-mark-container">
+    //   <p class="year-mark-label">{{yearMark}}.<p>
+    // </div>
   }) 
 }
 
@@ -430,6 +435,10 @@ structureByRelease = function(){
       var source = $('#album-label-template').html();
       var template = Handlebars.compile(source)
       $("#big-timeline-container").append(template(albumData))
+
+
+
+
 
     _.each(albumData.tracks, function(trackData){
       structureTrack(trackData)

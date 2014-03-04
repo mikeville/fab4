@@ -220,8 +220,14 @@ html {
 }
 
 
-//*** HEADER STYLES
+#master-container{
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
 
+
+//*** SITE STYLES
 
 #site-header{
   height: auto;
@@ -231,14 +237,13 @@ html {
     float: left;
 
     #site-title {
-      font-size: 1.5rem;
-      font-weight: 900;
       text-decoration: none;
       :hover{
         color: $text;
       }
       h1{
-        font-weight: 300;
+        font-size: 1.5rem;
+        font-weight: 500;
       }
     }
   }
@@ -254,7 +259,7 @@ html {
 }
 
 
-
+//***TIMELINE HEADER
 
 #timeline-header-container{
   #timeline-title {
@@ -275,63 +280,112 @@ html {
 
 }
 
+
+
+
+//***TIMELINE
+
+
 #timeline-view-switcher{
   font-size: 1rem;
   font-weight: 100;
   // padding-bottom: .5rem;
   // border-bottom: 1px solid $text;
-  margin-bottom: 3rem;
+  // margin-bottom: 3rem;
+}
+
+#timeline-container{
+
+  #big-timeline-container{
+    .album-label-container{
+      .album-label {
+        font-size: 1.5rem;
+        font-weight: 500;
+        display:inline;
+      }
+      .album-year-label{
+        font-size: 1.5rem;
+        font-weight: 100;
+        padding-left: .5rem;
+      }
+      width: 100%;
+      overflow: hidden;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+
+
+    .track-container{
+      width: 100%;
+      display: block;
+      overflow: hidden;
+      p.year-mark-label{
+        display: none;
+      }
+      .track-title-container{
+        float: left;
+        .track-title-label {
+          @include ellipsis;
+          font-size: .6em;
+          font-weight: normal;
+        }
+        .track-title-label {
+          text-transform: uppercase;
+          font-family: 'Roboto Condensed', sans-serif;
+          font-weight: 300;
+        } 
+      }
+      .svg-track-container{
+        // width: 75%;
+        // float: left;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+        margin-bottom: .15rem;
+        .segment-label {
+          font-size: .6em;
+          text-transform: uppercase;
+          font-family: 'Roboto Condensed', sans-serif;
+          font-weight: 300;
+        }
+        svg.track{
+          display: block;
+          margin-bottom: 0rem;
+        }
+      }
+
+    }
+  }
+
+
+  #tiny-container{
+    .tiny-album-separator{
+      margin-top:.25rem;
+    }
+    svg.tiny-track{
+      display: block;
+      margin-bottom: 0rem;
+    }
+  }
+
 }
 
 
 
 
-.track-title-label, .segment-label {
-  text-transform: uppercase;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 300;
-}
 
-.track-title-label {
-  font-size: .6em;
-  font-weight: normal;
-}
-
-.segment-label {
-  font-size: .6em;
-}
-
-.album-title-label {
-  font-size: 1.5em;
-  // padding-top: 1em;
-  display:inline;
-}
-
-.album-title-container {
-  width: 100%;
-  overflow: hidden;
-  // padding-top: 3rem;
+.timeline-container-desktop {
+  width: 80%;
+  float: left;
 }
 
 
 
 
-// *************** Grid
 
 
 
-
-#master-container{
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
-
-#site-header{
-  // padding-bottom: 1rem
-}
-
+//***LEGEND/NOTES
 #context-module {
   background-color: $background-secondary;
   // background-color: $verse;
@@ -346,71 +400,9 @@ html {
   // right:0;
 }
 
-.timeline-container-desktop {
-  width: 80%;
-  float: left;
-}
-
-
-#timeline-header-container{
-  // padding-bottom: 3rem
-}
 
 
 
-svg.tiny-track, svg.track{
-  display: block;
-  margin-bottom: 0rem;
-}
-
-#timeline-container {
-  #tiny-container{
-    .tiny-album-separator{
-      margin-top:.25rem;
-    }
-
-  }
-
-  #big-timeline-container{
-    .album-label-container{
-      width: 100%;
-      overflow: hidden;
-      h3{
-        display:inline
-      }
-    }
-
-    .track-container{
-
-      width: 100%;
-      display: block;
-      overflow: hidden;
-
-      .track-title-container{
-        // width:25%;
-        float: left;
-
-        h6{
-          @include ellipsis;
-        }
-
-      }
-      .svg-track-container{
-        // width: 75%;
-        // float: left;
-        overflow: hidden;
-        padding: 0;
-        margin: 0;
-        // margin-bottom: .15rem
-      }
-    }
-  }  
-}
-
-
-  p.year-mark-label{
-    display: none;
-  }
 
 @media (max-width: 40rem) {
   .track-title-container h6{
@@ -456,20 +448,25 @@ svg.tiny-track, svg.track{
     padding-left: 10.11%;
   }
   .year-mark-container {
+    display: block;
+    float: left;
+    width: 10.11%;
+    position: relative;
+    // padding-top: 0.5rem;
+    // margin-top: 1px solid $text;
     p{
+      font-family: 'Roboto Condensed', sans-serif;
+      font-weight: 300;
       display: block;
       width: 100;
       // position: relative;
-      font-size: 2rem;
+      font-size: 1.5rem;
       line-height: 1.5rem;
       overflow: visible;
       vertical-align: text-top;
       font-weight: 300;
       letter-spacing: -.1rem;
     }
-    display: block;
-    float: left;
-    width: 10.11%
   }
 
   .track-title-container{
