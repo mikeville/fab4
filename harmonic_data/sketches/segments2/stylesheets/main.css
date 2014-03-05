@@ -396,7 +396,12 @@ html a:hover {
   margin-bottom: 7rem;
 }
 
-/* line 395, sass/main.scss */
+/* line 394, sass/main.scss */
+#meta-content-container.non-mobile {
+  margin-bottom: -.5rem;
+}
+
+/* line 403, sass/main.scss */
 #context-module-mobile {
   background-color: #1e1e1a;
   width: 100%;
@@ -405,18 +410,18 @@ html a:hover {
   padding-bottom: 1rem;
   border-bottom: 1px solid #fff8cd;
 }
-/* line 399, sass/main.scss */
+/* line 407, sass/main.scss */
 #context-module-mobile #context-nav-mobile {
   margin-top: .5rem;
   margin-bottom: .5rem;
 }
-/* line 403, sass/main.scss */
+/* line 411, sass/main.scss */
 #context-module-mobile .legend-column {
   width: 50%;
   float: left;
 }
 
-/* line 414, sass/main.scss */
+/* line 422, sass/main.scss */
 #context-module-sidebar {
   background-color: #2d2e27;
   margin-top: 3.5rem;
@@ -424,18 +429,18 @@ html a:hover {
   float: right;
   height: 100%;
 }
-/* line 424, sass/main.scss */
+/* line 432, sass/main.scss */
 #context-module-sidebar #legend-content-container .legend-item .legend-icon {
   width: 4rem;
   height: 100%;
   background-color: green;
 }
-/* line 431, sass/main.scss */
+/* line 439, sass/main.scss */
 #context-module-sidebar #legend-content-container .legend-item .legend-item-label p {
   color: red;
 }
 
-/* line 453, sass/main.scss */
+/* line 461, sass/main.scss */
 .context-module-desktop {
   width: 20%;
   float: right;
@@ -443,7 +448,7 @@ html a:hover {
 }
 
 @media (max-width: 40rem) {
-  /* line 465, sass/main.scss */
+  /* line 473, sass/main.scss */
   .track-title-container h6 {
     white-space: nowrap;
     overflow: hidden;
@@ -453,7 +458,7 @@ html a:hover {
     -moz-binding: url('xml/ellipsis.xml#ellipsis');
   }
 
-  /* line 469, sass/main.scss */
+  /* line 477, sass/main.scss */
   #notes-container {
     max-height: 10rem;
     overflow-y: scroll;
@@ -461,24 +466,24 @@ html a:hover {
 }
 /* Medium screens (640px) */
 @media (min-width: 40rem) {
-  /* line 480, sass/main.scss */
+  /* line 488, sass/main.scss */
   .track-title-label {
     font-size: .8em;
   }
 
-  /* line 484, sass/main.scss */
+  /* line 492, sass/main.scss */
   #notes-container {
     height: 100%;
   }
 }
 @media (max-width: 64rem) {
-  /* line 492, sass/main.scss */
+  /* line 500, sass/main.scss */
   .track-title-container {
     width: 25%;
     float: left;
   }
 
-  /* line 496, sass/main.scss */
+  /* line 504, sass/main.scss */
   .svg-track-container {
     width: 75%;
     float: left;
@@ -486,19 +491,19 @@ html a:hover {
 }
 /* Large screens (1024px) */
 @media (min-width: 64rem) {
-  /* line 504, sass/main.scss */
+  /* line 512, sass/main.scss */
   .album-label-container {
     padding-left: 10.11%;
   }
 
-  /* line 507, sass/main.scss */
+  /* line 515, sass/main.scss */
   .year-mark-container {
     display: block;
     float: left;
     width: 10.11%;
     position: relative;
   }
-  /* line 514, sass/main.scss */
+  /* line 522, sass/main.scss */
   .year-mark-container p {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 300;
@@ -512,13 +517,13 @@ html a:hover {
     letter-spacing: -.1rem;
   }
 
-  /* line 529, sass/main.scss */
+  /* line 537, sass/main.scss */
   .track-title-container {
     float: left;
     width: 22.22%;
   }
 
-  /* line 534, sass/main.scss */
+  /* line 542, sass/main.scss */
   .svg-track-container {
     float: right;
     width: 66.66%;

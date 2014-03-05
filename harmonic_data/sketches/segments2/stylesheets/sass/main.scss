@@ -389,8 +389,16 @@ html {
     // @include clearfix;
     // height: 5rem;
     margin-bottom:7rem;
-
 }
+
+#meta-content-container.non-mobile{
+    // @include clearfix;
+    // height: 5rem;
+    margin-bottom:-.5rem;
+}
+
+
+
 
 #context-module-mobile{
   background-color: $background; //temp
