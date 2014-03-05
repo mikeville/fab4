@@ -86,8 +86,7 @@ var App = Backbone.Router.extend({
 
   authorshipTest: function(){
 
-    $('#tiny-container').html("");
-    $('#big-timeline-container').html("");
+    emptyTimeline();
     $('.track-container').remove();
 
     _.each(dataMaster, function(albumData){
@@ -100,7 +99,7 @@ var App = Backbone.Router.extend({
       })
     }) 
     
-
+    authorshipLegendHack()
     // $('#big-timeline-container').prepend("<div id='timeline-top-margin-hack'><div>").css({"height": "3rem", "min-height": "3rem", "background-color": "blue", "width": "100%", "padding-top": "3rem"});
  
   },
@@ -111,10 +110,23 @@ var App = Backbone.Router.extend({
     //create/append all stuff common to every timeline
     if (ui) ui.remove()
     var ui = new UI()
+    emptyTimeline()
   }
 })
 
 
+emptyTimeline = function(){
+  $('#tiny-container').html("");
+  $('#big-timeline-container').html("");
+}
+
+
+authorshipLegendHack = function(){
+  var source = $('#legend-content-authorship-template').html();
+  var template = Handlebars.compile(source)
+  $("#legend-content-container").html(template)
+  $("#legend-content-container-mobile").html(template)
+}
 
 authorshipTestDrawD3 = function(trackData){
   trackWidth = $("#timeline-container").width(); //or this.el.width() w/ backbone
@@ -251,14 +263,14 @@ UI.ContextModuleSidebar = Backbone.View.extend({
     var template = Handlebars.compile(source)
     return template(attributes)
   },
-  renderLegend: function(){
+  renderLegendStructure: function(){
     var sourceLegend = $("#legend-content-structure-template").html()
     var templateLegend = Handlebars.compile(sourceLegend)
     $("#legend-content-container").html(templateLegend)
   },
   render: function(){
     this.$el.html(this.template(app.metaData))
-    this.renderLegend()
+    this.renderLegendStructure()
     return this
   }
 })
@@ -272,14 +284,14 @@ UI.ContextModuleMobile = Backbone.View.extend({
     var template = Handlebars.compile(source)
     return template(attributes)
   },
-  renderLegend: function(){
+  renderLegendStructure: function(){
     var sourceLegend = $("#legend-content-structure-template").html()
     var templateLegend = Handlebars.compile(sourceLegend)
     $("#legend-content-container-mobile").html(templateLegend)
   },
   render: function(){
     this.$el.html(this.template(app.metaData))
-    this.renderLegend()
+    this.renderLegendStructure()
     return this
   }
 })
@@ -320,15 +332,13 @@ addNavEvents = function(){
 }
 
 sortByRelease = function(){
-  $('#tiny-container').html("");
-  $('#big-timeline-container').html("");
+  emptyTimeline()
   structureTinyByRelease() //TODO: this should go in routes i think, not in callback? i don't know
   structureByRelease() 
 }
 
 sortByRecording = function(){
-  $('#tiny-container').html("");
-  $('#big-timeline-container').html("");
+  emptyTimeline()
   sortDataMasterByRecording() //TODO: make it only load data if it doesn't exist yet. (esepcially cause it will just push it)
   structureTinyByRecording() //TODO: this should go in routes i think, not in callback? i don't know
   structureByRecording() 
@@ -571,8 +581,7 @@ legendNavHider = function(){
 var chordSample
 
 songSketch = function(){
-  $('#tiny-container').html("");
-  $('#big-timeline-container').html("");
+  emptyTimeline()
   console.log("starting test")
 
 
