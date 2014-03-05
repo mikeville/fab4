@@ -225,7 +225,7 @@ html {
 #master-container{
     @include clearfix;
 
-  max-width: 900px;
+  max-width: 64rem;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -237,28 +237,19 @@ html {
   height: auto;
   min-height: 1.5rem;
   #site-title-container{
-    width: 50%;
+    width: 75%;
     float: left;
 
     #site-title {
-      text-decoration: none;
-      :hover{
-        color: $text;
-      }
-      h1{
-        font-size: 1.5rem;
-        font-weight: 500;
-      }
+        //see media query
     }
   }
   #nav-timeline-container{
-    width: 50%;
+    width: 25%;
     float: right;
   }
 
-  padding-bottom: 2rem;
-  border-bottom: 3px solid $text;
-  margin-bottom: 0.5rem;
+
 
 }
 
@@ -267,15 +258,10 @@ html {
 
 #timeline-header-container{
   #timeline-title {
-    font-size: 3rem;
-    font-weight: 100;
-    margin-bottom: .5rem;
+    //see media query
   }
   #timeline-intro{
-    width: 75%;
-    font-size: 1.5rem;
-    font-weight: 100;
-    line-height: 1.75rem;
+    //see media query
   }
 
   padding-bottom: 1rem;
@@ -299,6 +285,9 @@ html {
 }
 
 #timeline-container{
+  float: left;
+  background-color: black;
+  width: 75%;
 
   #big-timeline-container{
     .album-label-container{
@@ -385,23 +374,21 @@ html {
 
 
 //***LEGEND/NOTES
-#meta-content-container{
-    // @include clearfix;
-    // height: 5rem;
-    margin-bottom:9rem;
-}
 
 #meta-content-container.non-mobile{
     // @include clearfix;
     // height: 5rem;
-    margin-bottom:-.5rem;
+    // margin-bottom:-.5rem;
 }
 
 
-
+#context-module-mobile-sticky-wrapper{
+  // padding-right: 1rem;
+  // width: 100%;
+}
 
 #context-module-mobile{
-  background-color: $background; //temp
+  background-color: $background;
   width: 100%;
   @include clearfix;
   #context-nav-mobile{
@@ -451,21 +438,26 @@ html {
 
 
 
+#context-module-sidebar-container{
+  float: left;
+  width: 25%;
+  padding-top:1.5rem;
+}
 
 
 
 #context-module-sidebar{
-
-  padding-top:3.5rem;
-  width: 20%;
-  float: right;
+  float: left;
+  padding-top: 2rem;
   height: 100%;
+}
 
+#notes-container-sidebar{
+  margin-top: 2rem;
 }
 
 #legend-content-container{
-  background-color: silver;
-  width: 10rem;
+  width: 16rem;
   .legend-column{
     .legend-item{
       margin-top: 0.5rem;
@@ -485,7 +477,6 @@ html {
         // overflow: hidden;`
         p{
           // color: red;
-          background-color: red;  
           // float: left; 
           font-weight: 100;
           // width: 100%;
@@ -519,20 +510,78 @@ html {
 
 
 @media (max-width: 40rem) {
+  #site-header{
+    border-bottom: 3px solid $text;
+    margin-bottom: 0.5rem;
+  }
+
+  #site-title {
+    text-decoration: none;
+    :hover{
+      color: $text;
+    }
+    h1{
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+
+  #meta-content-container{
+    // @include clearfix;
+    // height: 5rem;
+    margin-bottom:9rem;
+  }
+
+
   .track-title-container h6{
     @include ellipsis;
+  }
+  #timeline-title {
+    font-size: 2rem;
+    font-weight: 100;
+    margin-bottom: .5rem;
   }
 
   #notes-container {
     max-height:10rem;
     overflow-y: scroll;
   }
+  #timeline-intro{
+    width: 75%;
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 1.5rem;
+  }
+
 
 }
 
 
 /* Medium screens (640px) */
 @media (min-width: 40rem) { 
+  #site-header{
+    padding-bottom: 2rem;
+    border-bottom: 3px solid $text;
+    margin-bottom: 0.5rem;
+  }
+
+
+  #site-title {
+    text-decoration: none;
+    :hover{
+      color: $text;
+    }
+    h1{
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+  }
+  #timeline-title {
+    font-size: 3rem;
+    font-weight: 100;
+    margin-bottom: .5rem;
+  }
+
 
   .track-title-label {
     font-size: .8em;
@@ -541,11 +590,20 @@ html {
   #notes-container {
     height: 100%;
   }
+  #timeline-intro{
+    width: 75%;
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 1.75rem;
+  }
 
 }
 
 
 @media (max-width: 64rem) {
+
+
+
   .track-title-container{
     width:25%;
     float:left;
@@ -558,6 +616,8 @@ html {
 
 /* Large screens (1024px) */
 @media (min-width: 64rem) { 
+
+
   .album-label-container{
     padding-left: 10.11%;
   }

@@ -346,6 +346,7 @@ screenModes = {
     $("#context-module-sidebar").hide()
     $("#context-module-mobile").show()
     $('#meta-content-container').removeClass("non-mobile")
+    // $('#timeline-intro').addClass("mobile")
   },
 
   tablet: function(){
@@ -353,6 +354,7 @@ screenModes = {
     $("#context-module-mobile").hide()
     $("#context-module-sidebar").show()
     $('#meta-content-container').addClass("non-mobile")
+    // $('#timeline-intro').removeClass("mobile")
   },
 
   desktop: function(){
@@ -659,9 +661,11 @@ $(function(){
 
 
 
-  // $("#context-module-mobile").stick_in_parent()
   $("#context-module-mobile").sticky({topSpacing:0});
-  $("#context-module-sidebar").sticky({topSpacing:0});
+  $("#context-module-sidebar").sticky({topSpacing:0}).parent().addClass("stick-right")
+
+  // $("#context-module-mobile").stick_in_parent()
+  // $("#context-module-sidebar").stick_in_parent()
     // .on("sticky_kit:stick", function(e){
     //   // legendNavHider();
     // })
