@@ -631,14 +631,13 @@ $(function(){
   addNavEvents()
 
 
-  //TURNED OFF FOR NOW
 
-  // $("#context-module").stick_in_parent()
-  //   .on("sticky_kit:stick", function(e){
-  //     legendNavHider();
-  //   })
+  // $("#context-module-mobile").stick_in_parent()
+  $("#context-module-mobile").sticky({topSpacing:0});
+    // .on("sticky_kit:stick", function(e){
+    //   // legendNavHider();
+    // })
 
-  // TEMP_renderSidebar()
   
 
 })
