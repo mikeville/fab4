@@ -118,29 +118,27 @@ authorshipTestDrawD3 = function(trackData){
   trackWidth = $("#timeline-container").width(); //or this.el.width() w/ backbone
   trackHeight = trackWidth/trackAspect
 
-  var maxBarWidth = trackWidth //TODO: clean this up. right now it's for guitar gently weeps.
-  var widthFactor = trackWidth/maxBarWidth;
+  var widthFactor = trackWidth-(trackWidth/2);
 
 
   var source = $('#track-container-template').html();
       var template = Handlebars.compile(source)
       $("#big-timeline-container").append(template(trackData))
 
-  var authorWidth = 200 //TODO: make this relative, not hardcoded
   var authorArray = [{author: "McCartney", start: 0, end:0},
                      {author: "Lennon", start: 0, end:0},
                      {author: "Harrison", start: 0, end:0},
                      {author: "Starr", start: 0, end:0},
                      {author: "Other", start: 0, end:0}]  
-      authorArray[0].end = (trackData.authorship[0].McCartney) * authorWidth      //******GIVE THIS A FUCKING TOWEL
-      authorArray[1].start = (trackData.authorship[0].McCartney) * authorWidth    //******GIVE THIS A FUCKING TOWEL
-      authorArray[1].end = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon) * authorWidth
-      authorArray[2].start = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon) * authorWidth
-      authorArray[2].end = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison) * authorWidth
-      authorArray[3].start = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison) * authorWidth
-      authorArray[3].end = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison + trackData.authorship[3].Starr) * authorWidth
-      authorArray[4].start = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison + trackData.authorship[3].Starr) * authorWidth
-      authorArray[4].end = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison + trackData.authorship[3].Starr + trackData.authorship[4].Other) * authorWidth
+      authorArray[0].end = (trackData.authorship[0].McCartney)      //******GIVE THIS A FUCKING TOWEL
+      authorArray[1].start = (trackData.authorship[0].McCartney)    //******GIVE THIS A FUCKING TOWEL
+      authorArray[1].end = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon)
+      authorArray[2].start = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon)
+      authorArray[2].end = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison)
+      authorArray[3].start = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison)
+      authorArray[3].end = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison + trackData.authorship[3].Starr)
+      authorArray[4].start = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison + trackData.authorship[3].Starr)
+      authorArray[4].end = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison + trackData.authorship[3].Starr + trackData.authorship[4].Other)
 
 
   var svg = d3.select(".track-"+trackData.trackIndex).append("svg")
@@ -172,7 +170,7 @@ authorshipTestDrawD3 = function(trackData){
     && ( trackData.authorship[3].Starr != 1 )
     && ( trackData.authorship[4].Other != 1 )) {
     svg.append("ellipse")
-      .attr("cx", authorWidth+authorWidth/4)
+      .attr("cx", widthFactor+widthFactor/25)
       .attr("cy", trackHeight/2)
       .attr("rx", trackHeight/2)
       .attr("ry", trackHeight/2)
