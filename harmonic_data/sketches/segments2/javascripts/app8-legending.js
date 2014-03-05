@@ -48,7 +48,9 @@ var App = Backbone.Router.extend({
     //if data hasn't been prepared...prepare it...then set it to the metaData thing.
     app.metaData = metaDataMaster.songStructure
     app.uiMaker()
-    sortByRelease()
+    // sortByRelease()
+    var timeline = new TimelineStructure()
+    timeline.listByRelease()
   },
 
   bootAuthorship: function(){
@@ -77,25 +79,13 @@ var App = Backbone.Router.extend({
     app.uiMaker()
   },
 
-
-
   uiMaker: function(){
     //create/append all stuff common to every timeline
     if (ui) ui.remove()
     var ui = new UI()
   },
 
-  initialize: function(){
-    this.TEMP_makeAppFrame()
-      // **** ADD STICKINESS
-  },
-  TEMP_makeAppFrame: function(){
-    console.log("app frame drawn. welcome to app")
-  },
-  TEMP_drawTimeline: function(){
-    console.log("we'd do d3 stuff now")
-  },
-
+ 
   authorshipTest: function(){
     _.each(dataMaster, function(albumData){
         var source = $('#album-label-template').html();
@@ -110,88 +100,11 @@ var App = Backbone.Router.extend({
 
   }
 
-
-
 })
 
 
 
-
-
-authorshipTestDrawD3 = function(trackData){
-  trackWidth = $("#timeline-container").width(); //or this.el.width() w/ backbone
-  trackHeight = trackWidth/trackAspect
-
-  var maxBarWidth = trackWidth //TODO: clean this up. right now it's for guitar gently weeps.
-  var widthFactor = trackWidth/maxBarWidth;
-
-
-  
-  var authorWidth = 200 //TODO: make this relative, not hardcoded
-  var authorArray = [{author: "McCartney", start: 0, end:0},
-                     {author: "Lennon", start: 0, end:0},
-                     {author: "Harrison", start: 0, end:0},
-                     {author: "Starr", start: 0, end:0},
-                     {author: "Other", start: 0, end:0}]  
-      authorArray[0].end = (trackData.authorship[0].McCartney) * authorWidth      //******GIVE THIS A FUCKING TOWEL
-      authorArray[1].start = (trackData.authorship[0].McCartney) * authorWidth    //******GIVE THIS A FUCKING TOWEL
-      authorArray[1].end = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon) * authorWidth
-      authorArray[2].start = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon) * authorWidth
-      authorArray[2].end = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison) * authorWidth
-      authorArray[3].start = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison) * authorWidth
-      authorArray[3].end = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison + trackData.authorship[3].Starr) * authorWidth
-      authorArray[4].start = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison + trackData.authorship[3].Starr) * authorWidth
-      authorArray[4].end = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison + trackData.authorship[3].Starr + trackData.authorship[4].Other) * authorWidth
-
-
-  var svg = d3.select(".track-"+trackData.trackIndex).append("svg")
-      .attr("class", "track track-"+trackData.trackIndex)
-      .attr("preserveAspectRatio", "xMidYMid")
-      .attr("viewBox", "0 0 "+trackWidth+" "+trackHeight)
-      .attr("width", trackWidth)
-      .attr("height", trackHeight)
-
-  svg.selectAll("rect")
-      .data(authorArray)
-    .enter().append("rect")
-      .attr("x", function(d) { return d.start*widthFactor })
-      .attr("y", 0)
-      .attr("width", function(d) { return (d.end-d.start)*widthFactor})
-      .attr("height", trackHeight)
-      .attr("class", function(d) { return "author_"+d.author })
-      // .style("stroke", "black")
-      // .style("fill", "none")
-    .on("click", function(d){
-      console.log(d.author)
-      // sortTest(d)
-    })
-
-  if (
-    ( trackData.authorship[0].McCartney != 1 )
-    && ( trackData.authorship[1].Lennon != 1 )
-    && ( trackData.authorship[2].Harrison != 1 )
-    && ( trackData.authorship[3].Starr != 1 )
-    && ( trackData.authorship[4].Other != 1 )) {
-    svg.append("ellipse")
-      .attr("cx", authorWidth+authorWidth/4)
-      .attr("cy", trackHeight/2)
-      .attr("rx", trackHeight/2)
-      .attr("ry", trackHeight/2)
-      .style("fill", "red")
-  }
-
-   $(".track-"+trackData.trackIndex).on("click", function(){
-        updateNotes(trackData)
-      })
-
-
-}
-
-
-
-
-
-
+//****** UI VIEWS
 
 
 var UI = Backbone.View.extend({
@@ -406,6 +319,14 @@ desktopMode = function(){
 
 
 
+//****TIMELINES
+
+
+
+
+
+
+
 // **** DRAW D3
 
 
@@ -457,6 +378,75 @@ structureTrackTiny = function(trackData){
 
 
 
+var TimelineStructure = function(){}
+
+TimelineStructure.prototype.makeTrack = function(trackData){
+  trackWidth = $("#timeline-container").width(); //or this.el.width() w/ backbone
+  trackHeight = trackWidth/trackAspect
+
+  var maxBarWidth = 600 //TODO: clean this up. right now it's for guitar gently weeps.
+  var widthFactor = trackWidth/maxBarWidth;
+
+
+  var source = $('#track-container-template').html();
+      var template = Handlebars.compile(source)
+      $("#big-timeline-container").append(template(trackData))
+
+
+  var svg = d3.select(".track-"+trackData.trackIndex).append("svg")
+      .attr("class", "track track-"+trackData.trackIndex)
+      .attr("preserveAspectRatio", "xMidYMid")
+      .attr("viewBox", "0 0 "+trackWidth+" "+trackHeight)
+      .attr("width", trackWidth)
+      .attr("height", trackHeight)
+
+  svg.selectAll("rect")
+      .data(trackData.segments)
+    .enter().append("rect")
+      .attr("x", function(d) { return d.start*widthFactor })
+      .attr("y", 0)
+      .attr("width", function(d) { return (d.end-d.start)*widthFactor})
+      .attr("height", trackHeight)
+      .attr("class", function(d) { return "segment_"+d.segment })
+    .on("click", function(d){
+      console.log(d.segment)
+      // sortTest(d)
+    })
+
+   $(".track-"+trackData.trackIndex).on("click", function(){
+        updateNotes(trackData)
+      })
+
+
+}
+
+
+TimelineStructure.prototype.listByRecording = function(){
+  _.each(dataMasterByRecording, function(trackData){
+    this.makeTrack(trackData)
+    $(".track-container-"+trackData.trackIndex).prepend("<div class='year-mark-container'><p class='year-mark-label'>"+trackData.yearMark+".<p></div>")
+  }) 
+}
+
+TimelineStructure.prototype.listByRelease = function(){
+  var self = this;
+  _.each(dataMaster, function(albumData){
+      var source = $('#album-label-template').html();
+      var template = Handlebars.compile(source)
+      $("#big-timeline-container").append(template(albumData))
+
+    _.each(albumData.tracks, function(trackData){
+      self.makeTrack(trackData)
+    })
+  }) 
+}
+
+
+
+
+
+
+
 
 structureByRecording = function(){
   _.each(dataMasterByRecording, function(trackData){
@@ -474,10 +464,6 @@ structureByRelease = function(){
       var source = $('#album-label-template').html();
       var template = Handlebars.compile(source)
       $("#big-timeline-container").append(template(albumData))
-
-
-
-
 
     _.each(albumData.tracks, function(trackData){
       structureTrack(trackData)
@@ -525,6 +511,81 @@ structureTrack = function(trackData){
 
 
 }
+
+
+
+
+authorshipTestDrawD3 = function(trackData){
+  trackWidth = $("#timeline-container").width(); //or this.el.width() w/ backbone
+  trackHeight = trackWidth/trackAspect
+
+  var maxBarWidth = trackWidth //TODO: clean this up. right now it's for guitar gently weeps.
+  var widthFactor = trackWidth/maxBarWidth;
+
+
+  
+  var authorWidth = 200 //TODO: make this relative, not hardcoded
+  var authorArray = [{author: "McCartney", start: 0, end:0},
+                     {author: "Lennon", start: 0, end:0},
+                     {author: "Harrison", start: 0, end:0},
+                     {author: "Starr", start: 0, end:0},
+                     {author: "Other", start: 0, end:0}]  
+      authorArray[0].end = (trackData.authorship[0].McCartney) * authorWidth      //******GIVE THIS A FUCKING TOWEL
+      authorArray[1].start = (trackData.authorship[0].McCartney) * authorWidth    //******GIVE THIS A FUCKING TOWEL
+      authorArray[1].end = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon) * authorWidth
+      authorArray[2].start = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon) * authorWidth
+      authorArray[2].end = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison) * authorWidth
+      authorArray[3].start = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison) * authorWidth
+      authorArray[3].end = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison + trackData.authorship[3].Starr) * authorWidth
+      authorArray[4].start = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison + trackData.authorship[3].Starr) * authorWidth
+      authorArray[4].end = (trackData.authorship[0].McCartney + trackData.authorship[1].Lennon + trackData.authorship[2].Harrison + trackData.authorship[3].Starr + trackData.authorship[4].Other) * authorWidth
+
+
+  var svg = d3.select(".track-"+trackData.trackIndex).append("svg")
+      .attr("class", "track track-"+trackData.trackIndex)
+      .attr("preserveAspectRatio", "xMidYMid")
+      .attr("viewBox", "0 0 "+trackWidth+" "+trackHeight)
+      .attr("width", trackWidth)
+      .attr("height", trackHeight)
+
+  svg.selectAll("rect")
+      .data(authorArray)
+    .enter().append("rect")
+      .attr("x", function(d) { return d.start*widthFactor })
+      .attr("y", 0)
+      .attr("width", function(d) { return (d.end-d.start)*widthFactor})
+      .attr("height", trackHeight)
+      .attr("class", function(d) { return "author_"+d.author })
+      // .style("stroke", "black")
+      // .style("fill", "none")
+    .on("click", function(d){
+      console.log(d.author)
+      // sortTest(d)
+    })
+
+  if (
+    ( trackData.authorship[0].McCartney != 1 )
+    && ( trackData.authorship[1].Lennon != 1 )
+    && ( trackData.authorship[2].Harrison != 1 )
+    && ( trackData.authorship[3].Starr != 1 )
+    && ( trackData.authorship[4].Other != 1 )) {
+    svg.append("ellipse")
+      .attr("cx", authorWidth+authorWidth/4)
+      .attr("cy", trackHeight/2)
+      .attr("rx", trackHeight/2)
+      .attr("ry", trackHeight/2)
+      .style("fill", "red")
+  }
+
+   $(".track-"+trackData.trackIndex).on("click", function(){
+        updateNotes(trackData)
+      })
+
+
+}
+
+
+
 
 
 
