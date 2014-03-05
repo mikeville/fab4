@@ -120,6 +120,13 @@ $bridge: $pink;
 $instrumental: $green;
 
 
+
+rect {
+  fill: $green;
+}
+
+
+
 .segment_intro,
 .segment_outro,
 .segment_outro_a,
@@ -304,6 +311,9 @@ html {
       margin-top: 3rem;
       margin-bottom: 1rem;
     }
+      #album-label-container-pleasePleaseMe{
+        margin-top: 0rem;
+      }
 
 
     .track-container{
@@ -469,6 +479,7 @@ html {
     .note-song-title{
       padding-top: 0.5rem;
       font-size: 0.8rem;
+      font-family: 'Roboto Condensed';
       font-weight: 500;
     }
 
@@ -567,6 +578,48 @@ html {
 
 
 
+// ***SCALE
+
+  #scale-container{
+    width: 100%;
+    @include clearfix;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 0.6rem;
+    margin-top: 3.3rem;
+    margin-bottom: 1rem;
+  }
+
+  #scale-title-container{
+    width:25%;
+    float: left;
+    border-right: 1px solid $text;
+
+  }
+
+  #scale-notch-container{
+    width: 70%;
+    float: left;
+    // background-color: black;
+  }
+
+  .scale-notch{
+    float: left;
+    width: 20%;
+    border-right: 1px solid $text;
+    min-height: 1rem;
+    height: 1rem;
+    padding-left: 0.5rem;
+  }
+
+
+
+
+
+//***MEDIA QUERIES
+
+
 
 
 @media (max-width: 40rem) {
@@ -647,6 +700,7 @@ html {
       font-weight: 500;
     }
   }
+
 
   #timeline-container{
     width: 75%;

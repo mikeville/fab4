@@ -99,8 +99,10 @@ var App = Backbone.Router.extend({
         authorshipTestDrawD3(trackData)
       })
     }) 
-  
+    
 
+    // $('#big-timeline-container').prepend("<div id='timeline-top-margin-hack'><div>").css({"height": "3rem", "min-height": "3rem", "background-color": "blue", "width": "100%", "padding-top": "3rem"});
+ 
   },
 
 
@@ -482,9 +484,15 @@ structureTrackTiny = function(trackData){
 }
 
 
+structureScale = function(){
+  var source = $('#scale-structure-template').html();
+  var template = Handlebars.compile(source)
+  $("#big-timeline-container").prepend(template())
+}
 
 
 structureByRecording = function(){
+  structureScale()
   _.each(dataMasterByRecording, function(trackData){
     structureTrack(trackData)
     $(".track-container-"+trackData.trackIndex).prepend("<div class='year-mark-container'><p class='year-mark-label'>"+trackData.yearMark+".<p></div>")
@@ -493,6 +501,7 @@ structureByRecording = function(){
 }
 
 structureByRelease = function(){
+  structureScale()
   _.each(dataMaster, function(albumData){
       var source = $('#album-label-template').html();
       var template = Handlebars.compile(source)
@@ -535,6 +544,7 @@ structureTrack = function(trackData){
       .attr("y", 0)
       .attr("width", function(d) { return (d.end-d.start)*widthFactor})
       .attr("height", trackHeight)
+      .style("background-color", "purple")
       .attr("class", function(d) { return "segment_"+d.segment })
     .on("click", function(d){
       console.log(d.segment)
