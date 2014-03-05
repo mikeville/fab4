@@ -79,6 +79,11 @@ var App = Backbone.Router.extend({
 
 
   authorshipTest: function(){
+    $('#timeline-container').html("")
+    $('#timeline-container').empty();
+    $('#tiny-container').html("");
+    $('#big-timeline-container').html("");
+
     _.each(dataMaster, function(albumData){
         var source = $('#album-label-template').html();
         var template = Handlebars.compile(source)
@@ -88,8 +93,6 @@ var App = Backbone.Router.extend({
         authorshipTestDrawD3(trackData)
       })
     }) 
-  
-
   },
 
 

@@ -85,6 +85,11 @@ var App = Backbone.Router.extend({
 
 
   authorshipTest: function(){
+
+    $('#tiny-container').html("");
+    $('#big-timeline-container').html("");
+    $('.track-container').remove();
+
     _.each(dataMaster, function(albumData){
         var source = $('#album-label-template').html();
         var template = Handlebars.compile(source)
