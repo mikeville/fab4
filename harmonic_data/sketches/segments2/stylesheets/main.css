@@ -398,20 +398,20 @@ html a:hover {
   height: 0.75rem;
   min-width: 0.75rem;
   min-height: 0.75rem;
-  background-color: green;
   float: left;
   margin-right: 0.25rem;
 }
-/* line 425, sass/main.scss */
+/* line 424, sass/main.scss */
 #legend-content-container-mobile .legend-column .legend-item .legend-item-label p {
   font-weight: 100;
 }
 
-/* line 440, sass/main.scss */
+/* line 438, sass/main.scss */
 #context-module-sidebar-container {
   float: left;
   width: 25%;
   padding-top: 1.5rem;
+  height: 100%;
 }
 
 /* line 448, sass/main.scss */
@@ -419,42 +419,79 @@ html a:hover {
   float: left;
   padding-top: 2rem;
   height: 100%;
+  height: 40rem;
 }
 
-/* line 454, sass/main.scss */
+/* line 455, sass/main.scss */
 #notes-container-sidebar {
   margin-top: 2rem;
+  height: 100%;
+  overflow-y: scroll;
 }
 
-/* line 458, sass/main.scss */
+/* line 465, sass/main.scss */
 #legend-content-container {
   width: 16rem;
 }
-/* line 461, sass/main.scss */
+/* line 468, sass/main.scss */
 #legend-content-container .legend-column .legend-item {
   margin-top: 0.5rem;
   line-height: 1rem;
 }
-/* line 464, sass/main.scss */
+/* line 471, sass/main.scss */
 #legend-content-container .legend-column .legend-item .legend-icon {
   width: 0.75rem;
   height: 0.75rem;
   min-width: 0.75rem;
   min-height: 0.75rem;
-  background-color: green;
   float: left;
   margin-right: 0.25rem;
 }
-/* line 473, sass/main.scss */
+/* line 479, sass/main.scss */
 #legend-content-container .legend-column .legend-item .legend-item-label {
   display: block;
 }
-/* line 477, sass/main.scss */
+/* line 483, sass/main.scss */
 #legend-content-container .legend-column .legend-item .legend-item-label p {
   font-weight: 100;
 }
 
+/* line 494, sass/main.scss */
+#legend-icon-intro {
+  background-color: #555244;
+}
+
+/* line 497, sass/main.scss */
+#legend-icon-verse {
+  background-color: #57caef;
+}
+
 /* line 500, sass/main.scss */
+#legend-icon-chorus {
+  background-color: #ffce06;
+}
+
+/* line 503, sass/main.scss */
+#legend-icon-bridge {
+  background-color: #ee3766;
+}
+
+/* line 506, sass/main.scss */
+#legend-icon-unique {
+  background-color: #74c044;
+}
+
+/* line 509, sass/main.scss */
+#legend-icon-variation {
+  background-color: #74c044;
+}
+
+/* line 512, sass/main.scss */
+#legend-icon-instrumentation {
+  background-color: #74c044;
+}
+
+/* line 526, sass/main.scss */
 .context-module-desktop {
   width: 20%;
   float: right;
@@ -462,32 +499,32 @@ html a:hover {
 }
 
 @media (max-width: 40rem) {
-  /* line 512, sass/main.scss */
+  /* line 538, sass/main.scss */
   #site-header {
     border-bottom: 3px solid #fff8cd;
     margin-bottom: 0.5rem;
   }
 
-  /* line 517, sass/main.scss */
+  /* line 543, sass/main.scss */
   #site-title {
     text-decoration: none;
   }
-  /* line 519, sass/main.scss */
+  /* line 545, sass/main.scss */
   #site-title :hover {
     color: #fff8cd;
   }
-  /* line 522, sass/main.scss */
+  /* line 548, sass/main.scss */
   #site-title h1 {
     font-size: 1rem;
     font-weight: 500;
   }
 
-  /* line 528, sass/main.scss */
+  /* line 554, sass/main.scss */
   #meta-content-container {
     margin-bottom: 9rem;
   }
 
-  /* line 535, sass/main.scss */
+  /* line 561, sass/main.scss */
   .track-title-container h6 {
     white-space: nowrap;
     overflow: hidden;
@@ -497,20 +534,20 @@ html a:hover {
     -moz-binding: url('xml/ellipsis.xml#ellipsis');
   }
 
-  /* line 538, sass/main.scss */
+  /* line 564, sass/main.scss */
   #timeline-title {
     font-size: 2rem;
     font-weight: 100;
     margin-bottom: .5rem;
   }
 
-  /* line 544, sass/main.scss */
+  /* line 570, sass/main.scss */
   #notes-content-container-mobile {
     max-height: 10rem;
     overflow-y: scroll;
   }
 
-  /* line 548, sass/main.scss */
+  /* line 577, sass/main.scss */
   #timeline-intro {
     width: 75%;
     font-size: 1rem;
@@ -520,45 +557,45 @@ html a:hover {
 }
 /* Medium screens (640px) */
 @media (min-width: 40rem) {
-  /* line 561, sass/main.scss */
+  /* line 590, sass/main.scss */
   #site-header {
     padding-bottom: 2rem;
     border-bottom: 3px solid #fff8cd;
     margin-bottom: 0.5rem;
   }
 
-  /* line 568, sass/main.scss */
+  /* line 597, sass/main.scss */
   #site-title {
     text-decoration: none;
   }
-  /* line 570, sass/main.scss */
+  /* line 599, sass/main.scss */
   #site-title :hover {
     color: #fff8cd;
   }
-  /* line 573, sass/main.scss */
+  /* line 602, sass/main.scss */
   #site-title h1 {
     font-size: 1.5rem;
     font-weight: 500;
   }
 
-  /* line 578, sass/main.scss */
+  /* line 607, sass/main.scss */
   #timeline-title {
     font-size: 3rem;
     font-weight: 100;
     margin-bottom: .5rem;
   }
 
-  /* line 585, sass/main.scss */
+  /* line 614, sass/main.scss */
   .track-title-label {
     font-size: .8em;
   }
 
-  /* line 589, sass/main.scss */
+  /* line 618, sass/main.scss */
   #notes-container {
     height: 100%;
   }
 
-  /* line 592, sass/main.scss */
+  /* line 621, sass/main.scss */
   #timeline-intro {
     width: 75%;
     font-size: 1.5rem;
@@ -567,13 +604,13 @@ html a:hover {
   }
 }
 @media (max-width: 64rem) {
-  /* line 606, sass/main.scss */
+  /* line 635, sass/main.scss */
   .track-title-container {
     width: 25%;
     float: left;
   }
 
-  /* line 610, sass/main.scss */
+  /* line 639, sass/main.scss */
   .svg-track-container {
     width: 75%;
     float: left;
@@ -581,19 +618,19 @@ html a:hover {
 }
 /* Large screens (1024px) */
 @media (min-width: 64rem) {
-  /* line 620, sass/main.scss */
+  /* line 649, sass/main.scss */
   .album-label-container {
     padding-left: 10.11%;
   }
 
-  /* line 623, sass/main.scss */
+  /* line 652, sass/main.scss */
   .year-mark-container {
     display: block;
     float: left;
     width: 10.11%;
     position: relative;
   }
-  /* line 630, sass/main.scss */
+  /* line 659, sass/main.scss */
   .year-mark-container p {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 300;
@@ -607,13 +644,13 @@ html a:hover {
     letter-spacing: -.1rem;
   }
 
-  /* line 645, sass/main.scss */
+  /* line 674, sass/main.scss */
   .track-title-container {
     float: left;
     width: 22.22%;
   }
 
-  /* line 650, sass/main.scss */
+  /* line 679, sass/main.scss */
   .svg-track-container {
     float: right;
     width: 66.66%;

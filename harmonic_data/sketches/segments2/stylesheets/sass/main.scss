@@ -416,7 +416,6 @@ html {
         height: 0.75rem;
         min-width: 0.75rem;
         min-height: 0.75rem;
-        background-color: green;
         float:left;
         margin-right: 0.25rem;
       }
@@ -436,11 +435,12 @@ html {
 
 
 
-
 #context-module-sidebar-container{
   float: left;
   width: 25%;
   padding-top:1.5rem;
+  height: 100%;
+
 }
 
 
@@ -449,11 +449,18 @@ html {
   float: left;
   padding-top: 2rem;
   height: 100%;
+  height: 40rem;
 }
 
 #notes-container-sidebar{
   margin-top: 2rem;
+  height: 100%;
+  overflow-y: scroll;
 }
+#notes-content-container-sidebar {
+    // max-height:10rem;
+    // height: 100%
+  }
 
 #legend-content-container{
   width: 16rem;
@@ -466,7 +473,6 @@ html {
         height: 0.75rem;
         min-width: 0.75rem;
         min-height: 0.75rem;
-        background-color: green;
         float:left;
         margin-right: 0.25rem;
       }
@@ -485,7 +491,27 @@ html {
   }
 }
 
-
+#legend-icon-intro{
+  background-color: $intro-outro;
+}
+#legend-icon-verse{
+  background-color: $verse;
+}
+#legend-icon-chorus{
+  background-color: $chorus;
+}
+#legend-icon-bridge{
+  background-color: $bridge;
+}
+#legend-icon-unique{
+  background-color: $instrumental;
+}
+#legend-icon-variation{
+  background-color: $instrumental;
+}
+#legend-icon-instrumentation{
+  background-color: $instrumental;
+}
 
 
 
@@ -545,6 +571,9 @@ html {
     max-height:10rem;
     overflow-y: scroll;
   }
+
+
+
   #timeline-intro{
     width: 75%;
     font-size: 1rem;

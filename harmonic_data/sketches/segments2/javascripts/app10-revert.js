@@ -333,15 +333,19 @@ var updateNotes = function(trackData){
   var source = $('#notes-template').html();
   var template = Handlebars.compile(source)
   $('#notes-content-container-mobile').html(template(trackData))
+  $('#notes-content-container-sidebar').append(template(trackData))
+  $('#notes-content-container-sidebar').append(template(trackData))
+  $('#notes-content-container-sidebar').append(template(trackData))
+  $('#notes-content-container-sidebar').append(template(trackData))
 }
 
 
 // RESPONSIVENESS
 
 screenModesInit = function(){
-  if ( $(window).width() > 640) {
+  if ( $(window).width() < 640) {
     screenModes.mobile()
-  } else if ( $(window).width() > 1024) {
+  } else if ( $(window).width() < 1024) {
     screenModes.tablet()
   } else {
     screenModes.desktop()
@@ -368,6 +372,11 @@ screenModes = {
 
   desktop: function(){
     console.log("you're in desktop mode")
+    $("#context-module-mobile").hide()
+    $("#context-module-sidebar").show()
+    $('#meta-content-container').addClass("non-mobile")
+    //I LEFT OFF NEEDING TO CALL THESEE THINGS ON INITTTTTT
+    
   }
 }
 
