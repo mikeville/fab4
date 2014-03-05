@@ -1,5 +1,0 @@
-[{"start":0.000,"end":0.180,"segment":"silence"},
-{"start":0.180,"end":69.848,"segment":"part_x"},
-{"start":69.848,"end":148.093,"segment":"part_y"},
-{"start":148.093,"end":242.400,"segment":"part_z_(fade-out)"},
-{"start":242.400,"end":242.400,"segment":"silence"}]

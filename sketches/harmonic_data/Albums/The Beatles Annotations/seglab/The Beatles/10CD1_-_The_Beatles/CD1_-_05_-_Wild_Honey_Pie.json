@@ -1,9 +1,0 @@
-[{"start":0.000,"end":0.098,"segment":"silence"},
-{"start":0.098,"end":9.445,"segment":"break"},
-{"start":9.445,"end":14.883,"segment":"refrain"},
-{"start":14.883,"end":24.184,"segment":"break"},
-{"start":24.184,"end":29.551,"segment":"refrain"},
-{"start":29.551,"end":38.890,"segment":"break"},
-{"start":38.890,"end":44.290,"segment":"refrain"},
-{"start":44.290,"end":52.932,"segment":"outro"},
-{"start":52.932,"end":52.907,"segment":"silence"}]
