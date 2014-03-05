@@ -661,6 +661,7 @@ $(function(){
 
   // $("#context-module-mobile").stick_in_parent()
   $("#context-module-mobile").sticky({topSpacing:0});
+  $("#context-module-sidebar").sticky({topSpacing:0});
     // .on("sticky_kit:stick", function(e){
     //   // legendNavHider();
     // })

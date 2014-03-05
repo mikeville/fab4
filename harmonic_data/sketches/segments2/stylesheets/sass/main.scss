@@ -455,9 +455,8 @@ html {
 
 
 #context-module-sidebar{
-  background-color: $background-secondary; //temp
 
-  margin-top:3.5rem;
+  padding-top:3.5rem;
   width: 20%;
   float: right;
   height: 100%;
@@ -465,6 +464,8 @@ html {
 }
 
 #legend-content-container{
+  background-color: silver;
+  width: 10rem;
   .legend-column{
     .legend-item{
       margin-top: 0.5rem;
@@ -479,11 +480,15 @@ html {
         margin-right: 0.25rem;
       }
       .legend-item-label{
-        // width:80%;
+        // width:4rem;
+        display: block;
+        // overflow: hidden;`
         p{
-          // color: red;  
+          // color: red;
+          background-color: red;  
           // float: left; 
           font-weight: 100;
+          // width: 100%;
         } 
       }      
     }

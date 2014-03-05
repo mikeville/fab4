@@ -443,19 +443,23 @@ html a:hover {
 
 /* line 457, sass/main.scss */
 #context-module-sidebar {
-  background-color: #2d2e27;
-  margin-top: 3.5rem;
+  padding-top: 3.5rem;
   width: 20%;
   float: right;
   height: 100%;
 }
 
-/* line 469, sass/main.scss */
+/* line 466, sass/main.scss */
+#legend-content-container {
+  background-color: silver;
+  width: 10rem;
+}
+/* line 470, sass/main.scss */
 #legend-content-container .legend-column .legend-item {
   margin-top: 0.5rem;
   line-height: 1rem;
 }
-/* line 472, sass/main.scss */
+/* line 473, sass/main.scss */
 #legend-content-container .legend-column .legend-item .legend-icon {
   width: 0.75rem;
   height: 0.75rem;
@@ -465,12 +469,17 @@ html a:hover {
   float: left;
   margin-right: 0.25rem;
 }
-/* line 483, sass/main.scss */
+/* line 482, sass/main.scss */
+#legend-content-container .legend-column .legend-item .legend-item-label {
+  display: block;
+}
+/* line 486, sass/main.scss */
 #legend-content-container .legend-column .legend-item .legend-item-label p {
+  background-color: red;
   font-weight: 100;
 }
 
-/* line 505, sass/main.scss */
+/* line 510, sass/main.scss */
 .context-module-desktop {
   width: 20%;
   float: right;
@@ -478,7 +487,7 @@ html a:hover {
 }
 
 @media (max-width: 40rem) {
-  /* line 517, sass/main.scss */
+  /* line 522, sass/main.scss */
   .track-title-container h6 {
     white-space: nowrap;
     overflow: hidden;
@@ -488,7 +497,7 @@ html a:hover {
     -moz-binding: url('xml/ellipsis.xml#ellipsis');
   }
 
-  /* line 521, sass/main.scss */
+  /* line 526, sass/main.scss */
   #notes-container {
     max-height: 10rem;
     overflow-y: scroll;
@@ -496,24 +505,24 @@ html a:hover {
 }
 /* Medium screens (640px) */
 @media (min-width: 40rem) {
-  /* line 532, sass/main.scss */
+  /* line 537, sass/main.scss */
   .track-title-label {
     font-size: .8em;
   }
 
-  /* line 536, sass/main.scss */
+  /* line 541, sass/main.scss */
   #notes-container {
     height: 100%;
   }
 }
 @media (max-width: 64rem) {
-  /* line 544, sass/main.scss */
+  /* line 549, sass/main.scss */
   .track-title-container {
     width: 25%;
     float: left;
   }
 
-  /* line 548, sass/main.scss */
+  /* line 553, sass/main.scss */
   .svg-track-container {
     width: 75%;
     float: left;
@@ -521,19 +530,19 @@ html a:hover {
 }
 /* Large screens (1024px) */
 @media (min-width: 64rem) {
-  /* line 556, sass/main.scss */
+  /* line 561, sass/main.scss */
   .album-label-container {
     padding-left: 10.11%;
   }
 
-  /* line 559, sass/main.scss */
+  /* line 564, sass/main.scss */
   .year-mark-container {
     display: block;
     float: left;
     width: 10.11%;
     position: relative;
   }
-  /* line 566, sass/main.scss */
+  /* line 571, sass/main.scss */
   .year-mark-container p {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 300;
@@ -547,13 +556,13 @@ html a:hover {
     letter-spacing: -.1rem;
   }
 
-  /* line 581, sass/main.scss */
+  /* line 586, sass/main.scss */
   .track-title-container {
     float: left;
     width: 22.22%;
   }
 
-  /* line 586, sass/main.scss */
+  /* line 591, sass/main.scss */
   .svg-track-container {
     float: right;
     width: 66.66%;
