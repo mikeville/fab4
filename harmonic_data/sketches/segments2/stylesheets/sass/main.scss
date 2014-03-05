@@ -388,7 +388,7 @@ html {
 #meta-content-container{
     // @include clearfix;
     // height: 5rem;
-    margin-bottom:6rem;
+    margin-bottom:7rem;
 
 }
 
@@ -396,6 +396,10 @@ html {
   background-color: $background; //temp
   width: 100%;
   @include clearfix;
+  #context-nav-mobile{
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+  }
   .legend-column{
     width: 50%;
     float: left;
@@ -403,7 +407,7 @@ html {
   padding-bottom: 1rem;
   border-bottom: 1px solid $text;
   // margin-bottom: 0.5rem;
-  margin-bottom: 5rem;
+  // margin-bottom: 5rem;
   // padding-bottom: 5rem;
 }
 

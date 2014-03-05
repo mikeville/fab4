@@ -30,66 +30,51 @@ var tinyTrackAspect = 200;
 var App = Backbone.Router.extend({
 
   routes: {
-    '': 'songStructure',
-    'song-structure': 'songStructure',
-    'authorship-and-collaboration': 'authorship',
-    'working-schedule': 'schedule',
-    'in-the-studio': 'inTheStudio',
-    'lyrical-syntax': 'lyricalSyntax',
-    'self-reference': 'songTest'
+    '': 'bootSongStructure',
+    'song-structure': 'bootSongStructure',
+    'authorship-and-collaboration': 'bootAuthorship',
+    'working-schedule': 'bootSchedule',
+    'in-the-studio': 'bootInTheStudio',
+    'lyrical-syntax': 'bootLyricalSyntax',
+    'self-reference': 'bootSongTest'
     //go to error page if these aren't found? or redirect to home page?
   },
 
-  songTest: function(){
+  bootSongTest: function(){
     songSketch();
   },
 
-  songStructure: function(){
+  bootSongStructure: function(){
     //if data hasn't been prepared...prepare it...then set it to the metaData thing.
     app.metaData = metaDataMaster.songStructure
     app.uiMaker()
     sortByRelease()
   },
 
-  authorship: function(){
+  bootAuthorship: function(){
     app.metaData = metaDataMaster.authorship
     app.uiMaker()
     app.authorshipTest()
   },
 
-  schedule: function(){
+  bootSchedule: function(){
     app.metaData = metaDataMaster.schedule
     app.uiMaker()
   },
 
-  inTheStudio: function(){
+  bootInTheStudio: function(){
     app.metaData = metaDataMaster.inTheStudio
     app.uiMaker()
   },
 
-  lyricalSyntax: function(){
+  bootLyricalSyntax: function(){
     app.metaData = metaDataMaster.lyricalSyntax
     app.uiMaker()
   },
 
-  selfReference: function(){
+  bootSelfReference: function(){
     app.metaData = metaDataMaster.selfReference
     app.uiMaker()
-  },
-
-
-  authorshipTest: function(){
-    _.each(dataMaster, function(albumData){
-        var source = $('#album-label-template').html();
-        var template = Handlebars.compile(source)
-        $("#big-timeline-container").append(template(albumData))
-
-      _.each(albumData.tracks, function(trackData){
-        authorshipTestDrawD3(trackData)
-      })
-    }) 
-  
-
   },
 
 
@@ -109,7 +94,24 @@ var App = Backbone.Router.extend({
   },
   TEMP_drawTimeline: function(){
     console.log("we'd do d3 stuff now")
+  },
+
+  authorshipTest: function(){
+    _.each(dataMaster, function(albumData){
+        var source = $('#album-label-template').html();
+        var template = Handlebars.compile(source)
+        $("#big-timeline-container").append(template(albumData))
+
+      _.each(albumData.tracks, function(trackData){
+        authorshipTestDrawD3(trackData)
+      })
+    }) 
+  
+
   }
+
+
+
 })
 
 
