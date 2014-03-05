@@ -280,42 +280,41 @@ html a:hover {
 /* line 287, sass/main.scss */
 #timeline-container {
   float: left;
-  width: 75%;
 }
-/* line 292, sass/main.scss */
+/* line 291, sass/main.scss */
 #timeline-container #big-timeline-container .album-label-container {
   width: 100%;
   overflow: hidden;
   margin-top: 3rem;
   margin-bottom: 1rem;
 }
-/* line 293, sass/main.scss */
+/* line 292, sass/main.scss */
 #timeline-container #big-timeline-container .album-label-container .album-label {
   font-size: 1.5rem;
   font-weight: 500;
   display: inline;
 }
-/* line 298, sass/main.scss */
+/* line 297, sass/main.scss */
 #timeline-container #big-timeline-container .album-label-container .album-year-label {
   font-size: 1.5rem;
   font-weight: 100;
   padding-left: .5rem;
 }
-/* line 310, sass/main.scss */
+/* line 309, sass/main.scss */
 #timeline-container #big-timeline-container .track-container {
   width: 100%;
   display: block;
   overflow: hidden;
 }
-/* line 314, sass/main.scss */
+/* line 313, sass/main.scss */
 #timeline-container #big-timeline-container .track-container p.year-mark-label {
   display: none;
 }
-/* line 317, sass/main.scss */
+/* line 316, sass/main.scss */
 #timeline-container #big-timeline-container .track-container .track-title-container {
   float: left;
 }
-/* line 319, sass/main.scss */
+/* line 318, sass/main.scss */
 #timeline-container #big-timeline-container .track-container .track-title-container .track-title-label {
   white-space: nowrap;
   overflow: hidden;
@@ -326,48 +325,48 @@ html a:hover {
   font-size: .6em;
   font-weight: normal;
 }
-/* line 324, sass/main.scss */
+/* line 323, sass/main.scss */
 #timeline-container #big-timeline-container .track-container .track-title-container .track-title-label {
   text-transform: uppercase;
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 300;
 }
-/* line 330, sass/main.scss */
+/* line 329, sass/main.scss */
 #timeline-container #big-timeline-container .track-container .svg-track-container {
   overflow: hidden;
   padding: 0;
   margin: 0;
   margin-bottom: .15rem;
 }
-/* line 337, sass/main.scss */
+/* line 336, sass/main.scss */
 #timeline-container #big-timeline-container .track-container .svg-track-container .segment-label {
   font-size: .6em;
   text-transform: uppercase;
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 300;
 }
-/* line 343, sass/main.scss */
+/* line 342, sass/main.scss */
 #timeline-container #big-timeline-container .track-container .svg-track-container svg.track {
   display: block;
   margin-bottom: 0rem;
 }
-/* line 354, sass/main.scss */
+/* line 353, sass/main.scss */
 #timeline-container #tiny-container .tiny-album-separator {
   margin-top: .25rem;
 }
-/* line 357, sass/main.scss */
+/* line 356, sass/main.scss */
 #timeline-container #tiny-container svg.tiny-track {
   display: block;
   margin-bottom: 0rem;
 }
 
-/* line 369, sass/main.scss */
+/* line 368, sass/main.scss */
 .timeline-container-desktop {
   width: 80%;
   float: left;
 }
 
-/* line 389, sass/main.scss */
+/* line 388, sass/main.scss */
 #context-module-mobile {
   background-color: #1e1e1a;
   width: 100%;
@@ -376,23 +375,23 @@ html a:hover {
   padding-bottom: 1rem;
   border-bottom: 1px solid #fff8cd;
 }
-/* line 393, sass/main.scss */
+/* line 392, sass/main.scss */
 #context-module-mobile #context-nav-mobile {
   margin-top: .5rem;
   margin-bottom: .5rem;
 }
-/* line 397, sass/main.scss */
+/* line 396, sass/main.scss */
 #context-module-mobile .legend-column {
   width: 50%;
   float: left;
 }
 
-/* line 411, sass/main.scss */
+/* line 410, sass/main.scss */
 #legend-content-container-mobile .legend-column .legend-item {
   margin-top: 0.5rem;
   line-height: 1rem;
 }
-/* line 414, sass/main.scss */
+/* line 413, sass/main.scss */
 #legend-content-container-mobile .legend-column .legend-item .legend-icon {
   width: 0.75rem;
   height: 0.75rem;
@@ -401,44 +400,73 @@ html a:hover {
   float: left;
   margin-right: 0.25rem;
 }
-/* line 424, sass/main.scss */
+/* line 423, sass/main.scss */
 #legend-content-container-mobile .legend-column .legend-item .legend-item-label p {
   font-weight: 100;
 }
 
-/* line 438, sass/main.scss */
+/* line 437, sass/main.scss */
 #context-module-sidebar-container {
   float: left;
   width: 25%;
   padding-top: 1.5rem;
   height: 100%;
 }
-
-/* line 448, sass/main.scss */
-#context-module-sidebar {
+/* line 442, sass/main.scss */
+#context-module-sidebar-container #context-module-sidebar {
   float: left;
   padding-top: 2rem;
   height: 100%;
   height: 40rem;
 }
-
-/* line 455, sass/main.scss */
-#notes-container-sidebar {
+/* line 448, sass/main.scss */
+#context-module-sidebar-container #context-module-sidebar #notes-container-sidebar {
   margin-top: 2rem;
   height: 100%;
   overflow-y: scroll;
 }
+/* line 453, sass/main.scss */
+#context-module-sidebar-container #context-module-sidebar #notes-container-sidebar #notes-content-container-sidebar {
+  padding-right: 0rem;
+  margin-right: 6rem;
+}
 
-/* line 465, sass/main.scss */
+/* line 469, sass/main.scss */
+.note-song-title {
+  padding-top: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* line 475, sass/main.scss */
+.note {
+  margin-top: 0.5;
+  font-size: 0.8rem;
+  font-weight: 100;
+  line-height: 1rem;
+}
+
+/* line 482, sass/main.scss */
+.note-separator-hack {
+  min-height: 0.5em;
+  height: 0.5em;
+}
+
+/* line 492, sass/main.scss */
+#notes-title-sidebar, #legend-title-sidebar {
+  font-weight: 100;
+}
+
+/* line 500, sass/main.scss */
 #legend-content-container {
   width: 16rem;
 }
-/* line 468, sass/main.scss */
+/* line 503, sass/main.scss */
 #legend-content-container .legend-column .legend-item {
   margin-top: 0.5rem;
   line-height: 1rem;
 }
-/* line 471, sass/main.scss */
+/* line 506, sass/main.scss */
 #legend-content-container .legend-column .legend-item .legend-icon {
   width: 0.75rem;
   height: 0.75rem;
@@ -447,51 +475,51 @@ html a:hover {
   float: left;
   margin-right: 0.25rem;
 }
-/* line 479, sass/main.scss */
+/* line 514, sass/main.scss */
 #legend-content-container .legend-column .legend-item .legend-item-label {
   display: block;
 }
-/* line 483, sass/main.scss */
+/* line 518, sass/main.scss */
 #legend-content-container .legend-column .legend-item .legend-item-label p {
   font-weight: 100;
 }
 
-/* line 494, sass/main.scss */
+/* line 529, sass/main.scss */
 #legend-icon-intro {
   background-color: #555244;
 }
 
-/* line 497, sass/main.scss */
+/* line 532, sass/main.scss */
 #legend-icon-verse {
   background-color: #57caef;
 }
 
-/* line 500, sass/main.scss */
+/* line 535, sass/main.scss */
 #legend-icon-chorus {
   background-color: #ffce06;
 }
 
-/* line 503, sass/main.scss */
+/* line 538, sass/main.scss */
 #legend-icon-bridge {
   background-color: #ee3766;
 }
 
-/* line 506, sass/main.scss */
+/* line 541, sass/main.scss */
 #legend-icon-unique {
   background-color: #74c044;
 }
 
-/* line 509, sass/main.scss */
+/* line 544, sass/main.scss */
 #legend-icon-variation {
   background-color: #74c044;
 }
 
-/* line 512, sass/main.scss */
+/* line 547, sass/main.scss */
 #legend-icon-instrumentation {
   background-color: #74c044;
 }
 
-/* line 526, sass/main.scss */
+/* line 561, sass/main.scss */
 .context-module-desktop {
   width: 20%;
   float: right;
@@ -499,32 +527,37 @@ html a:hover {
 }
 
 @media (max-width: 40rem) {
-  /* line 538, sass/main.scss */
+  /* line 573, sass/main.scss */
   #site-header {
     border-bottom: 3px solid #fff8cd;
     margin-bottom: 0.5rem;
   }
 
-  /* line 543, sass/main.scss */
+  /* line 578, sass/main.scss */
   #site-title {
     text-decoration: none;
   }
-  /* line 545, sass/main.scss */
+  /* line 580, sass/main.scss */
   #site-title :hover {
     color: #fff8cd;
   }
-  /* line 548, sass/main.scss */
+  /* line 583, sass/main.scss */
   #site-title h1 {
     font-size: 1rem;
     font-weight: 500;
   }
 
-  /* line 554, sass/main.scss */
+  /* line 589, sass/main.scss */
   #meta-content-container {
     margin-bottom: 9rem;
   }
 
-  /* line 561, sass/main.scss */
+  /* line 595, sass/main.scss */
+  #timeline-container {
+    width: 100%;
+  }
+
+  /* line 599, sass/main.scss */
   .track-title-container h6 {
     white-space: nowrap;
     overflow: hidden;
@@ -534,20 +567,25 @@ html a:hover {
     -moz-binding: url('xml/ellipsis.xml#ellipsis');
   }
 
-  /* line 564, sass/main.scss */
+  /* line 602, sass/main.scss */
   #timeline-title {
     font-size: 2rem;
     font-weight: 100;
     margin-bottom: .5rem;
   }
 
-  /* line 570, sass/main.scss */
+  /* line 607, sass/main.scss */
+  #timeline-view-switcher {
+    padding-top: 4rem;
+  }
+
+  /* line 613, sass/main.scss */
   #notes-content-container-mobile {
     max-height: 10rem;
     overflow-y: scroll;
   }
 
-  /* line 577, sass/main.scss */
+  /* line 620, sass/main.scss */
   #timeline-intro {
     width: 75%;
     font-size: 1rem;
@@ -557,45 +595,50 @@ html a:hover {
 }
 /* Medium screens (640px) */
 @media (min-width: 40rem) {
-  /* line 590, sass/main.scss */
+  /* line 633, sass/main.scss */
   #site-header {
     padding-bottom: 2rem;
     border-bottom: 3px solid #fff8cd;
     margin-bottom: 0.5rem;
   }
 
-  /* line 597, sass/main.scss */
+  /* line 640, sass/main.scss */
   #site-title {
     text-decoration: none;
   }
-  /* line 599, sass/main.scss */
+  /* line 642, sass/main.scss */
   #site-title :hover {
     color: #fff8cd;
   }
-  /* line 602, sass/main.scss */
+  /* line 645, sass/main.scss */
   #site-title h1 {
     font-size: 1.5rem;
     font-weight: 500;
   }
 
-  /* line 607, sass/main.scss */
+  /* line 651, sass/main.scss */
+  #timeline-container {
+    width: 75%;
+  }
+
+  /* line 655, sass/main.scss */
   #timeline-title {
     font-size: 3rem;
     font-weight: 100;
     margin-bottom: .5rem;
   }
 
-  /* line 614, sass/main.scss */
+  /* line 662, sass/main.scss */
   .track-title-label {
     font-size: .8em;
   }
 
-  /* line 618, sass/main.scss */
+  /* line 666, sass/main.scss */
   #notes-container {
     height: 100%;
   }
 
-  /* line 621, sass/main.scss */
+  /* line 669, sass/main.scss */
   #timeline-intro {
     width: 75%;
     font-size: 1.5rem;
@@ -604,13 +647,13 @@ html a:hover {
   }
 }
 @media (max-width: 64rem) {
-  /* line 635, sass/main.scss */
+  /* line 686, sass/main.scss */
   .track-title-container {
     width: 25%;
     float: left;
   }
 
-  /* line 639, sass/main.scss */
+  /* line 690, sass/main.scss */
   .svg-track-container {
     width: 75%;
     float: left;
@@ -618,19 +661,19 @@ html a:hover {
 }
 /* Large screens (1024px) */
 @media (min-width: 64rem) {
-  /* line 649, sass/main.scss */
+  /* line 700, sass/main.scss */
   .album-label-container {
     padding-left: 10.11%;
   }
 
-  /* line 652, sass/main.scss */
+  /* line 703, sass/main.scss */
   .year-mark-container {
     display: block;
     float: left;
     width: 10.11%;
     position: relative;
   }
-  /* line 659, sass/main.scss */
+  /* line 710, sass/main.scss */
   .year-mark-container p {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 300;
@@ -644,13 +687,13 @@ html a:hover {
     letter-spacing: -.1rem;
   }
 
-  /* line 674, sass/main.scss */
+  /* line 725, sass/main.scss */
   .track-title-container {
     float: left;
     width: 22.22%;
   }
 
-  /* line 679, sass/main.scss */
+  /* line 730, sass/main.scss */
   .svg-track-container {
     float: right;
     width: 66.66%;

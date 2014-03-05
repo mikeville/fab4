@@ -167,9 +167,11 @@
 
 
 <script id="notes-template" type='text/x-handlebars-template'>
-  <h6>{{trackTitle}}</h6>
+  <h6 class="note-song-title">{{trackTitle}}</h6>
   {{#each notes}}
-  <p>{{this}}</p>
+  <div class="note-separator-hack"></div>
+  <p class="note">&#149; {{this}}</p>
+  <div class="note-separator-hack"></div>
   {{/each}}
 </script>
 

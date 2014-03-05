@@ -22,7 +22,7 @@ var sortDataMasterByRecording = function(){
 var trackWidth;
 var tinyTrackHeight;
 var trackHeight;
-var trackAspect = 40;
+var trackAspect = 30
 var tinyTrackAspect = 200;
 
 
@@ -289,13 +289,13 @@ UI.ContextModuleMobile = Backbone.View.extend({
 addNavEvents = function(){
   $("#nav-link-legend-mobile").on("click", function(e){
     e.preventDefault()
-        console.log("hide")
+        console.log("legend")
     $("#notes-content-container").hide()
     $("#legend-content-container").show()
   })
   $("#nav-link-notes-mobile").on("click", function(e){
     e.preventDefault()
-        console.log("hide")
+        console.log("notes")
     $("#legend-content-container").hide()
     $("#notes-content-container").show()
       .html("<p>Click tracks to read excerpts from Alan W. Pollack's <a href='http://www.icce.rug.nl/~soundscapes/DATABASES/AWP/awp-notes_on.shtml'>'Notes on...'</a> series</p>")
@@ -338,10 +338,7 @@ var updateNotes = function(trackData){
   var source = $('#notes-template').html();
   var template = Handlebars.compile(source)
   $('#notes-content-container-mobile').html(template(trackData))
-  $('#notes-content-container-sidebar').append(template(trackData))
-  $('#notes-content-container-sidebar').append(template(trackData))
-  $('#notes-content-container-sidebar').append(template(trackData))
-  $('#notes-content-container-sidebar').append(template(trackData))
+  $('#notes-content-container-sidebar').html(template(trackData))
 }
 
 
@@ -358,30 +355,39 @@ screenModesInit = function(){
 }
 
 screenModes = {
+  screenMode: "waiting",
   mobile: function(){
+    screenMode = "mobile"
     console.log("you're in mobile mode")
     $("#context-module-sidebar").hide()
     $("#context-module-mobile").show()
     $('#meta-content-container').removeClass("non-mobile")
     // $('#timeline-intro').addClass("mobile")
     addNavEvents();
+
+    // trackAspect = 40;
   },
 
   tablet: function(){
+    screenMode = "tablet"
     console.log("you're in tablet mode")
     $("#context-module-mobile").hide()
     $("#context-module-sidebar").show()
     $('#meta-content-container').addClass("non-mobile")
     // $('#timeline-intro').removeClass("mobile")
+
+  // trackAspect = 30;
   },
 
   desktop: function(){
+    screenMode = "desktop"
     console.log("you're in desktop mode")
     $("#context-module-mobile").hide()
     $("#context-module-sidebar").show()
     $('#meta-content-container').addClass("non-mobile")
     //I LEFT OFF NEEDING TO CALL THESEE THINGS ON INITTTTTT
     
+    // trackAspect = 20;
   }
 }
 
@@ -405,13 +411,13 @@ ssmTest = function(){
     screenModes.tablet();
   }
 },
-  {
-    id: 'tablet-desktop',
-    minWidth: 640,
-    onEnter: function(){
-      contextModuleToSidebar();
-    }
-  },
+  // {
+  //   id: 'tablet-desktop',
+  //   minWidth: 640,
+  //   onEnter: function(){
+  //     contextModuleToSidebar();
+  //   }
+  // },
   {
     id: 'desktop',
     minWidth: 1024,
@@ -421,36 +427,6 @@ ssmTest = function(){
     }
   }
   ]).ready()
-}
-
-
-
-
-contextModuleToSidebar = function(){
-  $("#context-module").removeClass("context-module-mobile")
-    .addClass("context-module-desktop")
-    // .css("float", "right")
-  $('#timeline-container').addClass("timeline-container-desktop")
-  $('#nav-link-hide').hide();
-
-
-}
-
-contextModuleToMobile = function(){
-  $("#context-module").removeClass("context-module-desktop")
-  $('#timeline-container').removeClass("timeline-container-desktop")
-  $('#context-module').addClass("context-module-mobile")
-  $('#nav-link-hide').show();
-
-  $('.year-mark-label').hide();
-}
-
-tabletMode = function(){
-  $('.year-mark-label').hide();
-}
-
-desktopMode = function(){
-  $('.year-mark-label').show();
 }
 
 
@@ -537,7 +513,7 @@ structureTrack = function(trackData){
   trackWidth = $("#timeline-container").width(); //or this.el.width() w/ backbone
   trackHeight = trackWidth/trackAspect
 
-  var widthFactor = trackWidth/500;
+  var widthFactor = trackWidth/450;
 
 
   var source = $('#track-container-template').html();
@@ -631,7 +607,24 @@ chordParser = function(chordSample){
 }
 
 
+setWidth = function(){
+  trackWidth = $("#timeline-container").width();
+  tinyTrackHeight = trackWidth/tinyTrackAspect
+  d3.selectAll(".tiny-track").attr("width", trackWidth);
+  d3.selectAll(".tiny-track").attr("height", tinyTrackHeight);
 
+  trackHeight = trackWidth/trackAspect
+  d3.selectAll(".track").attr("width", trackWidth);
+  d3.selectAll(".track").attr("height", trackHeight);
+
+  // if (screenMode == "mobile") {
+  //   trackAspect = 40;
+  // } else if (screenMode == "tablet") {
+  //   trackAspect = 30;
+  // } else {
+  //   trackAspect = 20;
+  // }
+}
 
 
 
@@ -640,6 +633,11 @@ $(function(){
 
   // **** START APP
   
+  // **** GET FRAME SIZE FOR RESPONSIVENESS
+  //is this the best place for this to go?
+  $(window).resize(function() {
+    setWidth();
+  });
 
 
 
@@ -661,19 +659,6 @@ $(function(){
   })
   
 
-  // **** GET FRAME SIZE FOR RESPONSIVENESS
-  //is this the best place for this to go?
-  $(window).resize(function() {
-    trackWidth = $("#timeline-container").width();
-    tinyTrackHeight = trackWidth/tinyTrackAspect
-    d3.selectAll(".tiny-track").attr("width", trackWidth);
-    d3.selectAll(".tiny-track").attr("height", tinyTrackHeight);
-
-    trackHeight = trackWidth/trackAspect
-    d3.selectAll(".track").attr("width", trackWidth);
-    d3.selectAll(".track").attr("height", trackHeight);
-
-  });
 
 
 
