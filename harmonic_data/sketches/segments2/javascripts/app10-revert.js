@@ -28,6 +28,12 @@ var tinyTrackAspect = 200;
 
 //ROUTES (coming soon)
 var App = Backbone.Router.extend({
+  initialize: function(){
+    console.log("initting")
+    screenModesInit()
+    ssmTest()
+    addNavEvents()
+  },
 
   routes: {
     '': 'songStructure',
@@ -98,17 +104,6 @@ var App = Backbone.Router.extend({
     //create/append all stuff common to every timeline
     if (ui) ui.remove()
     var ui = new UI()
-  },
-
-  initialize: function(){
-    this.TEMP_makeAppFrame()
-      // **** ADD STICKINESS
-  },
-  TEMP_makeAppFrame: function(){
-    console.log("app frame drawn. welcome to app")
-  },
-  TEMP_drawTimeline: function(){
-    console.log("we'd do d3 stuff now")
   }
 })
 
@@ -287,21 +282,24 @@ UI.ContextModuleMobile = Backbone.View.extend({
 // EVENTS
 
 addNavEvents = function(){
-  $("#nav-link-legend").on("click", function(e){
+  $("#nav-link-legend-mobile").on("click", function(e){
     e.preventDefault()
-    $("#notes-container").hide()
-    $("#legend-container").show()
+        console.log("hide")
+    $("#notes-content-container").hide()
+    $("#legend-content-container").show()
   })
-  $("#nav-link-notes").on("click", function(e){
+  $("#nav-link-notes-mobile").on("click", function(e){
     e.preventDefault()
-    $("#legend-container").hide()
-    $("#notes-container").show()
+        console.log("hide")
+    $("#legend-content-container").hide()
+    $("#notes-content-container").show()
       .html("<p>Click tracks to read excerpts from Alan W. Pollack's <a href='http://www.icce.rug.nl/~soundscapes/DATABASES/AWP/awp-notes_on.shtml'>'Notes on...'</a> series</p>")
   })
-  $("#nav-link-hide").on("click", function(e){
+  $("#nav-link-hide-mobile").on("click", function(e){
     e.preventDefault()
-    $("#legend-container").hide()
-    $("#notes-container").hide()
+    console.log("hide")
+    $("#legend-content-container").hide()
+    $("#notes-content-container").hide()
   })
 
   $("#sort-link-album").on("click", function(e){
@@ -330,15 +328,25 @@ sortByRecording = function(){
 }
 
 var updateNotes = function(trackData){
-  $("#legend-container").hide()
-  $("#notes-container").show()
+  $("#legend-content-container-mobile").hide()
+  $("#notes-content-container-mobile").show()
   var source = $('#notes-template').html();
   var template = Handlebars.compile(source)
-  $('#notes-container').html(template(trackData))
+  $('#notes-content-container-mobile').html(template(trackData))
 }
 
 
 // RESPONSIVENESS
+
+screenModesInit = function(){
+  if ( $(window).width() > 640) {
+    screenModes.mobile()
+  } else if ( $(window).width() > 1024) {
+    screenModes.tablet()
+  } else {
+    screenModes.desktop()
+  }
+}
 
 screenModes = {
   mobile: function(){
@@ -347,6 +355,7 @@ screenModes = {
     $("#context-module-mobile").show()
     $('#meta-content-container').removeClass("non-mobile")
     // $('#timeline-intro').addClass("mobile")
+    addNavEvents();
   },
 
   tablet: function(){
@@ -489,10 +498,7 @@ structureByRecording = function(){
   _.each(dataMasterByRecording, function(trackData){
     structureTrack(trackData)
     $(".track-container-"+trackData.trackIndex).prepend("<div class='year-mark-container'><p class='year-mark-label'>"+trackData.yearMark+".<p></div>")
-
-    // <div class="year-mark-container">
-    //   <p class="year-mark-label">{{yearMark}}.<p>
-    // </div>
+    //TODO: make this from a template
   }) 
 }
 
@@ -656,8 +662,7 @@ $(function(){
 
   });
 
-  ssmTest()
-  addNavEvents()
+
 
 
 

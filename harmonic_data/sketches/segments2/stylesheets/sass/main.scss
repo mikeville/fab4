@@ -286,7 +286,6 @@ html {
 
 #timeline-container{
   float: left;
-  background-color: black;
   width: 75%;
 
   #big-timeline-container{
@@ -542,7 +541,7 @@ html {
     margin-bottom: .5rem;
   }
 
-  #notes-container {
+  #notes-content-container-mobile {
     max-height:10rem;
     overflow-y: scroll;
   }
