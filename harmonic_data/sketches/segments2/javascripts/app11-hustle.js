@@ -537,8 +537,7 @@ structureTrack = function(trackData){
   trackWidth = $("#timeline-container").width(); //or this.el.width() w/ backbone
   trackHeight = trackWidth/trackAspect
 
-  var maxBarWidth = 600 //TODO: clean this up. right now it's for guitar gently weeps.
-  var widthFactor = trackWidth/maxBarWidth;
+  var widthFactor = trackWidth/500;
 
 
   var source = $('#track-container-template').html();
