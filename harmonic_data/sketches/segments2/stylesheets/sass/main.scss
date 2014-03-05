@@ -5,6 +5,8 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 $use-mozilla-ellipsis-binding: true;
 @import "compass/typography/text/ellipsis";
 
+// @import "compass/utilities/general/clearfix"
+
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -380,14 +382,52 @@ html {
 }
 
 
-
-
-
-
-
 //***LEGEND/NOTES
+
+
+#context-module-mobile{
+  background-color: $background-secondary; //temp
+  width: 100%;
+  .legend-column{
+    width: 50%;
+    float: left;
+  }
+}
+
+#context-module-sidebar{
+  background-color: $background-secondary; //temp
+
+  margin-top:3.5rem;
+  width: 20%;
+  float: right;
+  height: 100%;
+
+  #legend-content-container{
+    .legend-item{
+      .legend-icon {
+        width: 4rem;
+        height: 100%;
+        background-color: green;
+      }
+      .legend-item-label{
+        // width:80%;
+        p{
+          color: red;     
+        } 
+      }      
+    }
+
+
+
+  }
+}
+
+
+
+
+
+
 #context-module {
-  background-color: $background-secondary;
   // background-color: $verse;
   // @include pattern-dots4(5);
 }

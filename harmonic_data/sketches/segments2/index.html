@@ -11,7 +11,7 @@
 	<script src='javascripts/backbone.js'></script>
   <script src='javascripts/data_album_revolver.js'></script>
   <script src='javascripts/metaData.js'></script>
-  <script src='javascripts/app7-song1.js'></script>
+  <script src='javascripts/app8-legending.js'></script>
   <link rel="stylesheet" type="text/css" href="stylesheets/main.css" />
   <link rel="stylesheet" type="text/css" href="stylesheets/ellipsis.css" />
   <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
@@ -36,27 +36,22 @@
     </div>
     <div id="timeline-header-container">
     </div>
-    <div id="context-module">
-      <div id="context-nav">
-        <a id="nav-link-legend" href="#">Legend</a>
-        <a id="nav-link-notes" href="#">Notes</a>
-        <a id="nav-link-hide" href="#">Hide</a>
-      </div>
-      <div id="legend-container">
-      </div>
-      <div id="notes-container">
-      </div>
+    <div id="context-module-mobile">
     </div>
     <div id="timeline-view-switcher">
       <p>order by <a id="sort-link-album" href="#">album</a> or <a id="sort-link-recording" href="#">recording date</a>
     </div>
-    <div id="timeline-container">
-      <div id="big-timeline-container">
+    <div id="main-content-container">
+      <div id="timeline-container">
+        <div id="big-timeline-container">
+        </div>
+        <div id="tiny-container">
+          <h3>Tiny</h3>
+        </div>
+        <div id="song-container">
+        </div>
       </div>
-      <div id="tiny-container">
-        <h3>Tiny</h3>
-      </div>
-      <div id="song-container">
+      <div id="context-module-sidebar">
       </div>
     </div>
 </div>
@@ -99,6 +94,68 @@
   <p id='timeline-intro'>{{oneLiner}}</p>
 </script>
 
+
+<script id="legend-content-structure-template" type='text/x-handlebars-template'>
+  <div class="legend-column">
+    <div class="legend-item">
+      <div id="legend-icon-intro" class="legend-icon"></div>
+      <div class="legend-item-label"><p>Intro/Outro</p></div>
+    </div>
+    <div class="legend-item">
+      <div id="legend-icon-chorus" class="legend-icon"></div>
+      <div class="legend-item-label"><p>Chorus</p></div>
+    </div>
+    <div class="legend-item">
+      <div id="legend-icon-verse" class="legend-icon"></div>
+      <div class="legend-item-label"><p>Verse</p></div>
+    </div>
+    <div class="legend-item">
+      <div id="legend-icon-bridge" class="legend-icon"></div>
+      <div class="legend-item-label"><p>Bridge</p></div>
+    </div>
+  </div>
+  <div class="legend-column">
+    <div class="legend-item">
+      <div id="legend-icon-unique" class="legend-icon"></div>
+      <div class="legend-item-label"><p>Unique Section</p></div>
+    </div>
+    <div class="legend-item">
+      <div id="legend-icon-variation" class="legend-icon"></div>
+      <div class="legend-item-label"><p>Variation</p></div>
+    </div>
+    <div class="legend-item">
+      <div id="legend-icon-instrumentation" class="legend-icon"></div>
+      <div class="legend-item-label"><p>Solos and Instrumental</p></div>
+    </div>
+  </div>
+</script>
+
+<script id="context-module-sidebar-template" type='text/x-handlebars-template'>
+  <div id="legend-container-sidebar">
+    <div id="legend-title-container-sidebar">
+      <h6 id="legend-title-sidebar">Legend</h6>
+    </div>
+    <div id="legend-content-container">
+    </div>
+  </div>
+  <div id="notes-container-sidebar">
+    <div id="notes-title-container-sidebar">
+      <h6 id="notes-title-sidebar">Notes</h6>
+    </div>
+  </div>
+</script>
+
+<script id="context-module-mobile-template" type='text/x-handlebars-template'>
+  <div id="context-nav-mobile">
+    <a id="nav-link-legend-mobile" href="#">Legend</a>
+    <a id="nav-link-notes-mobile" href="#">Notes</a>
+    <a id="nav-link-hide-mobile" href="#">Hide</a>
+  </div>
+  <div id="legend-content-container-mobile">
+  </div>
+  <div id="notes-content-container-mobile">
+  </div>
+</script>
 
 
 

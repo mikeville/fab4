@@ -196,8 +196,8 @@ var UI = Backbone.View.extend({
   initialize: function(){
     this.render({
       timelineHeading: new UI.TimelineHeading,
-      contextModuleSidebar: new UI.ContextModuleSidebar,
-      legendSidebar: new UI.LegendSidebar()
+      // contextModuleSidebar: new UI.ContextModuleSidebar
+      contextModuleMobile: new UI.ContextModuleMobile
     });
   },
   render: function(sub_views){
@@ -249,25 +249,35 @@ UI.ContextModuleSidebar = Backbone.View.extend({
     var template = Handlebars.compile(source)
     return template(attributes)
   },
+  renderLegend: function(){
+    var sourceLegend = $("#legend-content-structure-template").html()
+    var templateLegend = Handlebars.compile(sourceLegend)
+    $("#legend-content-container").html(templateLegend)
+  },
   render: function(){
     this.$el.html(this.template(app.metaData))
+    this.renderLegend()
     return this
   }
 })
 
-UI.LegendSidebar = Backbone.View.extend({
+UI.ContextModuleMobile = Backbone.View.extend({
   el: function(){
-    return $('#legend-content-container')
+    return $('#context-module-mobile')
   },
-  template: function(){
-    var source = $("#legend-content-structure-template").html()
+  template: function(attributes){
+    var source = $('#context-module-mobile-template').html();
     var template = Handlebars.compile(source)
-    return template()
+    return template(attributes)
+  },
+  renderLegend: function(){
+    var sourceLegend = $("#legend-content-structure-template").html()
+    var templateLegend = Handlebars.compile(sourceLegend)
+    $("#legend-content-container-mobile").html(templateLegend)
   },
   render: function(){
-    this.$el.html(this.template())
-    // this.$el.html("beans")
-    $("#legend-content-container").html(this.template())
+    this.$el.html(this.template(app.metaData))
+    this.renderLegend()
     return this
   }
 })
