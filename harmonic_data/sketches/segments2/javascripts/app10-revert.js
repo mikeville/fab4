@@ -196,8 +196,8 @@ var UI = Backbone.View.extend({
   initialize: function(){
     this.render({
       timelineHeading: new UI.TimelineHeading,
-      // contextModuleSidebar: new UI.ContextModuleSidebar
-      contextModuleMobile: new UI.ContextModuleMobile
+      contextModuleSidebar: new UI.ContextModuleSidebar,
+      contextModuleMobile: new UI.ContextModuleMobile,
     });
   },
   render: function(sub_views){
